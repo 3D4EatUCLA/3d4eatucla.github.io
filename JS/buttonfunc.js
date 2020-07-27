@@ -704,6 +704,7 @@
                         </div>
                   </div>
               </div>
+              /*
               <div id="cell10" class="carousel-cell">
                 <div class="ucla3d4e-bioelement">
                     <div class="biowrapper">
@@ -715,6 +716,7 @@
                     </div>
                 </div>
             </div>
+            */
               <div id="cell4" class="carousel-cell">
                   <div class="ucla3d4e-bioelement">
                       <div class="biowrapper">
