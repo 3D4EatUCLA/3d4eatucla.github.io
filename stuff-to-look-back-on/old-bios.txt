@@ -1,0 +1,13 @@
+<!--Good bye big boss
+    <div id="cell1" class="carousel-cell">
+    <div class="ucla3d4e-bioelement">
+        <div class="biowrapper">
+            <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img2" src="img/board1920/bhav.JPG"/>
+        </div>
+        <div class="ucla3d4e-biodesc">
+            <h4 class="biotext">Bhav Patel - President</h4>
+            <p class="biotext">Bhav is a fourth year aerospace engineering student with an interest in astronautics. His interest in 3D printing stems from the interesting applications additive manufacturing has in the aerospace industry. Beyond 3D printing, his interests include rocketry, running, and attempting to cook overly fancy desserts. The biggest thing on his bucket list is to backpack in Patagonia and see the Milky Way in the night sky.</p>
+            </div>
+    </div>
+    </div>
+-->
