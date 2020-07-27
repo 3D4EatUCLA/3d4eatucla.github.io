@@ -1,13 +1,107 @@
-<!--Good bye big boss
-    <div id="cell1" class="carousel-cell">
-    <div class="ucla3d4e-bioelement">
-        <div class="biowrapper">
-            <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img2" src="img/board1920/bhav.JPG"/>
-        </div>
-        <div class="ucla3d4e-biodesc">
-            <h4 class="biotext">Bhav Patel - President</h4>
-            <p class="biotext">Bhav is a fourth year aerospace engineering student with an interest in astronautics. His interest in 3D printing stems from the interesting applications additive manufacturing has in the aerospace industry. Beyond 3D printing, his interests include rocketry, running, and attempting to cook overly fancy desserts. The biggest thing on his bucket list is to backpack in Patagonia and see the Milky Way in the night sky.</p>
-            </div>
+Bhav Patel
+
+<div id="cell1" class="carousel-cell">
+  <div class="ucla3d4e-bioelement">
+    <div class="biowrapper">
+      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img2" src="img/board1920/bhav.JPG"/>
     </div>
+    <div class="ucla3d4e-biodesc">
+      <h4 class="biotext">Bhav Patel - President</h4>
+      <p class="biotext">
+        Bhav is a fourth year aerospace engineering student with an interest in astronautics. 
+
+        His interest in 3D printing stems from the interesting applications additive manufacturing has in the aerospace industry. 
+
+        Beyond 3D printing, his interests include rocketry, running, and attempting to cook overly fancy desserts. 
+
+        The biggest thing on his bucket list is to backpack in Patagonia and see the Milky Way in the night sky.
+      </p>
     </div>
--->
+  </div>
+</div>
+
+Ken Li
+
+<div id="cell4" class="carousel-cell">
+  <div class="ucla3d4e-bioelement">
+    <div class="biowrapper">
+      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img10" src="img/board1920/ken.JPG"/>
+    </div>
+    <div class="ucla3d4e-biodesc">
+      <h4 class="biotext">Ken Li - Treasurer</h4>
+      <p class="biotext">
+        Ken is a 4th year mechanical engineering undergraduate student who joined 3D4E to pursue his interest in computer-aided design. 
+
+        He enjoys creating objects from mental images and the challenges of solving design issues. 
+
+        Outside of 3D4E, he also spends time tutoring kids in math and science. 
+
+        In his free time, he loves to watch movies, game online with his friends, and work on completing his coin collections.
+      </p>
+    </div>
+  </div>
+</div>
+
+Stefan Yue
+
+<div id="cell4" class="carousel-cell">
+  <div class="ucla3d4e-bioelement">
+    <div class="biowrapper">
+      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img4" src="img/board1920/stefan.JPG"/>
+    </div>
+    <div class="ucla3d4e-biodesc">
+      <h4 class="biotext">Stefan Yue - Lab Manager</h4>
+      <p class="biotext">
+        Stefan is a fifth year Bioengineering major. 
+
+        His interest is in biomechanics, orthopedics and bioprinting.  
+                
+        He joined this club because 3D printing is extremely useful in the field of biomedical devices, for it’s capability in fast and cheap prototyping, his goal is to give people the ability to help themselves with 3D printed medical device. 
+
+        In his free time, he enjoys books, tea, and snowboarding.
+      </p>
+    </div>
+  </div>
+</div>
+
+Dennis Shen
+
+<div id="cell7" class="carousel-cell">
+  <div class="ucla3d4e-bioelement">
+    <div class="biowrapper">
+      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto; image-orientation: from-image;" id="img7" src="img/board1920/dennis.JPG"/>
+    </div>
+    <div class="ucla3d4e-biodesc">
+      <h4 class="biotext">Dennis Shen - Board Mom</h4>
+      <p class="biotext">
+        Dennis is a fourth year mechanical engineering student that joined 3D4E to really dive into 3D printing with an emphasis on educating others about the field.
+
+        He is also the 17-18 Resident Assistant for UCLA’s Design and Innovation community, working with groups such as FuturizeX and StartupUCLA to promote innovation and entrepreneurship on the Hill. 
+
+        In his free time, he drowns his ears in music and plays some club badminton.
+      </p>
+    </div>
+  </div>
+</div>
+
+Phipson Lee
+
+<div id="cell9" class="carousel-cell">
+  <div class="ucla3d4e-bioelement">
+    <div class="biowrapper">
+      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img9" src="img/board1920/phip.JPG"/>
+    </div>
+    <div class="ucla3d4e-biodesc">
+      <h4 class="biotext">Phipson Lee - Webmaster</h4>
+      <p class="biotext">
+        Phipson is a fourth year undergraduate, pursuing a double major in Computer Science and Cognitive Science. 
+
+        He enjoys the expressive nature of 3D printing, and the creative freedom designers have as they engineer innovative solutions on their computers. 
+
+        He currently does research in Augmented Reality and Virtual Reality, and exploring ways both systems can be combined for CAD in general. 
+
+        In his free time, he loves playing the saxophone and working out at the gym.
+      </p>
+    </div>
+  </div>
+</div>
