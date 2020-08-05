@@ -673,83 +673,88 @@
           <div class="carousel js-flickity">
               <div id="cell1" class="carousel-cell">
                 <div class="ucla3d4e-bioelement">
-                    <div class="biowrapper">
-                        <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img2" src="img/media/drone.jpg"/>
-                    </div>
-                    <div class="ucla3d4e-biodesc">
-                        <h4 class="biotext">Drone</h4>
-                        <p class="biotext">The Drone group is constructing a 1 kilogram 3D printed drone with the primary intent to do photography. We ultimately by the end of the year want to construct a lightweight FPV racing drone with the goal of participating in an intercollegiate competition. In the future, we want to look at the possibility of creating original function drones to better the world around us such as emergency medical supply drones and fire fighting drones.</p>
-                      </div>
+                  <div class="biowrapper">
+                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img2" src="img/media/airplane_cover.JPG"/>
+                  </div>
+                  <div class="ucla3d4e-biodesc">
+                    <h4 class="biotext">Flight</h4>
+                    <p class="biotext">The flight team has constructed a lightweight plane with a 6 foot wing span.
+                      It has a 3D printed chasis supported by carbon fiber rods, and its wings use a balsa wood ribcage wrapped around Monokote.
+                      In the future, we're looking into creating a drop-off payload system to distribute seeds while in the air.
+                    </p>
+                  </div>
                 </div>
               </div>
               <div id="cell2" class="carousel-cell">
                 <div class="ucla3d4e-bioelement">
-                    <div class="biowrapper">
-                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="./img/media/phand_3.JPG "/>
-                    </div>
-                    <div class="ucla3d4e-biodesc">
-                        <h4 class="biotext">Healthcare and Prosthetics</h4>
-                        <p class="biotext">The 3D4E prosthetics group is currently pursuing two big projects. The first is a small-animal leg and limb prosthetic, designed to attach to the body of a dog or cat and provide extra motor functionality in the form of a wheel-based prosthetic. The second project is developing a fully 3D printed Ponseti Brace that can travel with multiple degrees of freedom in all directions, allowing surgeons to easily help those that are affected.</p>
-                      </div>
-                </div>
-            </div>
-              <div id="cell3" class="carousel-cell">
-                  <div class="ucla3d4e-bioelement">
-                      <div class="biowrapper">
-                      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img3" src="./img/media/music.jpg"/>
-                      </div>
-                      <div class="ucla3d4e-biodesc">
-                          <h4 class="biotext">Musical Instruments</h4>
-                          <p class="biotext">If you combine 3D printing, a love for music, a desire to help people, and a little bit of creativity, this is the project that results. We are designing and printing multiple different instruments with the intention of donating these to causes in which they can make the largest positive impact, like homeless shelters and orphanages. The instruments will include various ukuleles, drums, recorders, and whatever else our imagination leads to.</p>
-                        </div>
+                  <div class="biowrapper">
+                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="./img/media/point_of_care.jpg"/>
                   </div>
-              </div>
-              /*
-              <div id="cell10" class="carousel-cell">
-                <div class="ucla3d4e-bioelement">
-                    <div class="biowrapper">
-                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img10" src="./img/media/clothing.jpg"/>
-                    </div>
-                    <div class="ucla3d4e-biodesc">
-                        <h4 class="biotext">Renewable Energy</h4>
-                        <p class="biotext">A continuation of the renewable energy group of 2016, the fall 2017 renewable energy group aims to create a solar powered personal fan that integrates electronics, 3D printing, and solar cells. The goal of the fan is to be easily accessible to UCLA students to use within their dorms to cool down without the need for an external power source. During the upcoming winter quarter members will be iterating and refining their design to create the most efficient and practical model possible.</p>
-                    </div>
+                  <div class="ucla3d4e-biodesc">
+                    <h4 class="biotext">Healthcare and Prosthetics</h4>
+                    <p class="biotext">The 3D4E healthcare group is working on a point of care system, 
+                      where a small module measures your vital signs. It measures blood oxygen, body temperature,
+                      and heart rate with a Raspberry Pi as the foundation, and streams to an IoT service.
+                    </p>
+                  </div>
                 </div>
-            </div>
-            */
-              <div id="cell4" class="carousel-cell">
-                  <div class="ucla3d4e-bioelement">
-                      <div class="biowrapper">
-                      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img4" src="./img/media/renewenergy.jpg"/>
-                      </div>
-                      <div class="ucla3d4e-biodesc">
-                          <h4 class="biotext">3D Printing + Rasberry Pi</h4>
-                          <p class="biotext">This is a broad topic that encompasses the utilization of Raspberry Pi and 3D printing technology to create/automate interesting things/projects to help improve our daily lives. The project focuses on exploring and learning different features of the Raspberry Pi and using it in combination with 3D printing. Given such a broad topic, members will decide on the more specific path they will take as a group. This will also be an opportunity for members who are more knowledgeable in electronics than in CAD/3D Printing.</p>
-                        </div>
+              </div>
+              <div id="cell9" class="carousel-class">
+                <div class="ucla3d4e-bioelement">
+                  <div class="biowrapper">
+                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="./img/media/post_processing_cover.jpg"/>
+                  </div>
+                  <div class="ucla3d4e-biodesc">
+                    <h4 class="biotext">Post Processing</h4>
+                    <p class="biotext">When 3D prints first come out of the printer, they are a bit unrefined and look like, well, plastic.
+                      However, this team works to upgrade the final production of the print. They first sand the print to remove the layer lines, 
+                      then apply primer and paint to create a translucent surface.
+                    </p>
+                  </div>  
+                </div>
+              </div>
+              <div id="cell8" class="carousel-class">
+                <div class="ucla3d4e-bioelement">
+                  <div class="biowrapper">
+                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="./img/media/hydroponics_cover.png"/>
+                  </div>
+                  <div class="ucla3d4e-biodesc">
+                    <h4 class="biotext">Hydroponics</h4>
+                    <p class="biotext">What better way to take care of your succulents than to create a desk-sized hydroponics garden!
+                    </p>
+                  </div>  
+                </div>
+              </div>
+              <div id="cell3" class="carousel-cell">
+                <div class="ucla3d4e-bioelement">
+                  <div class="biowrapper">
+                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img3" src="./img/media/music.jpg"/>
+                  </div>
+                  <div class="ucla3d4e-biodesc">
+                    <h4 class="biotext">Musical Instruments</h4>
+                      <p class="biotext">If you combine 3D printing, a love for music, a desire to help people, and a little bit of creativity, 
+                        this is the project that results. We are designing and printing multiple different instruments with the intention of 
+                        donating these to causes in which they can make the largest positive impact, like homeless shelters and orphanages. 
+                        The instruments will include various ukuleles, drums, recorders, and whatever else our imagination leads to.
+                      </p>
+                    </div>
                   </div>
               </div>
               <div id="cell5" class="carousel-cell">
-                  <div class="ucla3d4e-bioelement">
-                      <div class="biowrapper">
-                      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img5" src="./img/media/city.JPG">
-                      </div>
-                      <div class="ucla3d4e-biodesc">
-                          <h4 class="biotext">Architecture</h4>
-                          <p class="biotext">Calling for all architects! This project is fun for beginners and pros alike. We model architectural designs within a wide range, from castles to animated characters’ homes. Keen attention to detail reveals intricate windows, tiled roofing, and perhaps even doors that open. We may work our way up to a campus map of UCLA—stay tuned!</p>
-                      </div>
+                <div class="ucla3d4e-bioelement">
+                  <div class="biowrapper">
+                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img5" src="./img/media/city.JPG">
+                  </div>
+                  <div class="ucla3d4e-biodesc">
+                    <h4 class="biotext">Architecture</h4>
+                    <p class="biotext">Calling for all architects! This project is fun for beginners and pros alike. 
+                      We model architectural designs within a wide range, from castles to animated characters’ homes. 
+                      Keen attention to detail reveals intricate windows, tiled roofing, and perhaps even doors that open. 
+                      We may work our way up to a campus map of UCLA—stay tuned!
+                    </p>
                   </div>
                 </div>
-                <div id="cell11" class="carousel-cell">
-                    <div class="ucla3d4e-bioelement">
-                        <div class="biowrapper">
-                        <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img9" src="img/media/transport.jpg"/>
-                        </div>
-                        <div class="ucla3d4e-biodesc">
-                            <h4 class="biotext">Transportation</h4>
-                            <p class="biotext">Often, plastic isn't thought of as a viable material when it comes to transportation due to its strength that is lower than metals. However, the transportation group is attempting to turn that notion on its head, as 100% infill plastic can be quite strong and may be able to take the weight of one human individual. Currently, the group is pursuing two main projects, a skateboard brake attachment and roller blades. We'll see if we can make solid plastic prints do the job!</p>
-                        </div>
-                    </div>
-                </div>
+              </div>
         </div>
         </div>`;
         addpage.play();
