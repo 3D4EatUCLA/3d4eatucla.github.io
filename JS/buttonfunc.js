@@ -699,7 +699,7 @@
                   </div>
                 </div>
               </div>
-              <div id="cell9" class="carousel-class">
+              <div id="cell9" class="carousel-cell">
                 <div class="ucla3d4e-bioelement">
                   <div class="biowrapper">
                     <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="./img/media/post_processing_cover.jpg"/>
@@ -713,7 +713,7 @@
                   </div>  
                 </div>
               </div>
-              <div id="cell8" class="carousel-class">
+              <div id="cell8" class="carousel-cell">
                 <div class="ucla3d4e-bioelement">
                   <div class="biowrapper">
                     <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="./img/media/hydroponics_cover.png"/>
