@@ -725,6 +725,20 @@
                   </div>  
                 </div>
               </div>
+              <div id="cell11" class="carousel-cell">
+                <div class="ucla3d4e-bioelement">
+                  <div class="biowrapper">
+                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img3" src="./img/media/rc_cars.jpg"/>
+                  </div>
+                  <div class="ucla3d4e-biodesc">
+                    <h4 class="biotext">RC Cars</h4>
+                      <p class="biotext">The RC Car team has built a compact electric vehicle, reaching a top speed of 15 ft/s in under 2 seconds. 
+                        The vehicle utilized PLA and SLA printers to create the main gearbox, rear differential, steering mechanism, and more! 
+                        Future goals include upgrading the aerodynamics as well as increasing the strength and durability of drive system parts.
+                      </p>
+                    </div>
+                  </div>
+              </div>
               <div id="cell3" class="carousel-cell">
                 <div class="ucla3d4e-bioelement">
                   <div class="biowrapper">
@@ -763,3 +777,20 @@
 
     })
 })(jQuery);
+
+/*
+              <div id="cell11" class="carousel-cell">
+                <div class="ucla3d4e-bioelement">
+                  <div class="biowrapper">
+                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img3" src="./img/media/rc_cars.jpg"/>
+                  </div>
+                  <div class="ucla3d4e-biodesc">
+                    <h4 class="biotext">RC Cars</h4>
+                      <p class="biotext">The RC Car team has built a compact electric vehicle, reaching a top speed of 15 ft/s in under 2 seconds. 
+                        The vehicle utilized PLA and SLA printers to create the main gearbox, rear differential, steering mechanism, and more! 
+                        Future goals include upgrading the aerodynamics as well as increasing the strength and durability of drive system parts.
+                      </p>
+                    </div>
+                  </div>
+              </div>
+*/
