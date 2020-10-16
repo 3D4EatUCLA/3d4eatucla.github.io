@@ -616,7 +616,7 @@
         }
 
         pdf1.addEventListener('click', function() {
-          window.location.href = "https://docs.google.com/presentation/d/1DcfVBb_67ZWvGGPyV44Fcr8_Gc4R92ezocayvVHFWy4/edit?usp=sharing";
+          window.location.href = "https://docs.google.com/presentation/d/16gKkG9ZPz7cI1yretzZ8DKTLchW2Jie_GbaOCly3944/edit?usp=sharing";
         });
 
         // Workshop 2
