@@ -9,9 +9,14 @@
         var openMenu = false;
 
         // Social Media
+        var discord = document.getElementById('discord');
+        discord.addEventListener('click', function() {
+             window.location.href = 'https://www.tinyurl.com/3D4EDiscord';
+        })
+
         var facebook = document.getElementById('facebook');
         facebook.addEventListener('click', function() {
-             window.location.href = 'https://www.facebook.com/3D4E.UCLA/';
+             window.location.href = 'https://www.facebook.com/3D4EatUCLA';
         })
 
         var email = document.getElementById('email');
