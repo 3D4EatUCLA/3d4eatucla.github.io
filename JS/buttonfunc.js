@@ -674,6 +674,19 @@
               <div id="cell1" class="carousel-cell">
                 <div class="ucla3d4e-bioelement">
                   <div class="biowrapper">
+                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img2" src="img/media/mechanical-keyboard.png"/>
+                  </div>
+                  <div class="ucla3d4e-biodesc">
+                    <h4 class="biotext">Mechanical Keyboards</h4>
+                    <p class="biotext">The mechanical keyboards team focuses on the CAD design and electronics of macropads, volume knobs, and smaller keyboards. 
+                      This team utilizes a combination of engineering and the arts.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div id="cell2" class="carousel-cell">
+                <div class="ucla3d4e-bioelement">
+                  <div class="biowrapper">
                     <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img2" src="img/media/airplane_cover.JPG"/>
                   </div>
                   <div class="ucla3d4e-biodesc">
@@ -685,7 +698,7 @@
                   </div>
                 </div>
               </div>
-              <div id="cell2" class="carousel-cell">
+              <div id="cell3" class="carousel-cell">
                 <div class="ucla3d4e-bioelement">
                   <div class="biowrapper">
                     <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="./img/media/point_of_care.jpg"/>
@@ -695,76 +708,6 @@
                     <p class="biotext">The 3D4E healthcare group is working on a point of care system, 
                       where a small module measures your vital signs. It measures blood oxygen, body temperature,
                       and heart rate with a Raspberry Pi as the foundation, and streams to an IoT service.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div id="cell9" class="carousel-cell">
-                <div class="ucla3d4e-bioelement">
-                  <div class="biowrapper">
-                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="./img/media/post_processing_cover.jpg"/>
-                  </div>
-                  <div class="ucla3d4e-biodesc">
-                    <h4 class="biotext">Post Processing</h4>
-                    <p class="biotext">When 3D prints first come out of the printer, they are a bit unrefined and look like, well, plastic.
-                      However, this team works to upgrade the final production of the print. They first sand the print to remove the layer lines, 
-                      then apply primer and paint to create a translucent surface.
-                    </p>
-                  </div>  
-                </div>
-              </div>
-              <div id="cell8" class="carousel-cell">
-                <div class="ucla3d4e-bioelement">
-                  <div class="biowrapper">
-                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="./img/media/hydroponics_cover.png"/>
-                  </div>
-                  <div class="ucla3d4e-biodesc">
-                    <h4 class="biotext">Hydroponics</h4>
-                    <p class="biotext">What better way to take care of your succulents than to create a desk-sized hydroponics garden!
-                    </p>
-                  </div>  
-                </div>
-              </div>
-              <div id="cell11" class="carousel-cell">
-                <div class="ucla3d4e-bioelement">
-                  <div class="biowrapper">
-                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img3" src="./img/media/rc_cars.jpg"/>
-                  </div>
-                  <div class="ucla3d4e-biodesc">
-                    <h4 class="biotext">RC Cars</h4>
-                      <p class="biotext">The RC Car team has built a compact electric vehicle, reaching a top speed of 15 ft/s in under 2 seconds. 
-                        The vehicle utilized PLA and SLA printers to create the main gearbox, rear differential, steering mechanism, and more! 
-                        Future goals include upgrading the aerodynamics as well as increasing the strength and durability of drive system parts.
-                      </p>
-                    </div>
-                  </div>
-              </div>
-              <div id="cell3" class="carousel-cell">
-                <div class="ucla3d4e-bioelement">
-                  <div class="biowrapper">
-                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img3" src="./img/media/music.jpg"/>
-                  </div>
-                  <div class="ucla3d4e-biodesc">
-                    <h4 class="biotext">Musical Instruments</h4>
-                      <p class="biotext">If you combine 3D printing, a love for music, a desire to help people, and a little bit of creativity, 
-                        this is the project that results. We are designing and printing multiple different instruments with the intention of 
-                        donating these to causes in which they can make the largest positive impact, like homeless shelters and orphanages. 
-                        The instruments will include various ukuleles, drums, recorders, and whatever else our imagination leads to.
-                      </p>
-                    </div>
-                  </div>
-              </div>
-              <div id="cell5" class="carousel-cell">
-                <div class="ucla3d4e-bioelement">
-                  <div class="biowrapper">
-                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img5" src="./img/media/city.JPG">
-                  </div>
-                  <div class="ucla3d4e-biodesc">
-                    <h4 class="biotext">Architecture</h4>
-                    <p class="biotext">Calling for all architects! This project is fun for beginners and pros alike. 
-                      We model architectural designs within a wide range, from castles to animated characters’ homes. 
-                      Keen attention to detail reveals intricate windows, tiled roofing, and perhaps even doors that open. 
-                      We may work our way up to a campus map of UCLA—stay tuned!
                     </p>
                   </div>
                 </div>
