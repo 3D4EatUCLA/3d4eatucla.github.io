@@ -668,7 +668,7 @@
         // Board Member Application
         var boardLink = document.getElementById('joinboardbutton');
         boardLink.addEventListener('click', function() {
-          window.location.href = "https://docs.google.com/presentation/d/16gKkG9ZPz7cI1yretzZ8DKTLchW2Jie_GbaOCly3944/edit?usp=sharing";
+          window.location.href = "https://forms.gle/WqFm7vyXgNPZEMfVA";
         });
 
         // Project Preview
