@@ -665,11 +665,11 @@
         });
         });
 
-        // Board Member Application
-        var boardLink = document.getElementById('joinboardbutton');
-        boardLink.addEventListener('click', function() {
-          window.location.href = "https://forms.gle/WqFm7vyXgNPZEMfVA";
-        });
+        // // Board Member Application
+        // var boardLink = document.getElementById('joinboardbutton');
+        // boardLink.addEventListener('click', function() {
+        //   window.location.href = "https://forms.gle/WqFm7vyXgNPZEMfVA";
+        // });
 
         // Project Preview
         var ShowProject = document.getElementById('projectbutton');
