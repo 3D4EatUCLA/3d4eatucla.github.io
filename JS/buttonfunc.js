@@ -68,9 +68,44 @@
         /* Projects Popup */
 
         /* Gallery Showup */
+        // USC Spring Showcase 2022
+        var pg0 = document.getElementById('showcase2022');
+        pg0.addEventListener('click', function() {
+            var str = `<script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+            <div class="pa-gallery-player-widget" style="width:100%; height:480px; display:none;"
+              data-link="https://photos.app.goo.gl/hMiHzs39njke25WW8"
+              data-title="3D4E Showcase 2022"
+              data-description="20 new items added to shared album">
+              <object data="https://lh3.googleusercontent.com/HvzNce2jJAxh7LPhlXvnZnPH6eMIkelPVBPgdKFftcv1q2SqWxYCA96KaHACEGhfWXvcw5IeIpnvyxbTn73tEfOVyq-1m67QURKfyW3PPe6qtmVUC2eGNLhyFzDcYSatbjMKG01D9A=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/m97ycoh5JKJjMgZJhKQdQyf4LaujIukGF4mb2oHftl_7S3SgQznesaQ6436Nga3IZy1-9ycm8y9QErM9IVwqbkadgUGNyM55rEJ_ay_0Bn12xpXZdWwSC4y_-UzC3sAAo1_pRamfTA=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/D07MniVsovAlXF9-Iy64VpS4Wss-hW8x05UhkAOo22xXihgMoQ1MZ_-OWPJoUx-f7eoaX7wQ-__5RE4ZofAvSnDRdV9aR5FU6LPEd6Xj6SoAydt8OxpUbFshSG6Rqk6tWohPYBwRUQ=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/yiuCU7BptYoEHivFtspLu9X2J8zCD0t-5RAjaZQqVHPnBlG6LtDbUF1lH9WIYwKHoaEgXHmxXjS4FBwYwuXfXQMKjPOt0Tzhfe9sq1rbz1N_kVAXk5JyWmFix3CdBkjALHKNfYuAXg=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/k3o7Rvsrx8CYMpH_vAJganJv-z2sfzeE63VO7up9PBVKgyuf9i3WLveMfETTL0LlO3WVX55nexU2TqUpduNHy7GjtAiJ8SK1xZI50nWr5mpvzeI0aMdlvGm_K85_eMYfUzXEZWBKfg=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/FMFjmSKjkG-sWgelwDmyCr_s5fPA5V93uVH6WIp9Tz0rCDlY367WGRSkU8yfeUHs6xMriZ6Gjk6LjKIT_DCX15gSERlufb-FFQ5ZETcl77rSDFX1KZqK22gWPyiMN6Fh0OY3_xP92w=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/4OrO2jdbEwEczYnrCP38krfA21bRd9aLgSFQVSIVv3eUkwEI0yBuS4TywFzDuXlUkU9tCfLkslQWGJDpQ3EONTGWbcROU5gmr909mKOE2HU6fZ6Jg43l1tD7useASWEt1AJ6t64DdQ=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/Ogdf1uGRzK_vJk0fXdTYH6UKXubw1iocrW84omFNpGYz3j7AQOvVHUVMOdBXqgSQNtfOjUsk7khjGlSCvestUH8sTvdKJutBpjsR8aeTusKZRNXg4_GG2dqqWYykhm3jrtbB6eQD4g=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/9SDFMFohNYJraRF4Lq3cY0AdcJX1ORm0KZNrn1rvC3WNqNxXDMZjwy0PqkoZtR86pCFEuPVQpnvbqd53-swH16brr1NE3UCQi6Pi_HbvtfF0QpYViDDqAfvn-7PZ2mZIuSJOEPsWjQ=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/MzM3Eqb7zImCRdPPK1jK1bph1uoAIQgAOlM_rOh03R87dK3mdkIu-kIYqsq4yRnY-6nhno5lwc1dOXbkVQjJUP_MtpOnghtNRkggQeEYk532IzWwFnbRiYndmwrWEK1OochYlkR1Kg=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/60wq7BYtE-d7-29TR4ykJK71YXufF9pTSdGCHDLpw8PFZKCtZ_2CKMxO_N7Y67f8hqstlvoVlHpz7WLfExTGxj9Nvx_a_hJBR8mOfuin0LPRRBY9qh6i6ZGSZWxEFkEOdLpA_nxprg=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/48iJREzA2PfkJRQi798NopjlM1kCO2lRCG4sxA9RcH1GF2z72Q0KXqTopw9SogNumRvU_jChFZ56cSvgLEtX014Mrw49HMgsB4qEJv5fUXrN7Bx9PpHI0alHP3RysDku66q9Yh0RLg=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/KXym69yiad28QZHYP2pAl-9I56AEq4cpaNeq7sgs9r6cNz2g4ENS-F5bdfKiYBpckb2AUoXz1bzp3pzc_E4oX0LJ4GaCTCViSZUCd4kkio3TCm_cfUPoWB2xoOiKOBs9lvX20Kk30g=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/SUJYgP567pxsrNrwwMGxkUhuJQimj7vVg1dpTSlKWmMutcqJf-liHc73in8ZW97K5WYBn-R4Erz5dkY2_nl24OE4LS1uLvHGlOfQetvyKKbGzOGNDaTvEnIosskRPBnM4UTQT5fSCw=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/JtX6v_7Vz0_rAdQpo9YN3ZAluaSnqEwsg-NKHEtnTqwWFD0Em8OXm7fRNJy3bngrHLdVcbHOBdmxpZt_wWooNeEB4-3q_YOpTVObZ9KMQ84j3f1nqIm5SIuYHEmgknjSGaW0MiUo8Q=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/7_xOSMdKhOabs4T7_afoErT-U0_HSzs6TRz67Mzx1mzF8vExod0Rk9NJE2K4xSQzYSQhLN2ahlTsghD2beJGd7TbHoY0h_PxG5Uyty846nRLbc8DirlLJoUZbLKpyuqmd8QpX93Jmw=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/z75aQ5Wdcu8klIdoVZJKUGSrxOHy6Oa_M_r6DWXpvK4DfwSh_IEYANzfAAcd7dFoKrjKZceXu-Wb6xU8jFi3sQ3kPUAzYVIXXmGz1qjMoEqphLTbWK1H05lv-21ZJ0HI-cKK4_N8zQ=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/IQ2wMUqIEMUmoLF6t7_sFuuFBmkW-HQq1VhEob9sPwC5x537YsOtVQgbMlsobX6aMdm7X-lolcBdYEOHnAVRujfJltyb_85ByuinZlrT0mfQdFdIkpJxBCRcC_DOvrHsBSRtR0Qdqg=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/yj1Q-1O1b1wLqv7o5HmIXIzQzHqSxznWPp8yY4Lo9gXT2g0Jt-b9iOAcVAA5jwBp-2mD6K_bovqND9CSk0O7kLnevdMtTjp2bDt8JJzuJjFYSfvJ-1oTpa-GmuYk_vtzQy3n8lOGPg=w1920-h1080"></object>
+              <object data="https://lh3.googleusercontent.com/R61k_ZZQouZQ1hjBNvshxnhbHB89rUbGkCbVic8cafYUhOQCIqVSDbGqKTSt90afA0Fnrgzde9OcEv5M-M_BPXkZIVw9QrqKm8JnwrD4HC3IhsUhRmuVVeRwVf6UXe_K-QxETLTjTQ=w1920-h1080"></object>
+            </div>
+            
+            `;
+            addpage.play();
+            $('#overlay-content').append(str);
+        });
+
         // 3D4E Retreat 2022
-        var pg2 = document.getElementById('retreat2022');
-        pg2.addEventListener('click', function() {
+        var pg1 = document.getElementById('retreat2022');
+        pg1.addEventListener('click', function() {
             var str = `<script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
             <div class="pa-gallery-player-widget" style="width:100%; height:480px; display:none;"
               data-link="https://photos.app.goo.gl/RCBwNYsZnSCWDi3a9"
