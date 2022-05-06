@@ -105,3 +105,180 @@ Phipson Lee
     </div>
   </div>
 </div>
+
+
+
+            <div id="biodisplay" style="width: 100%">
+              <div class="carousel js-flickity">
+                <div id="cell1" class="carousel-cell">
+                  <div class="ucla3d4e-bioelement">
+                    <div class="biowrapper">
+                      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="img/board2021-2022/amanda.jpg"/>
+                    </div>
+                    <div class="ucla3d4e-biodesc">
+                      <h4 class="biotext">Amanda Han - President</h4>
+                      <p class="biotext">
+                        Amanda Han is a 4th year computer science major. 
+                        
+                        She likes working on artistic projects fusing unorthodox models, like her legged pikachu. 
+                        
+                        In her free time, Amanda enjoys karaoke, video games, and D&D.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div id="cell2" class="carousel-cell">
+                  <div class="ucla3d4e-bioelement">
+                    <div class="biowrapper">
+                      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="img/board2021-2022/jacobi.jpg"/>
+                    </div>
+                    <div class="ucla3d4e-biodesc">
+                      <h4 class="biotext">Jacobi Gunsalus - Vice President</h4>
+                      <p class="biotext">
+                        Jacobi is a third-year mechanical engineering major from Camarillo, CA. 
+                        
+                        She likes 3D modeling and printing strange creations (check out her grabCAD!), playing the piano, and using elite (strange) emoji combos. 
+                        
+                        Don't hesitate to reach out if you have questions about Mech E at UCLA, or if you have cute doggo pics 👀👄👀
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div id="cell3" class="carousel-cell">
+                  <div class="ucla3d4e-bioelement">
+                    <div class="biowrapper">
+                      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="img/board2021-2022/brady.png"/>
+                    </div>
+                    <div class="ucla3d4e-biodesc">
+                      <h4 class="biotext">Brady Ankenbrandt - Technical Instructor</h4>
+                      <p class="biotext">
+                        Brady is a second-year electrical engineering major. He loves working with 3D printers, doing CAD, and CNC milling for his various functional projects.
+                        
+                        Recently, he printed a nosecone for UCLA’s Rocket Project and converted a vending machine into a massive 3D printer.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div id="cell4" class="carousel-cell">
+                  <div class="ucla3d4e-bioelement">
+                    <div class="biowrapper">
+                      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="img/board2021-2022/sudarshan.jpg"/>
+                    </div>
+                    <div class="ucla3d4e-biodesc">
+                      <h4 class="biotext">Sudarshan Seshadri - Technical Instructor</h4>
+                      <p class="biotext">
+                        Hi there! I'm Sudarshan Seshadri, a 2nd year Electrical Engineering major. 
+                        
+                        I love making both cursed and functional 3D printed designs. 
+                        
+                        While I'm not creating, I enjoy trekking, playing video games, and Petting Powell cat every day until I don't (yes, that was me!).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div id="cell5" class="carousel-cell">
+                  <div class="ucla3d4e-bioelement">
+                    <div class="biowrapper">
+                      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img5" src="img/board2021-2022/kyle.jpeg"/>
+                    </div>
+                    <div class="ucla3d4e-biodesc">
+                      <h4 class="biotext">Kyle C. Ho - Lab Manager</h4>
+                      <p class="biotext">
+                        Kyle is a fourth year mechanical engineering freshman who strives to create contraptions that are completely pointless, but not entirely useless. 
+                            
+                        Besides spending more time than he cares to admit designing these contraptions, Kyle also enjoys using 3D printing to create costumes and cosplay props with his sister; from Overwatch to the Marvel Cinematic Universe, Kyle will gladly shunt his studies to bring these characters to life. 
+                            
+                        Not the best role model.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div id="cell6" class="carousel-cell">
+                  <div class="ucla3d4e-bioelement">
+                    <div class="biowrapper">
+                      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="img/board2021-2022/brian.jpg"/>
+                    </div>
+                    <div class="ucla3d4e-biodesc">
+                      <h4 class="biotext">Brian Wu - Social Chair</h4>
+                      <p class="biotext">
+                        Brian is a second year Computational and Systems Biology Major. 
+                        
+                        He likes to print keyboards, so talk to him about keyboards. 
+                        
+                        In his free time, he enjoys video games, working out, swimming and basketball.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div id="cell7" class="carousel-cell">
+                  <div class="ucla3d4e-bioelement">
+                    <div class="biowrapper">
+                      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img6" src="img/board2021-2022/tiff.JPG"/>
+                    </div>
+                    <div class="ucla3d4e-biodesc">
+                      <h4 class="biotext">Tiffany Lee - Social Chair</h4>
+                      <p class="biotext">
+                        Tiffany is a fourth year undergraduate computer science major. 
+                            
+                        She discovered the world of 3D printing through 3D4E and is very excited to design more projects on Fusion 360. 
+                            
+                        She is also involved with the Innovation Lab in Boelter as a volunteer. 
+                            
+                        During her free time, she enjoys watching Chinese dramas and doing graphic designing. 
+                            
+                        In the future, she wants to travel to different cities like Shanghai, Vancouver, and New York.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div id="cell8" class="carousel-cell">
+                  <div class="ucla3d4e-bioelement">
+                    <div class="biowrapper">
+                      <img style="max-width: 100%; max-height: 100%; object-fit:cover; margin: auto" id="img8" src="img/board2021-2022/vincent.jpg"/>
+                    </div>
+                    <div class="ucla3d4e-biodesc">
+                      <h4 class="biotext">Vincent - Outreach Coordinator</h4>
+                      <p class="biotext">
+                        Hello! I’m a fourth year computer science major who first found 3D4E and 3D printing from the flight team. 
+                        
+                        I’m excited to keep learning about 3D printing this year and working with new people on exciting projects. 
+                        
+                        I grew up in the Bay Area enjoying watching the NBA in my spare time as well as running and playing video games.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div id="cell9" class="carousel-cell">
+                  <div class="ucla3d4e-bioelement">
+                    <div class="biowrapper">
+                      <img style="max-width: 100%; max-height: 100%; object-fit:cover; margin: auto" id="img10" src="img/board2021-2022/lushe.jpg"/>
+                    </div>
+                    <div class="ucla3d4e-biodesc">
+                      <h4 class="biotext">Lushe Shipkov- Treasurer</h4>
+                      <p class="biotext">
+                        Hey, my name is Lushe Shipkov, and I'm a 3rd year aerospace engineering major. 
+                        
+                        My focus in the club this year is working on flight team, and when I'm not in class 
+                        
+                        I enjoy all things 3D-printing, programming, and enjoying everything LA has to offer!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div id="cell10" class="carousel-cell">
+                  <div class="ucla3d4e-bioelement">
+                    <div class="biowrapper">
+                      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img9" src="img/board2021-2022/ryan.JPG"/>
+                    </div>
+                    <div class="ucla3d4e-biodesc">
+                      <h4 class="biotext">Ryan Tong - Webmaster</h4>
+                      <p class="biotext">
+                        Ryan is a fourth year computer engineering major who enjoys working on small projects, his most recent one being a 3D model of Pikachu.
+
+                        He has worked with microcontrollers and small circuits, and outside of academics he likes to work out.
+
+                        He also loves to eat.
+                      </p>
+                    </div>
+                  </div>
+                </div>
