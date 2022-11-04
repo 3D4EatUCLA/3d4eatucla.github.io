@@ -1067,6 +1067,20 @@
                   </div>
                 </div>
               </div>
+              <div id="cell4" class="carousel-cell">
+              <div class="ucla3d4e-bioelement">
+                <div class="biowrapper">
+                  <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="./img/media/cursed.jpg"/>
+                </div>
+                <div class="ucla3d4e-biodesc">
+                  <h4 class="biotext">Cursed Objects</h4>
+                  <p class="biotext">Have you ever felt the need for something cursed in your life? 
+                  Maybe there is a cursed-Pikachu-shaped hole that you are trying to fill. If yes, join our cursed project group and design some 3D models that will for sure scare your roommates!
+
+                  </p>
+                </div>
+              </div>
+            </div>
         </div>
         </div>`;
         addpage.play();
