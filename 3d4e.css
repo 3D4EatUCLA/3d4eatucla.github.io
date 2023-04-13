@@ -762,7 +762,14 @@ svg {
 
   p {
     font-size: 1.5em;
-  }  
+  }
+
+  .ucla3d4e-socialsvg {
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: relative;
+  }
 
 }
 
