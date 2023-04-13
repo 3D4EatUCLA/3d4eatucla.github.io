@@ -933,6 +933,62 @@
             $('#overlay-content').append(str);
         });
 
+        //Relativity Space Factory Tour 2023
+        var pg12 = document.getElementById('factorytour2023');
+        pg12.addEventListener('click', function() {
+          var str = `<script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+          <div class="pa-gallery-player-widget" style="width:100%; height:480px; display:none;"
+            data-link="https://photos.app.goo.gl/1mVtDohQzfTuW3AC6"
+            data-title="Relativity Space Factory Tour 2023"
+            data-description="3 new items added to shared album">
+            <object data="https://lh3.googleusercontent.com/VEs03koqUf4qNz75plo6oIJ3NX3ehE9rhQBFBKBTOFUAXg1pySAKaa8N7BVHHyVRIlTLg5lzUwnIv28g9W7vgpyOsjVZnB_PBjYg-G9DlPpnHjQAAwqvbb6knp8MYdnL4B6Ed1oPDQ=w1920-h1080"></object>
+            <object data="https://lh3.googleusercontent.com/ZbE1b4svZaPfTPrvGz8jXv5efUArx3unsoXkFeDFJ-26I2DGnzaTOD-kVwWGjdwijLg0huuN7grqD5yUlqch3JEoobf-kkhbQwz3GmE8p4kE96yLpcpwYAuNEcIyOFTPsN4hmd1DDQ=w1920-h1080"></object>
+            <object data="https://lh3.googleusercontent.com/O4-ebdVJ142-itQc5VBsevp5dqY2e0rbb9FsceUES4cI4LSN2fEQk5PxvQAqeLgEZ2vKcu11T7b9kjVMrSenwTGSQDLArGvXK7viWddkeI8CZi-H-QMHFppGTQ85XvwTl48j45p-zQ=w1920-h1080"></object>
+          </div>
+          `;
+          addpage.play();
+          $('#overlay-content').append(str);
+        });
+
+        //socials and outreach (leftover pictures) 2023
+        var pg13 = document.getElementById('socialoutreach2023');
+        pg13.addEventListener('click', function() {
+          var str = `<script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+          <div class="pa-gallery-player-widget" style="width:100%; height:480px; display:none;"
+            data-link="https://photos.app.goo.gl/ET2Sb41pgyXnpnmLA"
+            data-title="Socials and Outreach 2023"
+            data-description="5 new items added to shared album">
+            <object data="https://lh3.googleusercontent.com/-NWt1fjgjQIdjEkIGwqjYSXOhPFp5PM8cBi0RCcYEj6gxZqxCeJ0gaK6mDAT6IgwaThGLOlfaugq33kZkMCJtoxivwt4SJfCOfhb9SuKvKTBrT3XD6jGBLt4B2B3MrrSzu5SPZFUlg=w1920-h1080"></object>
+            <object data="https://lh3.googleusercontent.com/dIIPkZksag93780ju3cs3hjFrrLNY-7w471D4B-vAGzD9JsXvK3uZuXv3KgYSpWFA1xmEegF6gytlR060MyeXj3auVMoeyo5rnGAUs4BEP8aM1EFuXV-Mj-uytGK8A59bkGOxNc3fQ=w1920-h1080"></object>
+            <object data="https://lh3.googleusercontent.com/-Lw0kX8XK0ifWFzkSd5hj3QBx1V8NegymOQCJTCNT5hg0UeDsixrxfBNUMk8CBCfl8ZvFhjk3a8JuCBsRa4dG2GtHTYGrRVLBv_KxbGxmYzYEmMRcuX5t_0yCyhtSmiQiX_Kj_txXw=w1920-h1080"></object>
+            <object data="https://lh3.googleusercontent.com/puPJ8oZ3qtAqEcP_cRjN54q4WMbDsMsnnAC28tzikSe48E-7zuGgUL2B8gsXh2tU-TCDKGuyywA6A26SWznbujWU_pD_HAoLgaZ9U7vRo47a78mADyXUG9Q5gorHoWJbxep2v42hcg=w1920-h1080"></object>
+            <object data="https://lh3.googleusercontent.com/OiDP0GIYHTulWLnP08Oot4TunBXbJoqFsUzVVxfg8lyv2eW9DNRtSJUmIp3hQaNaHGYkAjCdhds1B97lFIpYXVjUo8rAGWZ86ZeHppgd3Hgc_Xgjia4WIQF1KRZRt7kQq6zimf3XMQ=w1920-h1080"></object>
+          </div>          
+          `;
+          addpage.play();
+          $('#overlay-content').append(str);
+        });
+
+        var pg14 = document.getElementById('ideahacks2023');
+        pg14.addEventListener('click', function() {
+          var str = `<script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+          <div class="pa-gallery-player-widget" style="width:100%; height:480px; display:none;"
+            data-link="https://photos.app.goo.gl/sYqRE4CJpbMGTgoy7"
+            data-title="Idea Hacks 2023"
+            data-description="5 new items added to shared album">
+            <object data="https://lh3.googleusercontent.com/7pwCePzXig0EIu_Nrl1rh8BuTjsrBNOO61_DlwoGOMW_SGQDL0kfVfoYpfuY2sspYuvCjsN9c_u6ew5FGlSr6mWxzSMZLtUUVhrbwK4-UWkoT3hvjiWywEQ229TaJjGjF-hSUL4yXA=w1920-h1080"></object>
+            <object data="https://lh3.googleusercontent.com/g0dvSwRu-JlncAcVy0LWK2GgL0MAi2Ga4invdPVIir4lAZSawT6Muk1OQtSMMT66WhBnB9CSdjl3K7Jw-JJRBshO1cTYiH5JrErGXPLcSKeHRYr50bpFtvgfbUDTC6ZqfjHOiaWIJg=w1920-h1080"></object>
+            <object data="https://lh3.googleusercontent.com/cc5gk074idZvn2NtvLHGePQGwybMmJ5_RKnY-l9w3CyUcbff9Yi1M8ahsI9Om89E2mzHJmdwkFIv7sELQMe7on8jsEnZh46upqlrL5MQJMI02alP0bXxoZ9mHdhOrMwIeu-pcGqQJw=w1920-h1080"></object>
+            <object data="https://lh3.googleusercontent.com/3bHA2QQAKhjWPA4Y6iAQapeL3jhkJmEUcnOEP_SOLLZ5fqZoT5qUi3BkzhfSKPz4H09MybbxSu4lCqGPrytB8_Ybt1_fX-pXpLWtX4RKHhbP3dtTWtELyh-YS0-i_OD8IN_rUkXszQ=w1920-h1080"></object>
+            <object data="https://lh3.googleusercontent.com/gqo61hqr3_CZ8WK-LMMgJS-uC7tAhRykKL5VohrGrjIlP_Che7pQ7rKsAOLa-hf6KOSdKKpV2nOw0n9UcfDLPXx4N9azl_dFpdE-Bq6MJDyYFp9zKjwFtqZd2S1xJgeq7UrusyUkWQ=w1920-h1080"></object>
+          </div>                    
+          `;
+          addpage.play();
+          $('#overlay-content').append(str);
+        });
+
+
+
         //PDF Viewers
         var ViewPDF = document.getElementById('workshopbutton');
         ViewPDF.addEventListener('click', function() {
