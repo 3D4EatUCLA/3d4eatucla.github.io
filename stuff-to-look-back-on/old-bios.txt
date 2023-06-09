@@ -282,3 +282,20 @@ Phipson Lee
                     </div>
                   </div>
                 </div>
+                <div id="cell1" class="carousel-cell">
+                  <div class="ucla3d4e-bioelement">
+                    <div class="biowrapper">
+                      <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img1" src="img/board2021-2022/jacobi.jpg"/>
+                    </div>
+                    <div class="ucla3d4e-biodesc">
+                      <h4 class="biotext">Jacobi Gunsalus - President</h4>
+                      <p class="biotext">
+                        I'm a fourth-year mechanical engineering major PA minor from Camarillo, CA. 
+                        
+                        I like 3D modeling and printing strange creations (check out my grabCAD!), playing the piano, and using elite (strange) emoji combos. 
+                        
+                        Don't hesitate to reach out if you have questions about Mech E at UCLA, or about dealing with senioritis 👀👄👀
+                      </p>
+                    </div>
+                  </div>
+                </div>
