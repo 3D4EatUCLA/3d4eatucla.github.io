@@ -1114,12 +1114,15 @@
               <div id="cell1" class="carousel-cell">
                 <div class="ucla3d4e-bioelement">
                   <div class="biowrapper">
-                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img2" src="img/media/mechanical-keyboard.png"/>
+                    <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto;" id="img2" src="img/media/keebs2.jpg"/>
                   </div>
                   <div class="ucla3d4e-biodesc">
                     <h4 class="biotext">Mechanical Keyboards</h4>
-                    <p class="biotext">The mechanical keyboards team focuses on the CAD design and electronics of macropads, volume knobs, and smaller keyboards. 
-                      This team utilizes a combination of engineering and the arts.
+                    <p class="biotext">The mechanical keyboards team works on design of anything keyboard related, including keycaps, macropads, volume knobs,
+                    and of course, keyboards.
+                    </p>
+                    <p class="biotext">For this quarter, the team will finish building a macropad (all parts supplied for free for every member) and move
+                    on to building a 75% keyboard.
                     </p>
                   </div>
                 </div>
@@ -1131,9 +1134,9 @@
                   </div>
                   <div class="ucla3d4e-biodesc">
                     <h4 class="biotext">Flight</h4>
-                    <p class="biotext">The flight team has constructed a lightweight plane with a 6 foot wing span.
-                      It has a 3D printed chasis supported by carbon fiber rods, and its wings use a balsa wood ribcage wrapped around Monokote.
-                      In the future, we're looking into creating a drop-off payload system to distribute seeds while in the air.
+                    <p class="biotext">The flight team makes planes. They have made planes with 6 feet wing span and Sova's drone from Valorant. Currently the 
+                    team is working on a basic model plane. Join if you want to learn the basics of aerospace engineering or if you just want to fly a 3D printed
+                    aircraft!
                     </p>
                   </div>
                 </div>
@@ -1144,10 +1147,9 @@
                     <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="./img/media/point_of_care.jpg"/>
                   </div>
                   <div class="ucla3d4e-biodesc">
-                    <h4 class="biotext">Healthcare and Prosthetics</h4>
-                    <p class="biotext">The 3D4E healthcare group is working on a point of care system, 
-                      where a small module measures your vital signs. It measures blood oxygen, body temperature,
-                      and heart rate with a Raspberry Pi as the foundation, and streams to an IoT service.
+                    <h4 class="biotext">Biomed</h4>
+                    <p class="biotext"> The biomed team works to explore the medical applications of 3D printing. The team has made a prosthetic arm, 3D printed masks, and
+                    oximeters in previous years. Currently, the team is working on building a core X-Y surgery robot.
                     </p>
                   </div>
                 </div>
@@ -1155,13 +1157,12 @@
               <div id="cell4" class="carousel-cell">
               <div class="ucla3d4e-bioelement">
                 <div class="biowrapper">
-                  <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="./img/media/cursed.jpg"/>
+                  <img style="max-width: 100%; max-height: 100%; object-fit: cover; margin: auto" id="img2" src="./img/media/rc_car.jpg"/>
                 </div>
                 <div class="ucla3d4e-biodesc">
-                  <h4 class="biotext">Cursed Objects</h4>
-                  <p class="biotext">Have you ever felt the need for something cursed in your life? 
-                  Maybe there is a cursed-Pikachu-shaped hole that you are trying to fill. If yes, join our cursed project group and design some 3D models that will for sure scare your roommates!
-
+                  <h4 class="biotext">Wheels</h4>
+                  <p class="biotext"> The wheels group works on, well, anything that has wheels attached to it. This is a new group that formed this year, so join and let
+                  us know what you want to build! The team has made tech decks and is currently building a RC car.
                   </p>
                 </div>
               </div>
