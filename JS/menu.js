@@ -133,10 +133,10 @@
                 TweenMax.to(".socialmedia", 0.25, {stroke: "#ff9a3c"});
                 TweenMax.to(".socialmedia", 0.25, {fill: "#ff9a3c"});
             } else {
-                TweenMax.to(".ucla3d4e-navtitle", 0.25, {css:{color: "#3f72af"}});
-                TweenMax.to(".logostyle", 0.25, {stroke: "#112d4e"});
-                TweenMax.to(".socialmedia", 0.25, {stroke: "#3f72af"});
-                TweenMax.to(".socialmedia", 0.25, {fill: "#3f72af"});
+                TweenMax.to(".ucla3d4e-navtitle", 0.25, {css:{color: "#84dafa"}});
+                TweenMax.to(".logostyle", 0.25, {stroke: "#65a9c2"});
+                TweenMax.to(".socialmedia", 0.25, {stroke: "#84dafa"});
+                TweenMax.to(".socialmedia", 0.25, {fill: "#84dafa"});
             }
         });
 
