@@ -1,0 +1,189 @@
+<head>    
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="../3d4e.css" rel="stylesheet">
+    <link href="../shop.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/dropin/1.20.4/js/dropin.min.js"></script>
+    <script src="https://js.braintreegateway.com/web/3.55.0/js/client.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+
+    <script defer src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.4.0/firebase-database.js"></script>  
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+          https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.paypal.com/sdk/js?client-id=Ad5edD-AvJrC8DbA6lcqcw0M40zhA43OcpNHQcVrB-sZW9yFwlAWEWPmdHaAcXvenLyUka9EK8kDWHJL&currency=USD" data-sdk-integration-source="button-factory"></script>
+
+    <!-- TODO: Update Mobile UIUX -->
+    <meta charset="UTF-8">
+    <meta property="og:title" content="3D4E at UCLA">
+    <meta property="og:site_name" content="3D4E at UCLA">
+    <meta property="og:image" content="img/favicon.png">
+    <meta name="image" content="img/favicon.png">
+    <meta property="og:image:type" content="image/png">
+    <meta name="keywords" content="UCLA, 3D4E, 3D, Printing, Design, Fabrication, Modelling, Printers, Innovation, Creation, Engineer, Engineering">
+    <meta name="author" content="Cheuk Yin Phipson Lee (李卓彥)">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+<body style="background-color: #f0f5f9">
+    <div id="3d4e-menu" class="ucla3d4e-shopmenu" style="z-index: 3">
+        <div id="Logo" class="ucla3d4e-logocontainer">
+                <h3 id="shop-main-icon" class="shop-back-btn">&#8592; Back</h3>
+        </div>
+        <div></div>
+        <div class="ucla3d4e-menuitems-shop">
+        <div class="ucla3d4e-nav">
+        </div>
+        <div class="ucla3d4e-nav">
+          </div>
+        <div class="ucla3d4e-nav">
+        </div>
+      </div>
+      <div class="ucla3d4e-socialmedia">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <div id="cart-inquiry-menu" class="shop3d4e-bottomdiv">
+        <button id="shop3d4e-cart" class="shop3d4e-bottombutton">
+        <div class="ucla3d4e-socialsvg">
+          <svg id="ucla3d4e-shopcart" viewBox="0 0 20 20">
+              <path class="shop-socialmedia" fill="none" d="M17.671,13.945l0.003,0.002l1.708-7.687l-0.008-0.002c0.008-0.033,0.021-0.065,0.021-0.102c0-0.236-0.191-0.428-0.427-0.428H5.276L4.67,3.472L4.665,3.473c-0.053-0.175-0.21-0.306-0.403-0.306H1.032c-0.236,0-0.427,0.191-0.427,0.427c0,0.236,0.191,0.428,0.427,0.428h2.902l2.667,9.945l0,0c0.037,0.119,0.125,0.217,0.239,0.268c-0.16,0.26-0.257,0.562-0.257,0.891c0,0.943,0.765,1.707,1.708,1.707S10,16.068,10,15.125c0-0.312-0.09-0.602-0.237-0.855h4.744c-0.146,0.254-0.237,0.543-0.237,0.855c0,0.943,0.766,1.707,1.708,1.707c0.944,0,1.709-0.764,1.709-1.707c0-0.328-0.097-0.631-0.257-0.891C17.55,14.182,17.639,14.074,17.671,13.945 M15.934,6.583h2.502l-0.38,1.709h-2.312L15.934,6.583zM5.505,6.583h2.832l0.189,1.709H5.963L5.505,6.583z M6.65,10.854L6.192,9.146h2.429l0.19,1.708H6.65z M6.879,11.707h2.027l0.189,1.709H7.338L6.879,11.707z M8.292,15.979c-0.472,0-0.854-0.383-0.854-0.854c0-0.473,0.382-0.855,0.854-0.855s0.854,0.383,0.854,0.855C9.146,15.596,8.763,15.979,8.292,15.979 M11.708,13.416H9.955l-0.189-1.709h1.943V13.416z M11.708,10.854H9.67L9.48,9.146h2.228V10.854z M11.708,8.292H9.386l-0.19-1.709h2.512V8.292z M14.315,13.416h-1.753v-1.709h1.942L14.315,13.416zM14.6,10.854h-2.037V9.146h2.227L14.6,10.854z M14.884,8.292h-2.321V6.583h2.512L14.884,8.292z M15.978,15.979c-0.471,0-0.854-0.383-0.854-0.854c0-0.473,0.383-0.855,0.854-0.855c0.473,0,0.854,0.383,0.854,0.855C16.832,15.596,16.45,15.979,15.978,15.979 M16.917,13.416h-1.743l0.189-1.709h1.934L16.917,13.416z M15.458,10.854l0.19-1.708h2.218l-0.38,1.708H15.458z"></path>
+            </svg>
+        </div>
+        </button>
+        <button id="shop3d4e-info" class="shop3d4e-bottombutton">
+        <div class="ucla3d4e-socialsvg">
+            <svg id="ucla3d4e-shopinfo" viewBox="-2 -2 35 35" xmlns="http://www.w3.org/2000/svg">
+              <path class="shop-socialmedia" d="M15.5 22c-.823 0-1.5.677-1.5 1.5s.677 1.5 1.5 1.5c.822 0 1.5-.677 1.5-1.5s-.678-1.5-1.5-1.5zm0 1c.282 0 .5.218.5.5 0 .282-.218.5-.5.5-.282 0-.5-.218-.5-.5 0-.282.218-.5.5-.5zM16 5c-1.986 0-3.804 1.238-4.7 2.532-.525.758-.296 1.68.27 2.134.282.227.652.36 1.04.323.39-.037.778-.254 1.06-.62C14.355 8.477 15.05 8 16 8c.277 0 .915.205 1.322.563.427.375.678.806.678 1.437 0-.063-.054.236-.327.6-.276.368-.736.84-1.234 1.34-.5.498-1.047 1.034-1.517 1.66-.466.622-.923 1.413-.923 2.4v3.492c-.007.464.18.88.472 1.14.292.263.664.382 1.028.382s.735-.12 1.027-.38c.292-.263.48-.678.473-1.142V16s.053-.236.326-.6c.276-.368.736-.84 1.234-1.34.498-.498 1.047-1.034 1.516-1.66.466-.622.924-1.413.924-2.4 0-1.55-.736-2.845-1.698-3.69C18.352 5.478 17.182 5 16 5zm0 1c.91 0 1.858.372 2.642 1.06C19.414 7.74 20 8.768 20 10c0 .68-.313 1.25-.725 1.8-.41.544-.92 1.052-1.422 1.554-.502.5-.982.984-1.328 1.445-.35.465-.525.804-.525 1.2v3.508c.003.212-.057.305-.14.38-.085.076-.22.126-.36.126-.14 0-.275-.05-.36-.125-.084-.077-.143-.17-.14-.382V16c0-.68.313-1.25.724-1.8.41-.544.92-1.052 1.422-1.554.502-.5.983-.984 1.328-1.445.35-.465.526-.804.526-1.2 0-.922-.43-1.67-1.018-2.187C17.372 7.277 16.632 7 16 7c-1.49 0-2.508.958-3.124 1.76-.14.18-.253.224-.36.234-.104.01-.22-.028-.32-.108-.2-.16-.334-.41-.074-.785C12.99 6.85 14.426 6 16 6zm-1-6C6.722 0 0 6.722 0 15c0 8.278 6.722 15 15 15 8.278 0 15-6.722 15-15 0-8.278-6.722-15-15-15zm0 1c7.738 0 14 6.262 14 14s-6.262 14-14 14S1 22.738 1 15 7.262 1 15 1z"/>
+            </svg>
+        </div>
+        </button>
+      </div>
+
+    <div id="item-body" style="display: block; padding-top: 8em">
+        <div class="ucla3d4e-tab-title">
+            <h4 id="product-name">UCLA Keychain</h4>
+            <br>
+            <h6 id="product-desc" style="width: 100%; text-align: center">Show your UCLA spirit with a cool 3D printed keychain.</h6>
+        </div>
+        <div class="ucla3d4e-item-preview">
+            <div style="width: 100%; display: block;">
+                    <div class="carousel carousel-main ucla3d4e-product-details" data-flickity>
+                        <div class="carousel-cell"><img class="ucla3d4e-item-img" src="../img/shop/keychain.jpg"/></div>
+                        </div>
+                        
+                    <div class="carousel carousel-nav ucla3d4e-product-details"
+                        data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false }'>
+                        <div class="carousel-cell"><img class="ucla3d4e-item-img" src="../img/shop/keychain.jpg"/></div>
+                    </div>
+            </div>
+            <div class="ucla3d4e-item-config">
+                <h5>Amount</h5>
+                <h6 id="amount-result">$5.00 USD</h6>
+                <input id="number" type="number" value="1">
+                <select id="color" name="Color">
+                    <option id="default-color" value="Pink">Pink</option>
+                    <option value="Gold">Gold</option>
+                    <option value="Gray">Gray</option>
+                    <option value="Green">Green</option>
+                    <option value="Brown">Brown</option>
+                </select>
+                <div id="paypal-button-container" style="width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+<script src="../JS/TweenMax.min.js" type="text/javascript"></script>
+<script src="../JS/shopMenu.js" type="text/javascript"></script>
+ <script type="text/javascript">
+        $(document).ready(function () {
+            // Obtain the stored JSON information
+            console.log(JSON.parse(localStorage.getItem("product")));
+
+            // Set the menu and the buttons to appear
+            var navbar = document.getElementById("3d4e-menu"),
+            cartbar = document.getElementById("cart-inquiry-menu"),
+            itemBody = document.getElementById("item-body");
+
+
+            $(navbar).addClass("scrollUp");
+            $(cartbar).addClass("bottomDown");
+            $(itemBody).addClass("shop-fadeOut");
+
+            // Get the JSON Package
+            var productItem = JSON.parse(localStorage.getItem("product"));
+            //console.log(productItem.price);
+            $("#amount-result").html(`$${productItem.price.toFixed(2)} USD`);
+            $("#default-color").html(`${productItem.color}`);
+            $("#product-name").html(`${productItem.name}`);
+            $("#product-desc").html(`${productItem.description}`);
+
+            const selectQuantity = document.querySelector('#number');
+            selectQuantity.addEventListener('change', (event) => {
+                const result = event.target.value;
+                const currPrice = $('#checkout-button').attr('data-item-price');
+                document.getElementById("amount-result").innerHTML = "$" + ((productItem.price * result).toFixed(2).toString() + " USD");
+                $('#checkout-button').attr('data-item-quantity', result);
+                console.log("Changed attribute to " + result);
+            });
+
+            const selectColor = document.querySelector('#color');
+            selectColor.addEventListener('change', (event) => {
+                const result = event.target.value;
+                $('#checkout-button').attr('data-item-custom1-value', result);
+                console.log("Changed attribute to " + result);
+            });
+
+
+            $("#shop-main-icon").click(function(e) {
+              // Animation for making everything fade out
+              $(navbar).removeClass("scrollUp");
+              $(cartbar).removeClass("bottomDown");
+              $(itemBody).removeClass("shop-fadeOut");
+
+              // Delay before fading back in with new content
+              setTimeout(function() {
+                window.location.href = "./../shop.html";
+              }, 600)
+            });
+        });
+    </script>
+<script>
+    var productItem = JSON.parse(localStorage.getItem("product"));
+    const selectQuantity = document.querySelector('#number');
+    const selectColor = document.querySelector('#color');
+
+    paypal.Buttons({
+        style: {
+            shape: 'rect',
+            color: 'black',
+            layout: 'vertical',
+            label: 'paypal',
+            
+        },
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        currency_code: "USD",
+                        value: `${productItem.price.toFixed(2) * selectQuantity.value}`
+                    },
+                    payee: {
+                        email_address: "3d4e.ucla@gmail.com"
+                    }
+                }]
+            });
+        },
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+                alert('Transaction completed by ' + details.payer.name.given_name + '!');
+            });
+        }
+    }).render('#paypal-button-container');
+</script>
+</body>

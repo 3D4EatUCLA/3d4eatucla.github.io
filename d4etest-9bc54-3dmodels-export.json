@@ -1,0 +1,41 @@
+{
+  "buff-kirby" : {
+    "color" : "Pink",
+    "deliver" : false,
+    "description" : "A masculine Kirby with giant arms",
+    "name" : "Kirby with Legs",
+    "price" : 10,
+    "quantity" : 1,
+    "size" : {
+      "height" : 5,
+      "length" : 5,
+      "width" : 5
+    }
+  },
+  "buff-pikachu" : {
+    "color" : "Yellow",
+    "deliver" : false,
+    "description" : "Bringing Pikachu massive legs to shock the world",
+    "name" : "Pikachu with Legs",
+    "price" : 10,
+    "quantity" : 1,
+    "size" : {
+      "height" : 5,
+      "length" : 5,
+      "width" : 5
+    }
+  },
+  "usc-keychains" : {
+    "color" : "Green",
+    "deliver" : false,
+    "description" : "Trash your rivals with cool anti-USC swag",
+    "name" : "USC Keychains",
+    "price" : 10,
+    "quantity" : 1,
+    "size" : {
+      "height" : 5,
+      "length" : 5,
+      "width" : 5
+    }
+  }
+}

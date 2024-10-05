@@ -1,0 +1,70 @@
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="./JS/TweenMax.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="MWE1ZWE3NDQtZjE4Ni00NzRlLTgyYjYtODBkMzA1NzRhNjhlNjM3MDgwMTcwNTg2NjE1MDI0"></script>
+<div id="item-detail" style="display: block; padding-top: 8em">
+    <div class="ucla3d4e-tab-title">
+        <h4>UCLA Keychain</h4>
+        <br>
+        <h6 style="width: 100%; text-align: center">Show your UCLA spirit with a cool 3D printed keychain.</h6>
+    </div>
+    <div class="ucla3d4e-item-preview">
+        <div style="width: 100%; display: block;">
+                <div class="carousel carousel-main ucla3d4e-product-details" data-flickity>
+                    <div class="carousel-cell"><img class="ucla3d4e-item-img" src="./img/shop/keychain.jpg"/></div>
+                    </div>
+                    
+                <div class="carousel carousel-nav ucla3d4e-product-details"
+                    data-flickity='{ "asNavFor": ".carousel-main", "contain": true, "pageDots": false }'>
+                    <div class="carousel-cell"><img class="ucla3d4e-item-img" src="./img/shop/keychain.jpg"/></div>
+                </div>
+        </div>
+        <div class="ucla3d4e-item-config">
+            <h5>Amount</h5>
+            <h6 id="amount-result">$5.00 USD</h6>
+            <input id="number" type="number" value="1">
+            <select id="color" name="Color">
+                <option value="Pink">Pink</option>
+                <option value="Gold">Gold</option>
+                <option value="Gray">Gray</option>
+                <option value="Green">Green</option>
+                <option value="Brown">Brown</option>
+              </select>
+            <button id="checkout-button"
+            class="snipcart-add-item shop3d4e-addbutton"
+            data-item-id="ucla-keychain"
+            data-item-price="5.00"
+            data-item-url="https://3d4eatucla.github.io/products/keychain.html"
+            data-item-description="Show your UCLA spirit with a cool 3D printed keychain."
+            data-item-quantity="1"
+            data-item-min-quantity="1"
+            data-item-image="https://3d4eatucla.github.io/img/shop/keychain.jpg"
+            data-item-name="UCLA Keychain"
+            data-item-custom1-name="Color"
+            data-item-custom1-options="Pink|Gold|Gray|Green|Brown"
+            data-item-custom1-value="Pink">
+            <h6><font color="#dbe2ef">Add to cart</font></h6>
+          </button>
+        </div>
+    </div>
+</div>
+ <script type="text/javascript">
+        $(document).ready(function () {
+            const selectQuantity = document.querySelector('#number');
+
+            selectQuantity.addEventListener('change', (event) => {
+                const result = event.target.value;
+                const currPrice = $('#checkout-button').attr('data-item-price');
+                document.getElementById("amount-result").innerHTML = "$" + (parseFloat(currPrice) * result).toFixed(2).toString() + " USD";
+                $('#checkout-button').attr('data-item-quantity', result);
+                console.log("Changed attribute to " + result);
+            });
+
+            const selectColor = document.querySelector('#color');
+            selectColor.addEventListener('change', (event) => {
+                const result = event.target.value;
+                $('#checkout-button').attr('data-item-custom1-value', result);
+                console.log("Changed attribute to " + result);
+            });
+        });
+    </script>
