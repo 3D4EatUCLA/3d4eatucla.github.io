@@ -2744,3 +2744,37 @@ html.dark-mode .printer-card {
     color: var(--wrought-iron);
     line-height: 1.4;
 }
+
+.printer-filaments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--tempered-steel-rule);
+}
+
+.filament-label {
+    font-size: 0.8rem;
+    font-family: var(--ff-sans);
+    font-weight: 600;
+    color: var(--nickel);
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.filament-badge {
+    font-family: var(--ff-mono);
+    font-size: 0.75rem;
+    background-color: var(--zinc);
+    color: var(--graphite);
+    padding: 2px 8px;
+    border-radius: 12px;
+    border: 1px solid var(--aluminum);
+}
+
+html.dark-mode .filament-badge {
+    background-color: var(--tin);
+    color: var(--wrought-iron);
+    border-color: var(--cadet-steel);
+}
