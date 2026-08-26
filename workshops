@@ -970,8 +970,10 @@
 
         <div class="topnav-dropdown">
             <a href="index.html">Home</a>
-            <a href="about" class="active" aria-current="page">About</a>
-            <a href="sitemap">Site Map</a>
+            <a href="projects">Student Projects</a>
+            <a href="workshops" class="active" aria-current="page">Workshops</a>
+            <a href="media">What We've Done</a>
+            <a href="about">About Us</a>
             <div class="topnav-dropdown-theme-row">
                 <button class="theme-toggle-topnav" id="theme-toggle-mobile" type="button" title="Toggle theme"
                     aria-label="Toggle theme">
