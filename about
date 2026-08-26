@@ -930,9 +930,11 @@
     <header class="top-header">
         <nav class="top-nav">
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about" class="active" aria-current="page">About</a></li>
-                <li><a href="sitemap">Site Map</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects">Student Projects</a></li>
+            <li><a href="workshops">Workshops</a></li>
+            <li><a href="media">What We've Done</a></li>
+            <li><a href="about" class="active" aria-current="page">About Us</a></li>
                 <li>
                     <button class="theme-toggle-topnav" id="theme-toggle-top" type="button" title="Toggle theme"
                         aria-label="Toggle theme">
@@ -1134,6 +1136,7 @@
                           our social and outreach team who make sure our impact is large and noticed,
                           and executive board who lubricate the gears between every group. Every person here plays a crucial role.
                         </p>
+                        <p>If you get the chance, say hi to us when you meet us! We love to chat with people.</p>
                       </div>
                     </div>
                 </div>

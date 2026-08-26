@@ -932,8 +932,10 @@
         <nav class="top-nav">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about" class="active" aria-current="page">About</a></li>
-                <li><a href="sitemap">Site Map</a></li>
+                <li><a href="projects">Student Projects</a></li>
+                <li><a href="workshops" class="active" aria-current="page">Workshops</a></li>
+                <li><a href="media">What We've Done</a></li>
+                <li><a href="about">About Us</a></li>
                 <li>
                     <button class="theme-toggle-topnav" id="theme-toggle-top" type="button" title="Toggle theme"
                         aria-label="Toggle theme">
