@@ -1,0 +1,190 @@
+body {
+    background-color: var(--pewter);
+    background-image: none;
+}
+
+html.dark-mode body {
+    background-image: none;
+}
+
+.reader-page {
+    max-width: 75em;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    box-sizing: border-box;
+}
+
+.work-meta {
+    border: 1px solid var(--zinc);
+    border-radius: 6px;
+    background: var(--platinum);
+    margin-bottom: 2rem;
+    font-family: var(--ff-sans);
+    font-size: 0.85rem;
+    overflow: hidden;
+}
+
+.work-meta dl {
+    display: grid;
+    grid-template-columns: 13rem 1fr;
+    margin: 0;
+}
+
+.work-meta dt,
+.work-meta dd {
+    margin: 0;
+    padding: 0.65em 1.25em;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+.work-meta dt {
+    color: var(--wrought-iron);
+    font-size: 1.125em;
+    text-align: left;
+}
+
+.work-meta dd {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.3rem;
+    align-items: center;
+    color: var(--wrought-iron);
+}
+
+.work-meta dl>dt:last-of-type,
+.work-meta dl>dd:last-of-type {
+    border-bottom: none;
+}
+
+.work-meta dd.stats-row {
+    gap: 0 1.25em;
+}
+
+.work-meta dd.stats-row span {
+    white-space: nowrap;
+}
+
+.fic-tag-fandom {
+    display: inline-block;
+    font-family: var(--ff-sans);
+    padding: 0.15em 0.65em;
+    background: transparent;
+    border: 1px solid var(--copper);
+    border-radius: 2px;
+    color: var(--copper);
+}
+
+.fic-ao3-tag {
+    display: inline-block;
+    font-family: var(--ff-sans);
+    font-size: 1em;
+    padding: 0.12em 0.55em;
+    background: transparent;
+    border-radius: 2px;
+    line-height: 1.5;
+}
+
+.fic-ao3-tag.warn {
+    color: var(--rust);
+    border: 1px solid var(--rust);
+}
+
+.fic-ao3-tag.ship,
+.fic-ao3-tag.character {
+    color: var(--tempered-steel);
+    border: 1px solid var(--tempered-steel);
+}
+
+.fic-ao3-tag.freeform {
+    color: var(--titanium);
+    border: 1px solid var(--titanium);
+}
+
+.work-preface {
+    margin-inline: 5%;
+    padding-inline: 0;
+    margin: 1.5em 3em;
+    padding: 0.643em 0.643em 0;
+    float: none;
+}
+
+.work-title {
+    text-align: center;
+    margin: 0 0 0.15rem;
+    font-family: var(--ff-sans);
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-style: unset;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--graphite);
+    padding-bottom: unset;
+    position: unset;
+    border-bottom: unset;
+}
+
+h1::after {
+    content: unset;
+}
+
+blockquote::before {
+    content: unset;
+}
+
+.preface-module {
+    margin-bottom: 1.25em;
+}
+
+.preface-module h3 {
+    font-family: var(--ff-sans);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--wrought-iron);
+    margin: 0 0 0.4em;
+    border-bottom: 1.5px solid var(--zinc);
+    padding-bottom: 0.25em;
+}
+
+.preface-module blockquote {
+    margin: 0;
+    padding: 0.4em 0 0.4em 1.5em;
+    color: var(--wrought-iron);
+}
+
+.chapter-start {
+    padding-top: 1.25rem;
+}
+
+.scene-break {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    color: var(--nickel);
+    letter-spacing: 6px;
+    font-size: 0.8rem;
+}
+
+.scene-break+p {
+    text-indent: 0 !important;
+}
+
+@media (max-width: 600px) {
+
+    .settings-panel {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .work-meta dl {
+        grid-template-columns: 1fr;
+    }
+
+    .work-meta dt {
+        padding-bottom: 0.2em;
+        border-bottom: none;
+    }
+
+    .work-meta dd {
+        padding-top: 0;
+        padding-bottom: 0.65em;
+    }
+}

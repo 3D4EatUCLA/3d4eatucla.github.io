@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3D4E at UCLA's website. We focus on collaboration and fabrication through 3D printers.">
+    <meta name="keywords" content="UCLA, 3D4E, 3D, Printing, Design, Fabrication, Modelling, Printers, Innovation, Creation, Engineer, Engineering">
+    <meta name="author" content="3D4E">
+    <meta name="theme-color" content="#fffaf3" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#2a273f" media="(prefers-color-scheme: dark)">
+    <meta property="og:site_name" content="3D4E at UCLA">
+    <meta property="og:title" content="3D4E at UCLA">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="3D4E's website">
+    <meta property="og:url" content="https://3d4eatucla.github.io">
+    <meta property="og:image" content="https://3d4eatucla.github.io/card.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="3D4E at UCLA">
+    <meta name="twitter:description" content="3D4E's website">
+    <meta name="twitter:image" content="https://3d4eatucla.github.io/card.jpg">
+    <title>Home - 3D4E at UCLA</title>
+    <link rel="canonical" href="about">
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" sizes="any">
+    <link rel="icon" href="assets/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <script>(function () { const s = localStorage.getItem("theme"); const d = window.matchMedia("(prefers-color-scheme: dark)").matches; if (s === "dark" || (!s && d)) document.documentElement.classList.add("dark-mode"); })();</script>
+    <script>document.documentElement.classList.add('js')</script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/transition.css">
+
+    <style>
+        :root {
+            --graphite-shadow: rgb(62 71 79 / 0.15);
+            --graphite-shadow-strong: rgb(62 71 79 / 0.24);
+
+            --platinum-gloss: rgb(255 255 255 / 0.34);
+            --platinum-gloss-soft: rgb(255 255 255 / 0.12);
+
+            --blue-steel-sheet: rgb(138 158 176 / 0.34);
+            --tempered-steel-sheet: rgb(122 142 158 / 0.24);
+            --copper-sheet: rgb(183 125 109 / 0.14);
+
+            --blue-steel-highlight: rgb(138 158 176 / 0.12);
+            --tempered-steel-glow: rgb(122 142 158 / 0.28);
+
+            --tempered-steel-rule: rgb(122 142 158 / 0.22);
+            --graphite-overlay: rgb(62 71 79 / 0.36);
+        }
+
+        html.dark-mode {
+            --graphite-shadow: rgb(0 0 0 / 0.28);
+            --graphite-shadow-strong: rgb(0 0 0 / 0.38);
+
+            --platinum-gloss: rgb(235 232 223 / 0.16);
+            --platinum-gloss-soft: rgb(235 232 223 / 0.07);
+
+            --blue-steel-sheet: rgb(158 181 198 / 0.26);
+            --tempered-steel-sheet: rgb(131 154 170 / 0.18);
+            --copper-sheet: rgb(201 142 125 / 0.12);
+
+            --blue-steel-highlight: rgb(158 181 198 / 0.11);
+            --tempered-steel-glow: rgb(158 181 198 / 0.24);
+
+            --tempered-steel-rule: rgb(158 181 198 / 0.18);
+            --graphite-overlay: rgb(0 0 0 / 0.45);
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            flex: 0 0 325px; /* Locks the wrapper to the exact width of one card */
+            display: flex;
+            align-items: center;
+        }
+
+        .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            scroll-behavior: smooth; /* Ensures clicking the arrows looks smooth */
+            width: 100%;
+            border-radius: 10px; /* Clips the container so the card edges look clean */
+            box-shadow: 0 10px 34px var(--graphite-shadow); /* Moved shadow here from the card */
+        }
+
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel-container .profile-card {
+            flex: 0 0 100%; /* Forces the card to take up exactly one full frame */
+            margin: 0; /* Removes the original 20px margin so it sits flush */
+            box-shadow: none; /* Shadow is handled by the container now */
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+        }
+
+        /* Arrow Styling */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--platinum);
+            color: var(--wrought-iron);
+            border: 1px solid var(--aluminum);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px var(--graphite-shadow);
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .carousel-btn:hover {
+            background: var(--zinc);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .carousel-btn.prev { left: -18px; }
+        .carousel-btn.next { right: -18px; }
+
+        .profile-card-center {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .profile-card-center:hover::after {
+            animation: shine .6s both;
+        }
+
+        .profile-card-center::after {
+            content: '';
+            width: 325px;
+            height: 100%;
+            border-radius: 10px;
+            position: absolute;
+            pointer-events: none;
+            background: linear-gradient(120deg,
+                    transparent 0%,
+                    transparent 34%,
+                    var(--platinum-gloss-soft) 40%,
+                    var(--platinum-gloss) 50%,
+                    var(--platinum-gloss-soft) 60%,
+                    transparent 66%,
+                    transparent 100%);
+            background-size: 300% 300%;
+            opacity: .55;
+            background-position: 0% 0%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+        }
+
+        .profile-card {
+            width: 325px;
+            overflow: hidden;
+            margin: 20px;
+            border-radius: 10px;
+            background: var(--platinum);
+            position: relative;
+            box-shadow: 0 10px 34px var(--graphite-shadow);
+            padding: 70px 25px 55px;
+            text-align: center;
+        }
+
+        .profile-card::after {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            width: 100px;
+            height: 16px;
+            margin-left: -50px;
+            background: var(--zinc);
+            border-radius: 25px;
+            box-shadow: inset 0 2px 6px var(--graphite-shadow);
+            z-index: 2;
+        }
+
+        .profile-card::before {
+            content: "3D4E at UCLA • est. 2016";
+            background: linear-gradient(to top right, var(--tempered-steel), var(--dark-steel));
+            position: absolute;
+            bottom: -0.5px;
+            left: 0;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            color: var(--platinum);
+            font-family: var(--ff-technical);
+            font-size: var(--fs-body);
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        html.dark-mode .profile-card::before {
+            background: linear-gradient(to top right, var(--brushed-steel), var(--tempered-steel));
+            color: var(--pewter);
+        }
+
+        .gradient-shapes {
+            position: absolute;
+            background: linear-gradient(135deg,
+                    var(--blue-steel-sheet),
+                    var(--tempered-steel-sheet));
+            width: 150%;
+            height: 300px;
+            top: -80px;
+            right: -25%;
+            transform: rotate(20deg);
+            opacity: 1;
+            z-index: 0;
+        }
+
+        .gradient-shapes::before {
+            content: "";
+            background: linear-gradient(-45deg,
+                    var(--tempered-steel-sheet),
+                    var(--copper-sheet));
+            width: 150%;
+            height: 300px;
+            position: absolute;
+            transform: rotate(-40deg);
+            top: -80px;
+            right: -25%;
+        }
+
+        .profile-photo {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            padding: 2px;
+            border: 4px solid var(--blue-steel);
+            margin: 0 auto 20px;
+            overflow: hidden;
+            background: var(--zinc);
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .name {
+            font: 600 32px;
+            margin: 5px 5px 0;
+            color: var(--wrought-iron);
+            line-height: 1.2;
+            position: relative;
+            z-index: 1;
+        }
+
+        .job {
+            color: var(--smoked-steel);
+            margin: 5px 5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .country {
+            color: var(--dark-steel);
+            margin: -5px 5px 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        html.dark-mode .country {
+            color: var(--blue-steel);
+        }
+
+        .bio {
+            font: 400 15px;
+            color: var(--wrought-iron);
+            margin: 15px 10px 0;
+            line-height: 1.4;
+            position: relative;
+            z-index: 1;
+        }
+
+        .intro-grid {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .art-showcase {
+            flex: 0 0 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .art-showcase img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid var(--aluminum);
+            border-radius: 8px;
+        }
+
+        .artwork-info {
+            padding: 0.3125rem 0.5rem;
+            text-align: center;
+            background-color: var(--platinum);
+            width: 100%;
+            margin: 1em auto;
+            font-size: 0.89em;
+            color: var(--wrought-iron);
+        }
+
+        .artwork-info p {
+            margin: 0.5rem 0;
+            text-wrap: balance;
+        }
+
+        .notebook-paper {
+            flex: 1;
+            padding: 0;
+            padding-top: calc(20px / 2);
+            background: radial-gradient(calc(20px / 2) at top,
+                    transparent 90%,
+                    var(--platinum) 100%);
+            background-position: 0 0;
+            background-repeat: repeat-x;
+            background-size: calc(20px * 1.5) calc(20px / 2);
+            overflow: hidden;
+            min-width: 0;
+        }
+
+        .notebook-content {
+            padding: 2.5rem 2rem 2rem;
+            background: var(--platinum);
+            overflow: hidden;
+        }
+
+        .notebook-content p {
+            width: 100%;
+            line-height: 1.55em;
+            display: block;
+            background-image: linear-gradient(to bottom,
+                    transparent 96%,
+                    var(--tempered-steel-rule) 100%,
+                    var(--tempered-steel-rule) 96%,
+                    transparent 100%);
+            background-size: 100% 1.55em;
+            background-repeat: repeat-y;
+            margin: 1em 0;
+        }
+
+        .notebook-content p:first-child {
+            margin-top: 0;
+        }
+
+        .notebook-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .pixel-badges {
+            margin: 0.5rem 0 0 0;
+            padding-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .pixel-badges img {
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+            flex-shrink: 0;
+        }
+
+        .blueprint-container {
+            position: relative;
+        }
+
+        .blueprint-container img {
+            display: block;
+            filter: unset;
+        }
+
+        .blueprint-instruction {
+            font-family: var(--ff-mono);
+            color: var(--wrought-iron);
+        }
+
+        .blueprint-instruction::after {
+            content: ' (Click diagram sections)';
+            font-weight: normal;
+        }
+
+        .blueprint-legend {
+            margin: 1rem 0;
+            padding: 0.75rem 1rem 0;
+            font-family: var(--ff-mono);
+            font-size: var(--fs-sm);
+            line-height: 1.8;
+            color: var(--wrought-iron);
+        }
+
+        .blueprint-legend div {
+            letter-spacing: 0.5px;
+        }
+
+        .blueprint-hover-label {
+            font-family: var(--ff-mono);
+            font-size: 0.85rem;
+            color: var(--dark-steel);
+            height: 1.5em;
+            margin-bottom: 0.5rem;
+        }
+
+        html.dark-mode .blueprint-hover-label {
+            color: var(--blue-steel);
+        }
+
+        area[data-spec] {
+            cursor: pointer;
+        }
+
+        .area-highlight {
+            position: absolute;
+            pointer-events: none;
+            border: 2px solid var(--blue-steel);
+            background: var(--blue-steel-highlight);
+            box-shadow: 0 0 18px var(--tempered-steel-glow);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .area-highlight.active {
+            opacity: 1;
+        }
+
+        .spec-sheet {
+            margin: 2rem 0;
+            background: var(--platinum);
+            font-family: var(--ff-mono);
+            font-weight: var(--font-weight-regular);
+            color: var(--wrought-iron);
+            border: 1px solid var(--aluminum);
+        }
+
+        .spec-sheet-titleblock {
+            padding: 1.25rem 1.5rem;
+            background: var(--zinc);
+        }
+
+        .titleblock-main {
+            margin-bottom: 0.75rem;
+        }
+
+        .titleblock-title {
+            font-size: 1.5rem;
+            letter-spacing: 1pt;
+            color: var(--graphite);
+            margin: 0 0 0.25rem 0;
+        }
+
+        .titleblock-subtitle {
+            font-size: var(--fs-xs);
+            color: var(--nickel);
+            letter-spacing: 0.5pt;
+            margin: 0;
+        }
+
+        .titleblock-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 1.5rem;
+            padding: 0.5rem 0 0;
+            border-top: 1px solid var(--tempered-steel-rule);
+        }
+
+        .info-row {
+            font-size: var(--fs-xs);
+            white-space: nowrap;
+        }
+
+        .info-label {
+            color: var(--nickel);
+        }
+
+        .info-value {
+            color: var(--graphite);
+        }
+
+        .spec-table-container {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .spec-table-desktop {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: var(--fs-sm);
+            display: table;
+        }
+
+        .spec-table thead {
+            background: var(--pewter);
+        }
+
+        .spec-table th {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: var(--fs-xs);
+            letter-spacing: 0.5pt;
+            color: var(--dark-steel);
+            border-right: 1px solid var(--tempered-steel-rule);
+            font-weight: var(--font-weight-regular);
+        }
+
+        html.dark-mode .spec-table th {
+            color: var(--blue-steel);
+        }
+
+        .spec-table th:last-child {
+            border-right: none;
+        }
+
+        .spec-table tbody tr {
+            border-bottom: 1px solid var(--tempered-steel-rule);
+        }
+
+        .spec-table td {
+            padding: 0.75rem 1rem;
+            color: var(--wrought-iron);
+            vertical-align: top;
+        }
+
+        .col-item {
+            color: var(--dark-steel);
+            text-align: center;
+            width: 72px;
+        }
+
+        html.dark-mode .col-item {
+            color: var(--blue-steel);
+        }
+
+        .col-designation {
+            color: var(--graphite);
+        }
+
+        .col-author {
+            color: var(--wrought-iron);
+        }
+
+        .col-year {
+            text-align: center;
+            color: var(--nickel);
+            width: 80px;
+        }
+
+        .spec-cards-mobile {
+            display: none;
+            padding: 0;
+        }
+
+        .spec-card {
+            padding: 1rem 1.25rem;
+            background: var(--pewter);
+            border-bottom: 1px solid var(--tempered-steel-rule);
+        }
+
+        .card-header {
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px dotted var(--tempered-steel);
+        }
+
+        .card-number {
+            font-size: var(--fs-xs);
+            color: var(--dark-steel);
+            letter-spacing: 1pt;
+            margin-right: 1rem;
+        }
+
+        html.dark-mode .card-number {
+            color: var(--blue-steel);
+        }
+
+        .card-year {
+            font-size: var(--fs-xs);
+            color: var(--nickel);
+        }
+
+        .card-title {
+            line-height: 1.3;
+            color: var(--graphite);
+            margin: 0 0 0.5rem 0;
+        }
+
+        .card-author {
+            font-size: var(--fs-sm);
+            color: var(--wrought-iron);
+            margin: 0;
+        }
+
+        .spec-sheet-footer {
+            padding: 1rem 1.5rem;
+            background: var(--zinc);
+        }
+
+        .footer-notes {
+            font-size: var(--fs-xs);
+            line-height: 1.5;
+            color: var(--wrought-iron);
+            margin: 0 0 1rem 0;
+        }
+
+        .footer-notes strong {
+            color: var(--dark-steel);
+        }
+
+        html.dark-mode .footer-notes strong {
+            color: var(--blue-steel);
+        }
+
+        .blurry {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(8px);
+            background: var(--graphite-overlay);
+            z-index: 9998;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .blurry.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .spec-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            z-index: 9999;
+            pointer-events: none;
+            max-width: 90vw;
+            max-height: 85vh;
+            width: 800px;
+            display: flex;
+            flex-direction: column;
+            filter: unset;
+        }
+
+        .spec-popup.show {
+            animation: enhancein 0.3s ease forwards;
+            pointer-events: auto;
+        }
+
+        .spec-popup.hide {
+            animation: enhanceout 0.3s ease forwards;
+            pointer-events: none;
+        }
+
+        .spec-popup .spec-sheet {
+            margin: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            max-height: 85vh;
+        }
+
+        .spec-popup .spec-sheet-titleblock {
+            flex-shrink: 0;
+        }
+
+        .spec-popup .spec-sheet-footer {
+            flex-shrink: 0;
+        }
+
+        .spec-popup .spec-table thead {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .spec-close {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
+            background: var(--graphite);
+            color: var(--platinum);
+            border: none;
+            border-radius: 4px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            font-family: var(--ff-mono);
+            transition:
+                transform 0.2s ease,
+                background-color 0.2s ease;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .spec-close:hover {
+            background: var(--dark-steel);
+            transform: scale(1.04);
+        }
+
+        html.dark-mode .spec-close {
+            background: var(--graphite);
+            color: var(--pewter);
+        }
+
+        html.dark-mode .spec-close:hover {
+            background: var(--tempered-steel);
+        }
+
+        .spec-close::after {
+            content: '✕';
+            display: block;
+            transform: translateY(-1px);
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        @keyframes enhancein {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes enhanceout {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+        }
+
+        html.dark-mode .profile-card::after {
+            background: var(--zinc);
+        }
+
+        html.dark-mode .spec-card {
+            background-color: var(--platinum);
+        }
+
+        @media (max-width: 768px) {
+
+            .intro-grid {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .art-showcase {
+                flex: 1 1 100%;
+            }
+
+            .notebook-paper {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .notebook-content {
+                max-width: 100%;
+            }
+
+            .blueprint-hover-label {
+                display: none;
+            }
+
+            .blueprint-legend div {
+                cursor: pointer;
+                padding: 0.5rem;
+                margin: -0.5rem -1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                transition: background 0.2s ease;
+            }
+
+            .blueprint-legend div:active {
+                background: rgb(138 158 176 / 0.10);
+            }
+
+            html.dark-mode .blueprint-legend div:active {
+                background: rgb(158 181 198 / 0.10);
+            }
+
+            .blueprint-instruction::after {
+                content: ' (Tap diagram sections or list below)';
+                font-weight: normal;
+            }
+
+            .spec-sheet-titleblock {
+                padding: 1rem;
+            }
+
+            .titleblock-title {
+                font-size: 1.25rem;
+            }
+
+            .titleblock-info {
+                gap: 0 1rem;
+            }
+
+            .spec-table-desktop {
+                display: none;
+            }
+
+            .spec-cards-mobile {
+                display: block;
+            }
+
+            .spec-sheet-footer {
+                padding: 1rem;
+            }
+
+            .spec-popup {
+                max-width: 95vw;
+                max-height: 85vh;
+            }
+
+            .spec-close {
+                width: 36px;
+                height: 36px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .profile-card {
+                width: 95%;
+                max-width: 325px;
+            }
+
+            .spec-sheet {
+                margin: 1.5rem 0;
+            }
+
+            .spec-sheet-titleblock {
+                padding: 0.875rem;
+            }
+
+            .spec-card {
+                padding: 0.875rem 1rem;
+            }
+
+            .card-title {
+                font-size: 0.9rem;
+            }
+
+            .spec-sheet-footer {
+                padding: 0.875rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .carousel-wrapper {
+                flex: 0 0 auto; /* Removes the strict 325px lock */
+                width: 100%;
+                max-width: 325px;
+                margin: 0 auto; /* Centers the carousel */
+            }
+
+            /* Shift the arrows inside the card so they don't go off-screen */
+            .carousel-btn.prev { left: 8px; }
+            .carousel-btn.next { right: 8px; }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-container .profile-card {
+                width: 100%; /* Overrides the existing 95% rule */
+                max-width: 100%;
+            }
+        }
+    </style>
+    <script src="assets/js/transition.js" defer></script>
+</head>
+
+<body class="top-nav-layout">
+    <header class="top-header">
+        <nav class="top-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about" class="active" aria-current="page">About</a></li>
+                <li><a href="sitemap">Site Map</a></li>
+                <li>
+                    <button class="theme-toggle-topnav" id="theme-toggle-top" type="button" title="Toggle theme"
+                        aria-label="Toggle theme">
+                        <svg class="theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                        <svg class="theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+
+            <button class="topnav-hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+
+        <div class="topnav-dropdown">
+            <a href="index.html">Home</a>
+            <a href="about" class="active" aria-current="page">About</a>
+            <a href="sitemap">Site Map</a>
+            <div class="topnav-dropdown-theme-row">
+                <button class="theme-toggle-topnav" id="theme-toggle-mobile" type="button" title="Toggle theme"
+                    aria-label="Toggle theme">
+                    <svg class="theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <main id="main-content" class="content" tabindex="-1">
+            <section class="right-stack">
+                <div class="profile-card-center" aria-hidden="true">
+                    <div class="profile-card">
+                        <div class="gradient-shapes"></div>
+                        <div class="profile-photo">
+                            <img src="assets/img/about/Board Photos/Maxime.jpg" alt="">
+                        </div>
+                        <div class="name h-label">Maxime</div>
+                        <div class="job h-label">Computer Science</div>
+                        <div class="country h-label">External Vice President</div>
+                        <div class="bio">
+                          Hey, I'm Maxime. I love open source 3D printer design.
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                      <div class="gradient-shapes"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="#ffd700" style="position: absolute; top: 16px; right: 18px; transform: rotate(15deg); filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); z-index: 10;" aria-hidden="true">
+                          <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+                        </svg>
+                      <div class="profile-photo">
+                        <img src="assets/img/about/Board Photos/Yancy.jpg" alt="">
+                      </div>
+                      <div class="name h-label">Yancy</div>
+                      <div class="job h-label">Mathematics of Computation</div>
+                      <div class="country h-label">President</div>
+                      <div class="bio">
+                        I'm Yancy. I used to run the biomed project before.
+                      </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="gradient-shapes"></div>
+                        <div class="profile-photo">
+                            <img src="assets/img/about/Board Photos/Eric.jpg" alt="">
+                        </div>
+                        <div class="name h-label">Eric</div>
+                        <div class="job h-label">Electrical Engineering</div>
+                        <div class="country h-label">Internal Vice President</div>
+                        <div class="bio">
+                            I'm also doing premed while pursuing my EE degree. 
+                        </div>
+                    </div>
+                </div>
+
+
+                <h1>About Us</h1>
+                <section class="right">
+                    <div class="chalkboard">
+                      <p>
+                        3D4E is a multi-collegiate organization of students interested in 3D printing and its applications.
+                      </p>
+                        <p>
+                          We provide 3D printing expertise & engineering resources to all UCLA and her surrounding community.
+                          We also enable you to bring your transformative ideas to life, with a little elbow grease and a helping hand!
+                          We pride ourselves on our openness, our response times, our material selections,
+                          and our printer infrastructure to make sure the only question you have about your projects will be how soon can I get it. 
+                        </p>
+                        <!-- TODO: Add a popup thing when you click boelter 6514 which gives instructions on how to reach our lab. -->
+                        <p>
+                          We offer printing resources in our lab (Boelter 6514) and technical expertise with our board members! Come say hi, we always have someone between 12-5 PM. It's a space for any student to print, study or just hang out (˶ᵔヮᵔ˶) 
+                          <br>
+                          <br>
+                          Additionally, we:
+                          <ul>
+                            <!-- TODO: link project hours to our student Projects page -->
+                            <li>host weekly project hours to collaborate on multidisciplinary projects</li>
+                            <li>offer workshops on 3D modeling/printing software and skills</li>
+                            <li>host social events to encourage bonding and teamwork</li>
+                            <li>organize outreach events for local middle- and high-school students</li>
+                            <li>connect with companies and alumni to bring opportunities to students</li>
+                          </ul>
+                        </p>
+                    </div>
+                </section>
+
+                <div class="intro-grid">
+                  <div class="carousel-wrapper">
+                    <!-- Left Arrow -->
+                    <button class="carousel-btn prev" aria-label="Previous person">❮</button>
+                    <div class="carousel-container" id="board-carousel">
+                      <div class="profile-card">
+                        <div class="gradient-shapes"></div>
+                        <div class="profile-photo">
+                          <img src="assets/img/about/Board Photos/Maxime.jpg" alt="">
+                        </div>
+                        <div class="name h-label">Maxime</div>
+                        <div class="job h-label">Computer Science</div>
+                        <div class="country h-label">External Vice President</div>
+                        <div class="bio">
+                          Hey I'm Maxime. I love open source 3D printer design.
+                        </div>
+                      </div>
+
+                      <div class="profile-card">
+                        <div class="gradient-shapes"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="#ffd700" style="position: absolute; top: 16px; right: 18px; transform: rotate(15deg); filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); z-index: 10;" aria-hidden="true">
+                          <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+                        </svg>
+                        <div class="profile-photo">
+                          <img src="assets/img/about/Board Photos/Yancy.jpg" alt="">
+                        </div>
+                        <div class="name h-label">Yancy</div>
+                        <div class="job h-label">Mathematics of Computation</div>
+                        <div class="country h-label">President</div>
+                        <div class="bio">
+                          I'm Yancy. I used to run the biomed project before.
+                        </div>
+                      </div>
+
+                      <div class="profile-card">
+                        <div class="gradient-shapes"></div>
+                        <div class="profile-photo">
+                          <img src="assets/img/about/Board Photos/Eric.jpg" alt="">
+                        </div>
+                        <div class="name h-label">Eric</div>
+                        <div class="job h-label">Electrical Engineering</div>
+                        <div class="country h-label">Internal Vice President</div>
+                        <div class="bio">
+                          I'm also doing premed while persuing my EE degree. 
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-btn next" aria-label="Next person">❯</button>
+                  </div>
+
+                    <div class="notebook-paper">
+                      <div class="notebook-content">
+                        <p>
+                          I'm really into clothes; I spend way too much time thrifting and I've been slowly
+                          teaching myself to sew. Sustainable fashion is something I care a lot about, and making
+                          my own clothes feels like the natural next step, even if I'm still figuring it out.
+                        </p>
+                        <p>
+                          Baseball also takes up an embarrassing amount of my free time. I'm a Yankees fan,
+                          Gerrit Cole is my favorite pitcher, and I watch pretty much every game when I can. I've
+                          made it to a few in person too. I follow the Cubs as well, but only because I'm very
+                          normal about PCA and Seiya's dynamic...
+                        </p>
+                        <p>
+                          I like strong alcohol and going to breweries. I also play video games sometimes -- I
+                          main Jack-O' in Guilty Gear, Nami in League, and white mage in FFXIV -- but I
+                          haven't decided if I like them yet.
+                        </p>
+                      </div>
+                    </div>
+                </div>
+
+                
+            </section>
+        </main>
+    </div>
+    <script>
+        const car = document.getElementById('board-carousel');
+        let timer;
+
+        // Handles both forward (1) and backward (-1) movement with looping
+        const move = (dir = 1) => {
+            const w = car.offsetWidth, len = car.children.length;
+            const nextIdx = (Math.round(car.scrollLeft / w) + dir + len) % len;
+            car.scrollTo({ left: nextIdx * w, behavior: 'smooth' });
+        };
+
+        const play = () => timer = setInterval(move, 4000);
+        const reset = () => { clearInterval(timer); play(); };
+
+        // Button clicks
+        document.querySelector('.carousel-btn.prev').onclick = () => { move(-1); reset(); };
+        document.querySelector('.carousel-btn.next').onclick = () => { move(1); reset(); };
+
+        // Pause on hover/touch, resume on leave
+        ['mouseenter', 'touchstart'].forEach(e => car.addEventListener(e, () => clearInterval(timer), { passive: true }));
+        ['mouseleave', 'touchend'].forEach(e => car.addEventListener(e, play));
+
+        play(); // Start autoplay on load
+    </script>
+    <script src="assets/js/allpages.js" defer></script>
+</body>
+</html>

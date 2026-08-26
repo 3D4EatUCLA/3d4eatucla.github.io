@@ -1,0 +1,63 @@
+:root {
+    --layer-count:          14;
+    --filament:             #FF6B00;
+    --filament-line:        #7a2f06;
+    --layer-height:         calc(100vh / var(--layer-count));
+    --transition-duration:  0.8s;
+}
+
+html.js body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        to top,
+        var(--filament) 0,
+        var(--filament) calc(var(--layer-height) - 2px),
+        var(--filament-line) calc(var(--layer-height) - 2px),
+        var(--filament-line) var(--layer-height)
+    );
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+    will-change: clip-path;
+}
+
+html.revealing body::before {
+    animation: wipeDown var(--transition-duration) ease-out forwards;
+}
+
+html.revealed body::before {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+
+html.painting body::before {
+    animation: paintUp var(--transition-duration) ease-out forwards;
+}
+
+@keyframes paintUp {
+    0%  { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); }
+    100%  { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+}
+
+@keyframes wipeDown {
+    0%  { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+    100%  { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); }
+}
+
+
+#filament-nozzle {
+    position: fixed;
+    z-index: 10000;
+    pointer-events: none;
+    width: 44px;
+    height: 54px;
+    left: -60px;
+    bottom: 0;
+    opacity: 0;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,.5));
+    will-change: left bottom opacity;
+}
+
+#filament-nozzle.active { opacity: 1; }
