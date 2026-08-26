@@ -1059,8 +1059,7 @@
                 <br>
                 Additionally, we:
                 <ul>
-                  <!-- TODO: link project hours to our student Projects page -->
-                  <li>host weekly project hours to collaborate on multidisciplinary projects</li>
+                  <li>host weekly <a href="projects">project hours</a> to collaborate on multidisciplinary projects</li>
                   <li>offer workshops on 3D modeling/printing software and skills</li>
                   <li>host social events to encourage bonding and teamwork</li>
                   <li>organize outreach events for local middle- and high-school students</li>
