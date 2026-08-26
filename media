@@ -1,6 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<!-- No regular need to touch the head. -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,45 +22,954 @@
     <meta name="twitter:title" content="3D4E at UCLA">
     <meta name="twitter:description" content="3D4E's website">
     <meta name="twitter:image" content="https://3d4eatucla.github.io/card.jpg">
-    <title>Home - 3D4E at UCLA</title>
-    <link rel="canonical" href="index.html">
+    <title>Media - 3D4E at UCLA</title>
+    <link rel="canonical" href="about">
     <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" sizes="any">
     <link rel="icon" href="assets/icons/favicon-32x32.png" type="image/png" sizes="32x32">
-    <!-- TODO get icons for this page's apple touch icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
     <script>(function () { const s = localStorage.getItem("theme"); const d = window.matchMedia("(prefers-color-scheme: dark)").matches; if (s === "dark" || (!s && d)) document.documentElement.classList.add("dark-mode"); })();</script>
-    <link rel="preload" href="assets/fonts/Avara-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/ApfelGrotezk-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="assets/fonts/CommitMono-400-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <script>document.documentElement.classList.add('js')</script>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/transition.css">
-    <script>document.documentElement.classList.add('js')</script>
-    <!-- <script src="assets/js/prism.js" defer></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" defer></script>
-    <script src="assets/js/printer-anim.js" defer></script>
+
+    <style>
+        :root {
+            --graphite-shadow: rgb(62 71 79 / 0.15);
+            --graphite-shadow-strong: rgb(62 71 79 / 0.24);
+
+            --platinum-gloss: rgb(255 255 255 / 0.34);
+            --platinum-gloss-soft: rgb(255 255 255 / 0.12);
+
+            --blue-steel-sheet: rgb(138 158 176 / 0.34);
+            --tempered-steel-sheet: rgb(122 142 158 / 0.24);
+            --copper-sheet: rgb(183 125 109 / 0.14);
+
+            --blue-steel-highlight: rgb(138 158 176 / 0.12);
+            --tempered-steel-glow: rgb(122 142 158 / 0.28);
+
+            --tempered-steel-rule: rgb(122 142 158 / 0.22);
+            --graphite-overlay: rgb(62 71 79 / 0.36);
+        }
+
+        html.dark-mode {
+            --graphite-shadow: rgb(0 0 0 / 0.28);
+            --graphite-shadow-strong: rgb(0 0 0 / 0.38);
+
+            --platinum-gloss: rgb(235 232 223 / 0.16);
+            --platinum-gloss-soft: rgb(235 232 223 / 0.07);
+
+            --blue-steel-sheet: rgb(158 181 198 / 0.26);
+            --tempered-steel-sheet: rgb(131 154 170 / 0.18);
+            --copper-sheet: rgb(201 142 125 / 0.12);
+
+            --blue-steel-highlight: rgb(158 181 198 / 0.11);
+            --tempered-steel-glow: rgb(158 181 198 / 0.24);
+
+            --tempered-steel-rule: rgb(158 181 198 / 0.18);
+            --graphite-overlay: rgb(0 0 0 / 0.45);
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            flex: 0 0 325px; /* Locks the wrapper to the exact width of one card */
+            display: flex;
+            align-items: center;
+        }
+
+        .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            scroll-behavior: smooth; /* Ensures clicking the arrows looks smooth */
+            width: 100%;
+            border-radius: 10px; /* Clips the container so the card edges look clean */
+            box-shadow: 0 10px 34px var(--graphite-shadow); /* Moved shadow here from the card */
+        }
+
+        .carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel-container .profile-card {
+            flex: 0 0 100%; /* Forces the card to take up exactly one full frame */
+            margin: 0; /* Removes the original 20px margin so it sits flush */
+            box-shadow: none; /* Shadow is handled by the container now */
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+        }
+
+        /* Arrow Styling */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--platinum);
+            color: var(--wrought-iron);
+            border: 1px solid var(--aluminum);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px var(--graphite-shadow);
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .carousel-btn:hover {
+            background: var(--zinc);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .carousel-btn.prev { left: -18px; }
+        .carousel-btn.next { right: -18px; }
+
+        .profile-card-center {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .profile-card-center:hover::after {
+            animation: shine .6s both;
+        }
+
+        .profile-card-center::after {
+            content: '';
+            width: 325px;
+            height: 100%;
+            border-radius: 10px;
+            position: absolute;
+            pointer-events: none;
+            background: linear-gradient(120deg,
+                    transparent 0%,
+                    transparent 34%,
+                    var(--platinum-gloss-soft) 40%,
+                    var(--platinum-gloss) 50%,
+                    var(--platinum-gloss-soft) 60%,
+                    transparent 66%,
+                    transparent 100%);
+            background-size: 300% 300%;
+            opacity: .55;
+            background-position: 0% 0%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 20;
+        }
+
+        .profile-card {
+            width: 325px;
+            overflow: hidden;
+            margin: 20px;
+            border-radius: 10px;
+            background: var(--platinum);
+            position: relative;
+            box-shadow: 0 10px 34px var(--graphite-shadow);
+            padding: 70px 25px 55px;
+            text-align: center;
+        }
+
+        .profile-card::after {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            width: 100px;
+            height: 16px;
+            margin-left: -50px;
+            background: var(--zinc);
+            border-radius: 25px;
+            box-shadow: inset 0 2px 6px var(--graphite-shadow);
+            z-index: 2;
+        }
+
+        .profile-card::before {
+            content: "3D4E at UCLA • est. 2016";
+            background: linear-gradient(to top right, var(--tempered-steel), var(--dark-steel));
+            position: absolute;
+            bottom: -0.5px;
+            left: 0;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            color: var(--platinum);
+            font-family: var(--ff-technical);
+            font-size: var(--fs-body);
+            font-weight: normal;
+            text-transform: uppercase;
+        }
+
+        html.dark-mode .profile-card::before {
+            background: linear-gradient(to top right, var(--brushed-steel), var(--tempered-steel));
+            color: var(--pewter);
+        }
+
+        .gradient-shapes {
+            position: absolute;
+            background: linear-gradient(135deg,
+                    var(--blue-steel-sheet),
+                    var(--tempered-steel-sheet));
+            width: 150%;
+            height: 300px;
+            top: -80px;
+            right: -25%;
+            transform: rotate(20deg);
+            opacity: 1;
+            z-index: 0;
+        }
+
+        .gradient-shapes::before {
+            content: "";
+            background: linear-gradient(-45deg,
+                    var(--tempered-steel-sheet),
+                    var(--copper-sheet));
+            width: 150%;
+            height: 300px;
+            position: absolute;
+            transform: rotate(-40deg);
+            top: -80px;
+            right: -25%;
+        }
+
+        .profile-photo {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            padding: 2px;
+            border: 4px solid var(--blue-steel);
+            margin: 0 auto 20px;
+            overflow: hidden;
+            background: var(--zinc);
+            display: block;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .name {
+            font: 600 32px;
+            margin: 5px 5px 0;
+            color: var(--wrought-iron);
+            line-height: 1.2;
+            position: relative;
+            z-index: 1;
+        }
+
+        .job {
+            color: var(--smoked-steel);
+            margin: 5px 5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .country {
+            color: var(--dark-steel);
+            margin: -5px 5px 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        html.dark-mode .country {
+            color: var(--blue-steel);
+        }
+
+        .bio {
+            font: 400 15px;
+            color: var(--wrought-iron);
+            margin: 15px 10px 0;
+            line-height: 1.4;
+            position: relative;
+            z-index: 1;
+        }
+
+        .intro-grid {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .art-showcase {
+            flex: 0 0 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .art-showcase img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid var(--aluminum);
+            border-radius: 8px;
+        }
+
+        .artwork-info {
+            padding: 0.3125rem 0.5rem;
+            text-align: center;
+            background-color: var(--platinum);
+            width: 100%;
+            margin: 1em auto;
+            font-size: 0.89em;
+            color: var(--wrought-iron);
+        }
+
+        .artwork-info p {
+            margin: 0.5rem 0;
+            text-wrap: balance;
+        }
+
+        .notebook-paper {
+            flex: 1;
+            padding: 0;
+            padding-top: calc(20px / 2);
+            background: radial-gradient(calc(20px / 2) at top,
+                    transparent 90%,
+                    var(--platinum) 100%);
+            background-position: 0 0;
+            background-repeat: repeat-x;
+            background-size: calc(20px * 1.5) calc(20px / 2);
+            overflow: hidden;
+            min-width: 0;
+        }
+
+        .notebook-content {
+            padding: 2.5rem 2rem 2rem;
+            background: var(--platinum);
+            overflow: hidden;
+        }
+
+        .notebook-content p {
+            width: 100%;
+            line-height: 1.55em;
+            display: block;
+            background-image: linear-gradient(to bottom,
+                    transparent 96%,
+                    var(--tempered-steel-rule) 100%,
+                    var(--tempered-steel-rule) 96%,
+                    transparent 100%);
+            background-size: 100% 1.55em;
+            background-repeat: repeat-y;
+            margin: 1em 0;
+        }
+
+        .notebook-content p:first-child {
+            margin-top: 0;
+        }
+
+        .notebook-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .pixel-badges {
+            margin: 0.5rem 0 0 0;
+            padding-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .pixel-badges img {
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+            flex-shrink: 0;
+        }
+
+        .blueprint-container {
+            position: relative;
+        }
+
+        .blueprint-container img {
+            display: block;
+            filter: unset;
+        }
+
+        .blueprint-instruction {
+            font-family: var(--ff-mono);
+            color: var(--wrought-iron);
+        }
+
+        .blueprint-instruction::after {
+            content: ' (Click diagram sections)';
+            font-weight: normal;
+        }
+
+        .blueprint-legend {
+            margin: 1rem 0;
+            padding: 0.75rem 1rem 0;
+            font-family: var(--ff-mono);
+            font-size: var(--fs-sm);
+            line-height: 1.8;
+            color: var(--wrought-iron);
+        }
+
+        .blueprint-legend div {
+            letter-spacing: 0.5px;
+        }
+
+        .blueprint-hover-label {
+            font-family: var(--ff-mono);
+            font-size: 0.85rem;
+            color: var(--dark-steel);
+            height: 1.5em;
+            margin-bottom: 0.5rem;
+        }
+
+        html.dark-mode .blueprint-hover-label {
+            color: var(--blue-steel);
+        }
+
+        area[data-spec] {
+            cursor: pointer;
+        }
+
+        .area-highlight {
+            position: absolute;
+            pointer-events: none;
+            border: 2px solid var(--blue-steel);
+            background: var(--blue-steel-highlight);
+            box-shadow: 0 0 18px var(--tempered-steel-glow);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .area-highlight.active {
+            opacity: 1;
+        }
+
+        .spec-sheet {
+            margin: 2rem 0;
+            background: var(--platinum);
+            font-family: var(--ff-mono);
+            font-weight: var(--font-weight-regular);
+            color: var(--wrought-iron);
+            border: 1px solid var(--aluminum);
+        }
+
+        .spec-sheet-titleblock {
+            padding: 1.25rem 1.5rem;
+            background: var(--zinc);
+        }
+
+        .titleblock-main {
+            margin-bottom: 0.75rem;
+        }
+
+        .titleblock-title {
+            font-size: 1.5rem;
+            letter-spacing: 1pt;
+            color: var(--graphite);
+            margin: 0 0 0.25rem 0;
+        }
+
+        .titleblock-subtitle {
+            font-size: var(--fs-xs);
+            color: var(--nickel);
+            letter-spacing: 0.5pt;
+            margin: 0;
+        }
+
+        .titleblock-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 1.5rem;
+            padding: 0.5rem 0 0;
+            border-top: 1px solid var(--tempered-steel-rule);
+        }
+
+        .info-row {
+            font-size: var(--fs-xs);
+            white-space: nowrap;
+        }
+
+        .info-label {
+            color: var(--nickel);
+        }
+
+        .info-value {
+            color: var(--graphite);
+        }
+
+        .spec-table-container {
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .spec-table-desktop {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: var(--fs-sm);
+            display: table;
+        }
+
+        .spec-table thead {
+            background: var(--pewter);
+        }
+
+        .spec-table th {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: var(--fs-xs);
+            letter-spacing: 0.5pt;
+            color: var(--dark-steel);
+            border-right: 1px solid var(--tempered-steel-rule);
+            font-weight: var(--font-weight-regular);
+        }
+
+        html.dark-mode .spec-table th {
+            color: var(--blue-steel);
+        }
+
+        .spec-table th:last-child {
+            border-right: none;
+        }
+
+        .spec-table tbody tr {
+            border-bottom: 1px solid var(--tempered-steel-rule);
+        }
+
+        .spec-table td {
+            padding: 0.75rem 1rem;
+            color: var(--wrought-iron);
+            vertical-align: top;
+        }
+
+        .col-item {
+            color: var(--dark-steel);
+            text-align: center;
+            width: 72px;
+        }
+
+        html.dark-mode .col-item {
+            color: var(--blue-steel);
+        }
+
+        .col-designation {
+            color: var(--graphite);
+        }
+
+        .col-author {
+            color: var(--wrought-iron);
+        }
+
+        .col-year {
+            text-align: center;
+            color: var(--nickel);
+            width: 80px;
+        }
+
+        .spec-cards-mobile {
+            display: none;
+            padding: 0;
+        }
+
+        .spec-card {
+            padding: 1rem 1.25rem;
+            background: var(--pewter);
+            border-bottom: 1px solid var(--tempered-steel-rule);
+        }
+
+        .card-header {
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px dotted var(--tempered-steel);
+        }
+
+        .card-number {
+            font-size: var(--fs-xs);
+            color: var(--dark-steel);
+            letter-spacing: 1pt;
+            margin-right: 1rem;
+        }
+
+        html.dark-mode .card-number {
+            color: var(--blue-steel);
+        }
+
+        .card-year {
+            font-size: var(--fs-xs);
+            color: var(--nickel);
+        }
+
+        .card-title {
+            line-height: 1.3;
+            color: var(--graphite);
+            margin: 0 0 0.5rem 0;
+        }
+
+        .card-author {
+            font-size: var(--fs-sm);
+            color: var(--wrought-iron);
+            margin: 0;
+        }
+
+        .spec-sheet-footer {
+            padding: 1rem 1.5rem;
+            background: var(--zinc);
+        }
+
+        .footer-notes {
+            font-size: var(--fs-xs);
+            line-height: 1.5;
+            color: var(--wrought-iron);
+            margin: 0 0 1rem 0;
+        }
+
+        .footer-notes strong {
+            color: var(--dark-steel);
+        }
+
+        html.dark-mode .footer-notes strong {
+            color: var(--blue-steel);
+        }
+
+        .blurry {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(8px);
+            background: var(--graphite-overlay);
+            z-index: 9998;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .blurry.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .spec-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            z-index: 9999;
+            pointer-events: none;
+            max-width: 90vw;
+            max-height: 85vh;
+            width: 800px;
+            display: flex;
+            flex-direction: column;
+            filter: unset;
+        }
+
+        .spec-popup.show {
+            animation: enhancein 0.3s ease forwards;
+            pointer-events: auto;
+        }
+
+        .spec-popup.hide {
+            animation: enhanceout 0.3s ease forwards;
+            pointer-events: none;
+        }
+
+        .spec-popup .spec-sheet {
+            margin: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            max-height: 85vh;
+        }
+
+        .spec-popup .spec-sheet-titleblock {
+            flex-shrink: 0;
+        }
+
+        .spec-popup .spec-sheet-footer {
+            flex-shrink: 0;
+        }
+
+        .spec-popup .spec-table thead {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .spec-close {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 44px;
+            height: 44px;
+            background: var(--graphite);
+            color: var(--platinum);
+            border: none;
+            border-radius: 4px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            font-family: var(--ff-mono);
+            transition:
+                transform 0.2s ease,
+                background-color 0.2s ease;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .spec-close:hover {
+            background: var(--dark-steel);
+            transform: scale(1.04);
+        }
+
+        html.dark-mode .spec-close {
+            background: var(--graphite);
+            color: var(--pewter);
+        }
+
+        html.dark-mode .spec-close:hover {
+            background: var(--tempered-steel);
+        }
+
+        .spec-close::after {
+            content: '✕';
+            display: block;
+            transform: translateY(-1px);
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        @keyframes enhancein {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes enhanceout {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+        }
+
+        html.dark-mode .profile-card::after {
+            background: var(--zinc);
+        }
+
+        html.dark-mode .spec-card {
+            background-color: var(--platinum);
+        }
+
+        @media (max-width: 768px) {
+
+            .intro-grid {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .art-showcase {
+                flex: 1 1 100%;
+            }
+
+            .notebook-paper {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .notebook-content {
+                max-width: 100%;
+            }
+
+            .blueprint-hover-label {
+                display: none;
+            }
+
+            .blueprint-legend div {
+                cursor: pointer;
+                padding: 0.5rem;
+                margin: -0.5rem -1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                transition: background 0.2s ease;
+            }
+
+            .blueprint-legend div:active {
+                background: rgb(138 158 176 / 0.10);
+            }
+
+            html.dark-mode .blueprint-legend div:active {
+                background: rgb(158 181 198 / 0.10);
+            }
+
+            .blueprint-instruction::after {
+                content: ' (Tap diagram sections or list below)';
+                font-weight: normal;
+            }
+
+            .spec-sheet-titleblock {
+                padding: 1rem;
+            }
+
+            .titleblock-title {
+                font-size: 1.25rem;
+            }
+
+            .titleblock-info {
+                gap: 0 1rem;
+            }
+
+            .spec-table-desktop {
+                display: none;
+            }
+
+            .spec-cards-mobile {
+                display: block;
+            }
+
+            .spec-sheet-footer {
+                padding: 1rem;
+            }
+
+            .spec-popup {
+                max-width: 95vw;
+                max-height: 85vh;
+            }
+
+            .spec-close {
+                width: 36px;
+                height: 36px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .profile-card {
+                width: 95%;
+                max-width: 325px;
+            }
+
+            .spec-sheet {
+                margin: 1.5rem 0;
+            }
+
+            .spec-sheet-titleblock {
+                padding: 0.875rem;
+            }
+
+            .spec-card {
+                padding: 0.875rem 1rem;
+            }
+
+            .card-title {
+                font-size: 0.9rem;
+            }
+
+            .spec-sheet-footer {
+                padding: 0.875rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .carousel-wrapper {
+                flex: 0 0 auto; /* Removes the strict 325px lock */
+                width: 100%;
+                max-width: 325px;
+                margin: 0 auto; /* Centers the carousel */
+            }
+
+            /* Shift the arrows inside the card so they don't go off-screen */
+            .carousel-btn.prev { left: 8px; }
+            .carousel-btn.next { right: 8px; }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-container .profile-card {
+                width: 100%; /* Overrides the existing 95% rule */
+                max-width: 100%;
+            }
+        }
+    </style>
     <script src="assets/js/transition.js" defer></script>
-    
 </head>
 
-<body>
+<body class="top-nav-layout">
     <header class="top-header">
         <nav class="top-nav">
-            <a href="index.html" class="nav-logo" aria-label="Home">
-                <img src="assets/icons/logo.svg" alt="3D4E Logo" />
-            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about" class="active" aria-current="page">About</a></li>
+                <li><a href="sitemap">Site Map</a></li>
+                <li>
+                    <button class="theme-toggle-topnav" id="theme-toggle-top" type="button" title="Toggle theme"
+                        aria-label="Toggle theme">
+                        <svg class="theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                        <svg class="theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+
             <button class="topnav-hamburger" aria-label="Menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
         </nav>
+
         <div class="topnav-dropdown">
             <a href="index.html">Home</a>
-            <a href="projects">Student Projects</a>
-            <a href="workshops">Workshops</a>
-            <a href="media">What We've Done</a>
-            <a href="about">About Us</a>
+            <a href="about" class="active" aria-current="page">About</a>
+            <a href="sitemap">Site Map</a>
             <div class="topnav-dropdown-theme-row">
                 <button class="theme-toggle-topnav" id="theme-toggle-mobile" type="button" title="Toggle theme"
                     aria-label="Toggle theme">
@@ -88,170 +998,175 @@
 
     <div class="container">
         <main id="main-content" class="content" tabindex="-1">
-            <aside class="sidebar" role="complementary">
-                <nav class="navigation" aria-label="Primary">
-                    <ul class="sidenav-links">
-                        <li class="nav-item">
-                            <a href="index.html" class="nav-logo" aria-label="Home">
-                                <svg width="128" height="128" xmlns="http://www.w3.org/2000/svg" style="vector-effect:non-scaling-stroke" xml:space="preserve" viewBox="0 0 1000 1000">
-                                    <title>Layer 1</title>
-                                    <path d="M927.07 739.079c-6.074 3.688-11.822 7.202-17.636 10.651-39.46 23.472-78.963 46.9-118.422 70.394-44.536 26.487-89.028 53.04-133.564 79.505-48.853 29.047-97.749 58.007-146.558 87.14-2.994 1.801-5.185 1.606-8.07-.021-48.614-27.355-97.271-54.623-145.929-81.913-61.196-34.297-122.414-68.593-183.61-102.89a188507 188507 0 0 1-90.2-50.61c-.737-.412-1.41-.976-2.342-1.605-.065-.76-.174-1.605-.174-2.43-.13-15.619-.216-31.216-.368-46.835-.217-22.886-.456-45.772-.694-68.637-.109-9.544-.24-19.068-.348-28.613-.347-31.194-.672-62.41-1.04-93.605-.326-26.682-.695-53.387-1.042-80.069l-1.041-83.713-1.042-80.07c-.021-1.388 0-2.754 0-4.707C214.693 177.967 354.505 94.84 494.468 11.603c7.116 3.927 14.1 7.723 21.043 11.606 45.164 25.338 90.33 50.718 135.516 76.056 54.688 30.674 109.42 61.304 164.107 91.978 34.145 19.155 68.268 38.354 102.457 57.422 2.516 1.41 3.275 2.993 3.297 5.727.13 23.233.412 46.466.629 69.678.13 14.577.195 29.133.369 43.711.304 27.03.694 54.08 1.02 81.11l1.04 83.193 1.042 80.59c.347 27.55.65 55.121 1.063 82.672.238 14.534.672 29.068 1.02 43.733M553.56 552.193c62.65.282 124.648.586 186.885.868 4.209-17.506 5.467-34.817 6.096-52.887H508.373c-1.04 0-2.082-.044-3.123.021-3.254.174-4.209 1.323-3.927 4.577.239 2.929.564 5.858.564 8.764.065 14.535.022 29.047.022 43.582-.022 61.434-.043 122.847-.022 184.282 0 1.323.282 2.646.434 3.926 32.8-.412 73.41-6.269 117.62-30.825 13.384-7.441 26.53-15.294 37.92-26.054-8.07-9.154-15.685-17.831-23.538-26.769-24.188 19.545-50.696 33.407-81.023 41.325.065-18.808-.13-36.9.152-55.078 1.909-.109 3.102-.239 4.317-.239 15.944.109 31.888.174 47.833.369 5.64.065 11.323.108 16.942.737 7.766.89 13.016-2.277 16.682-8.829.26-.455.542-.89.802-1.345 6.422-11.215 10.738-23.19 12.713-35.967.282-1.8.043-3.666.043-5.662-1.562-.151-2.56-.347-3.58-.347-20.456-.238-40.89-.499-61.347-.694-8.309-.087-16.639.044-24.947-.065-3.059-.043-6.118-.412-9.285-.629-.065-14.382-.065-28.353-.065-43.06m-51.65-297.737V495.01c5.402 1.084 240.597.889 244.545-.26-2.646-65.774-25.966-122.848-73.083-169.228-47.183-46.488-104.626-69.31-171.462-71.066m-57.313 92.65h-6.16c-20.826 0-41.651.087-62.455-.086-3.861-.044-6.725 1.215-9.133 3.926-1.497 1.67-2.972 3.428-4.121 5.337-4.86 8.026-8.417 16.66-10.934 25.684-1.518 5.424-2.668 10.977-1.779 16.9h92.825c.347 0 .694.064 1.02.151.151.043.303.152.433.26s.239.239.673.673c0 14.339.043 28.982-.044 44.167h-182.72c-4.035 17.094-6.139 33.95-6.247 51.043 6.55.998 237.234.716 240.532-.195v-240.12c-56.576 1.15-106.123 20.261-150.528 54.645 7.028 7.896 13.666 15.315 20.608 23.081 23.472-18.33 49.005-31.758 78.03-39.46zm.412 250.598H322.595c-11.628 0-11.888.109-16.118-10.803-4.99-12.864-9.74-25.858-14.08-38.96-2.928-8.83-5.119-17.919-7.353-26.965-1.367-5.51-2.3-11.15-3.167-16.769-.456-2.885-1.54-4.273-4.686-4.078-6.898.456-13.818.673-20.717 1.02-.26.021-.52.412-1.041.89.586 7.527 1.193 15.25 1.8 22.994 1.41 18.048 5.402 35.598 11.15 52.692 7.94 23.624 19.242 45.599 33.625 66.012 2.842 4.035 5.727 5.467 10.586 5.445 41.824-.195 83.648-.13 125.472-.087 2.17 0 4.36.326 6.834.542v89.115c17.072 4.014 34.058 6.4 51.477 6.205V500.933c-5.618-1.215-47.247-.998-51.325.282-.044 31.758-.044 63.647-.044 96.49m460.218 123.303c0-2.971.021-4.859 0-6.746-.348-20.435-.738-40.87-1.02-61.305-.39-28.07-.738-56.141-1.041-84.19-.174-15.077-.239-30.175-.369-45.252 0-1.106-.282-2.19-.542-4.143-39.091 45.967-77.596 91.262-116.644 137.165 39.894 21.498 79.267 42.713 119.616 64.471M107.92 492.776c15.359 16.118 30.045 31.542 44.731 46.966 10.261 10.781 20.5 21.606 30.804 32.366 16.4 17.159 32.865 34.253 49.287 51.39 9.328 9.762 18.59 19.61 27.919 29.394 1.367 1.454 2.863 2.799 4.295 4.187.282-.195.586-.369.868-.564-19.394-29.698-33.342-61.608-40.935-96.273-7.592-34.688-7.224-69.548-3.276-105.103-37.962 12.56-75.383 24.947-113.693 37.637m537.597-371.97c.759 16.812 1.497 32.17 2.147 47.53.413 9.327.738 18.677 1.042 28.005.39 11.758.672 23.537 1.063 35.295.282 8.091.715 16.161 1.106 24.882 46.315-18.331 92.022-36.423 138.748-54.905-48.418-27.16-95.774-53.69-144.106-80.807M102.345 732.788c3.797-.868 72.867-42.692 82.13-49.786-28.18-56.293-55.86-112.912-84.755-168.988-.433 1.865-.455 3.557-.412 5.271.217 11.237.52 22.496.673 33.733.39 27.528.759 55.078 1.041 82.607.217 21.498.195 42.995.39 64.471.109 10.543.478 21.108.738 31.65-.022.37.13.716.195 1.042m507.986 28.851c62.54 5.75 125.082 11.476 187.623 17.225.151-.347.325-.694.477-1.02l-77.943-99.874c-30.219 37.073-67.227 63.972-110.157 83.67M213.869 446.071c-5.532-5.662-112.825-87.032-116.665-88.42 0 1.843-.043 3.514 0 5.206.217 8.829.586 17.636.65 26.465.196 22.54.196 45.078.413 67.639.065 8.482.477 16.942.76 25.424.02.412.411.825.759 1.475 37.876-12.538 75.621-25.055 114.083-37.789m527.53-94.538c16.77-46.466 33.213-91.892 49.07-137.729-15.054 5.358-29.654 11.107-44.232 16.855-14.49 5.727-29.003 11.368-43.45 17.225s-29.156 11.107-44.168 17.745c34.058 22.886 61.044 51.239 82.78 85.904m-236.54 611.07 1.215.066c18.895-58.463 37.876-116.904 56.64-175.41a21 21 0 0 1-.954-.542c-35.23 25.294-70.459 50.588-105.819 75.99 16.509 33.69 32.714 66.793 48.918 99.897M114.407 516.683c.91 2.04 1.518 3.58 2.256 5.054 7.896 16.01 15.77 31.998 23.71 47.985 17.571 35.382 35.208 70.72 52.714 106.123 1.519 3.08 3.428 4.664 6.833 5.293 24.97 4.685 49.916 9.545 74.885 14.339 3.97.759 7.983 1.366 12.799 2.212-1.042-1.366-1.497-2.082-2.061-2.668-12.626-13.32-25.23-26.66-37.876-39.958a15965 15965 0 0 0-32.258-33.841c-14.946-15.663-29.893-31.325-44.883-46.944-9.718-10.13-19.523-20.175-29.22-30.305-4.903-5.12-9.61-10.456-14.578-15.532-3.796-3.884-7.853-7.506-12.321-11.758m406.83 438.828c55.925-33.255 111.611-66.38 167.319-99.506-.109-.369-.239-.737-.347-1.106-2.538 0-5.098-.109-7.636.021-12.604.651-25.208 1.41-37.811 2.018-9.155.455-18.33.737-27.507 1.063-4.512.173-9.003.195-13.515.412-13.298.65-26.595 1.323-39.893 2.04-3.775.194-7.528.563-11.129.824-3.666 11.171-30.023 89.288-29.48 94.234m261.25-482.778c36.487-28.483 72.129-56.489 107.77-84.516-.13-.369-.282-.738-.412-1.085-45.512-5.488-91.002-10.976-137.403-16.552 7.787 16.682 14.838 32.605 19.719 49.439 4.924 16.92 8.091 34.166 10.325 52.714M252.373 181.98c-9.024 4.057-143.825 83.128-146.102 86.664 33.212 8.395 66.38 16.79 99.94 25.272 15.488-37.572 30.825-74.754 46.162-111.936m-36.466 251.01c.347-.152.694-.303 1.041-.434-4.794-39.871-9.588-79.743-14.382-119.723-10.24 2.603-92.933 34.101-96.078 36.617 36.509 27.876 72.975 55.708 109.42 83.54M486.42 61.78c-.347-.13-.694-.24-1.02-.37-26.443 40.154-52.865 80.308-79.591 120.896 25.25 11.519 49.894 22.777 74.971 34.231.477-9.74.976-18.677 1.345-27.615.39-9.154.738-18.33 1.041-27.507.39-12.104.673-24.23 1.063-36.357.39-11.584.911-23.168 1.323-34.774.326-9.502.564-19.003.868-28.505m-45.512 795.287c-15.163-30.956-29.806-60.87-44.73-91.35a225537 225537 0 0 0-87.706 83.063l.456 1.042c43.668 2.408 87.358 4.794 131.98 7.245m345.18-372.946c.173.412.347.824.498 1.236 38.354 2.517 76.707 5.011 115.516 7.55v-6.292c-.109-22.539-.174-45.078-.369-67.617-.065-7.614-.477-15.207-.76-22.82-.021-.391-.477-.782-.932-1.476-38.093 29.893-76.012 59.656-113.953 89.419M604.365 772.16c1.757 1.28 2.755 2.126 3.861 2.82 20.978 13.167 41.955 26.357 62.954 39.503 13.21 8.265 26.487 16.465 39.676 24.773 1.974 1.258 3.514 1.519 5.662.239 26.596-15.945 53.256-31.78 79.874-47.682.607-.368 1.084-.954 2.19-1.974-7.418-.585-13.948-1.02-20.456-1.627-17.202-1.583-34.383-3.254-51.586-4.837-9.458-.868-18.938-1.605-28.418-2.495-16.508-1.54-32.995-3.21-49.503-4.75-14.383-1.367-28.83-2.604-44.254-3.97M498.872 57.788c-.325.108-.673.195-.998.304-.282 2.906-.694 5.813-.803 8.72-.412 12.452-.737 24.904-1.084 37.334-.13 4.664-.152 9.35-.369 14.013-.52 12.083-1.215 24.145-1.67 36.228-.478 12.452-.695 24.903-1.107 37.333-.217 6.378-.694 12.756-.976 19.134-.087 1.8.13 3.6.239 6.247 24.144-17.745 47.507-34.904 71.153-52.28-21.65-35.989-43.017-71.522-64.385-107.033m195.65 785.439c.108-.304.216-.586.346-.89-38.027-23.797-76.034-47.594-114.018-71.37-2.517 3.32-25.511 73.54-25.923 79.028 4.685-.325 9.328-.737 13.97-.954 15.012-.738 30.023-1.41 45.035-2.105 15.011-.694 30.023-1.431 45.034-2.082 9.502-.412 19.004-.694 28.505-1.085 2.365-.108 4.707-.369 7.05-.542m-484.97-47.052c-.087.412-.195.824-.282 1.215 28.7 16.096 57.422 32.214 86.187 48.332 26.335-24.926 52.41-49.612 78.485-74.299-.174-.412-.369-.803-.542-1.215a232473 232473 0 0 1-163.848 25.967m577.23-126.405c-.304.26-.608.52-.933.78 10.738 35.86 21.476 71.718 32.43 108.314a282153 282153 0 0 1 81.263-48.31c-38.18-20.587-75.47-40.697-112.76-60.784M632.935 113.669c-43.972-24.578-86.924-48.57-129.855-72.541-.086-.044-.303.065-.412.173-.13.087-.195.26-.434.608 23.234 38.613 46.51 77.292 70.025 116.383a42262 42262 0 0 1 60.676-44.623M306.498 713.741c-.108-.368-.217-.759-.347-1.128-36.249-6.92-72.52-13.818-109.29-20.825-3.21 30.327-6.355 60.111-9.63 91.046 40.413-23.407 79.851-46.25 119.267-69.093m19.416 147.968c-.066.326-.13.673-.196.998A599958 599958 0 0 0 486.68 952.95c.24-.26.5-.52.738-.78-13.601-27.79-27.181-55.578-41.021-83.866-40.11-2.17-80.308-4.382-120.483-6.595m125.103-9.089c34.622-24.925 68.745-49.243 102.456-74.19-48.549 7.267-96.208 5.271-142.913-10.673-.217.304-.412.586-.63.89 13.58 27.745 27.16 55.49 41.087 83.973m32.106-807.978c-.26-.282-.5-.564-.76-.846-39.59 23.558-79.2 47.095-119.137 70.85 11.627 19.87 22.929 39.22 34.73 59.373 28.743-43.646 56.944-86.512 85.167-129.377M340.752 255.585l1.106-.326c2.213-43.603 4.425-87.227 6.681-131.893-24.621 14.643-48.31 28.721-72.39 43.06 21.802 30.11 43.192 59.635 64.603 89.159m499.655 319.3c-8.742-12.04-53.755-64.017-56.75-65.73-.802 9.327-1.561 18.786-2.494 28.222-.477 4.816-1.67 9.567-1.865 14.383-.564 13.84-.89 27.702-1.085 41.542-.239 16.66-.282 33.298-.369 49.959 0 1.236.282 2.494.543 4.534 21.107-24.774 41.585-48.875 62.02-72.91M752.463 353.55c24.969-7.223 48.68-14.078 72.932-21.085-8.156-37.377-16.226-74.255-24.274-111.155h-.998c-15.75 43.711-31.52 87.401-47.66 132.24m-545.73 430.802c.15.347.303.716.455 1.063l175.323-27.789c-21.737-11.454-42.193-24.21-61.196-39.676-38.332 22.213-76.447 44.319-114.583 66.402M337.366 269.86c-21.693-29.915-42.865-59.309-64.818-88.313-.304 3.602.086 6.986.238 10.348a9595 9595 0 0 1 2.105 43.516c.412 9.155.715 18.31 1.062 27.485.13 3.645.196 7.267.391 10.912.52 9.827 1.128 19.654 1.67 29.48.39 6.769.716 13.559 1.085 20.327 17.354-20.37 36.336-38.136 58.267-53.755m473.385-56.38c4.252 19.632 8.157 38.006 12.235 56.336 4.079 18.223 7.745 36.553 12.235 55.036 7.484-6.205 57.877-60.459 59.7-64.19-27.66-15.532-55.361-31.043-84.17-47.182m-549.245-23.342c-5.315 9.805-45.338 108.205-45.75 112.348 17.332 10.977 34.535 22.43 52.93 33.711-.325-6.573-.585-12.04-.867-17.528-.63-11.91-1.302-23.819-1.91-35.728-.498-10.023-.91-20.045-1.366-30.067-.586-12.95-1.171-25.901-1.779-38.852-.369-7.57-.803-15.142-1.258-23.884m586.384 375.94c17.68-20.804 34.904-41.043 52.953-62.302-19.546-1.259-37.746-2.495-55.947-3.623-18.309-1.128-36.574-2.733-56.185-3.471 20.197 23.689 39.438 46.271 59.179 69.396M580.156 166.21c5.878 10.325 55.903 80.068 59.504 82.78-.347-5.705-.76-11.02-.977-16.335-.737-18.83-1.453-37.68-2.082-56.51-.542-16.075-.998-32.17-1.497-48.245 0-.26-.325-.521-.868-1.345-17.961 13.167-35.902 26.313-54.08 39.655M194.758 303.396c-.022-.369-.044-.737-.044-1.084-32.626-8.244-65.274-16.509-98.53-24.904 0 2.473-.021 4.187 0 5.879.217 15.055.456 30.11.695 45.143.043 2.603-.044 5.206.021 7.788.022 1.106.26 2.19.478 3.774 32.778-12.321 65.079-24.47 97.38-36.596m-9.35 392.557c-25.468 15.64-49.938 30.652-74.69 45.86 13.559 8.872 61.674 35.315 65.99 36.248 2.864-26.9 5.706-53.777 8.7-82.108m385.506-522.888c-10.39 7.592-20.326 14.75-30.153 22.083-9.827 7.354-19.98 14.296-30.479 22.734 20.153.044 38.527 3.146 56.75 7.354s35.684 10.738 53.212 17.507a54791 54791 0 0 0-49.33-69.678M843.4 333.029c8.374 6.638 53.712 34.622 57.313 35.338 0-1.953.022-3.818 0-5.705-.217-16.964-.477-33.928-.694-50.892-.152-11.433-.217-22.865-.369-34.297-.021-.868-.347-1.735-.694-3.34-18.786 19.935-37.051 39.285-55.556 58.896m-579.529 13.515c-16.66-10.673-32.93-21.108-50.045-32.084 4.534 37.767 8.937 74.385 13.34 110.981.326.087.673.174.999.26 7.896-27.962 19.632-54.21 35.706-79.157M771.987 662.74a34665 34665 0 0 0-42.41 8.83c24.231 31.042 47.855 61.304 71.457 91.565.304-.195.586-.368.89-.564-9.914-33.103-19.85-66.207-29.937-99.831m-371.71-470.804c-4.469 4.643-40.87 60.394-41.91 64.299 31.606-18.526 65.404-30.414 101.5-35.859v-1.171a33445 33445 0 0 0-59.59-27.269m-46.748 48.766c1.236-1.54 1.93-2.256 2.473-3.058 11.085-16.747 22.062-33.581 33.277-50.241 1.865-2.777 1.02-4.686-.347-7.029-8.938-15.228-17.81-30.479-26.726-45.707-.63-1.063-1.497-1.996-2.256-2.972-.282.087-.586.173-.868.282-1.844 35.837-3.666 71.674-5.553 108.725m415.139 119.92c.087.281.174.585.26.867 39.568 4.773 79.115 9.545 118.683 14.317-.412-1.323-1.02-1.909-1.714-2.342-16.096-10.174-32.236-20.305-48.31-30.522-2.126-1.345-4.035-1.367-6.378-.673-19.914 5.814-39.872 11.497-59.83 17.246-.932.239-1.8.738-2.711 1.106m-1.085 237.755c-.455-.087-.932-.174-1.388-.26-8.2 21.129-18.396 41.238-31.693 61.044 11.432-2.365 21.65-4.49 32.04-6.66.347-18.33.694-36.227 1.041-54.124" data-index="1" style="opacity:1;visibility:visible;fill:currentColor"/>
-                                    <path d="M704.196 443.663H554.167c-1.084-3.536-1.431-143.239-.303-150.506 31.563 8.374 59.525 23.363 84.039 44.666 32.539 28.331 54.427 63.452 66.293 105.84" data-index="51" style="opacity:1;fill:currentColor"/>
-                                    <path d="m834.314 526.013-3.922 3.921h-1.96" stroke="currentColor" fill="none" data-index="52"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="projects"><span class="nav-label">Student Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="workshops"><span class="nav-label">Workshops</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="media"><span class="nav-label">What We've Done</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="about"><span class="nav-label">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <div id="social-links">
-                                <a class="nav-icon" href="https://discord.gg/rh9EjtW5ZH">
-                                    <svg viewBox="0 0 24 24" stroke="currentColor" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M18.59 5.88997C17.36 5.31997 16.05 4.89997 14.67 4.65997C14.5 4.95997 14.3 5.36997 14.17 5.69997C12.71 5.47997 11.26 5.47997 9.83001 5.69997C9.69001 5.36997 9.49001 4.95997 9.32001 4.65997C7.94001 4.89997 6.63001 5.31997 5.40001 5.88997C2.92001 9.62997 2.25001 13.28 2.58001 16.87C4.23001 18.1 5.82001 18.84 7.39001 19.33C7.78001 18.8 8.12001 18.23 8.42001 17.64C7.85001 17.43 7.31001 17.16 6.80001 16.85C6.94001 16.75 7.07001 16.64 7.20001 16.54C10.33 18 13.72 18 16.81 16.54C16.94 16.65 17.07 16.75 17.21 16.85C16.7 17.16 16.15 17.42 15.59 17.64C15.89 18.23 16.23 18.8 16.62 19.33C18.19 18.84 19.79 18.1 21.43 16.87C21.82 12.7 20.76 9.08997 18.61 5.88997H18.59ZM8.84001 14.67C7.90001 14.67 7.13001 13.8 7.13001 12.73C7.13001 11.66 7.88001 10.79 8.84001 10.79C9.80001 10.79 10.56 11.66 10.55 12.73C10.55 13.79 9.80001 14.67 8.84001 14.67ZM15.15 14.67C14.21 14.67 13.44 13.8 13.44 12.73C13.44 11.66 14.19 10.79 15.15 10.79C16.11 10.79 16.87 11.66 16.86 12.73C16.86 13.79 16.11 14.67 15.15 14.67Z" fill="currentColor"/>
-                                    </svg>
-                                </a>
-                                <a class="nav-icon" href="https://www.instagram.com/3d4eatucla">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="currentColor"/>
-                                        <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="currentColor"/>
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="currentColor"/>
-                                    </svg>
-                                </a>
-                                <a class="nav-icon" href="mailto:3d4e.ucla@gmail.com">
-                                    <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <button id="theme-toggle" class="theme-toggle" type="button" title="Toggle theme"
-                                aria-label="Toggle theme">
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="1em" height="1em"
-                                    class="theme-toggle__lightbulb" stroke-width="0.7" stroke="currentColor"
-                                    fill="currentColor" stroke-linecap="round" viewBox="0 0 32 32">
-                                    <path stroke-width="0"
-                                        d="M9.4 9.9c1.8-1.8 4.1-2.7 6.6-2.7 5.1 0 9.3 4.2 9.3 9.3 0 2.3-.8 4.4-2.3 6.1-.7.8-2 2.8-2.5 4.4 0 .2-.2.4-.5.4-.2 0-.4-.2-.4-.5v-.1c.5-1.8 2-3.9 2.7-4.8 1.4-1.5 2.1-3.5 2.1-5.6 0-4.7-3.7-8.5-8.4-8.5-2.3 0-4.4.9-5.9 2.5-1.6 1.6-2.5 3.7-2.5 6 0 2.1.7 4 2.1 5.6.8.9 2.2 2.9 2.7 4.9 0 .2-.1.5-.4.5h-.1c-.2 0-.4-.1-.4-.4-.5-1.7-1.8-3.7-2.5-4.5-1.5-1.7-2.3-3.9-2.3-6.1 0-2.3 1-4.7 2.7-6.5z" />
-                                    <path d="M19.8 28.3h-7.6" />
-                                    <path d="M19.8 29.5h-7.6" />
-                                    <path d="M19.8 30.7h-7.6" />
-                                    <path pathLength="1" class="theme-toggle__lightbulb__coil" fill="none"
-                                        d="M14.6 27.1c0-3.4 0-6.8-.1-10.2-.2-1-1.1-1.7-2-1.7-1.2-.1-2.3 1-2.2 2.3.1 1 .9 1.9 2.1 2h7.2c1.1-.1 2-1 2.1-2 .1-1.2-1-2.3-2.2-2.3-.9 0-1.7.7-2 1.7 0 3.4 0 6.8-.1 10.2" />
-                                    <g class="theme-toggle__lightbulb__rays">
-                                        <path pathLength="1" d="M16 6.4V1.3" />
-                                        <path pathLength="1" d="M26.3 15.8h5.1" />
-                                        <path pathLength="1" d="m22.6 9 3.7-3.6" />
-                                        <path pathLength="1" d="M9.4 9 5.7 5.4" />
-                                        <path pathLength="1" d="M5.7 15.8H.6" />
-                                    </g>
-                                </svg>
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
-            </aside>
-
             <section class="right-stack">
-                <h1>Welcome to <span class="break-mobile">3D4E!</span></h1>
-                <section class="profile" aria-labelledby="about-heading">
-                    <div class="profile-left">
-                        <p>3D Printing is a 
-                            combination of art, engineering, and problem-solving. At 3D4E, 
-                            we strive to inspire people through the power of computer-aided 
-                            design, and leave our own mark by building practical solutions 
-                            to real-world problems through 3D-printed products.
-                        </p>
-                        <p>Our club’s main focus 
-                            is on group projects, in which we design, manufacture, and test 
-                            using CAD software and 3D printing. These projects range from 
-                            recreational, like , to life-changing, like our prosthetic hand. 
-                            In addition to our group efforts, 3D4E also supports members with 
-                            the resources and expertise they might need to pursue their own 
-                            individual ideas.
-                        </p>
-                        <p>
-                            We'd love to have you join us in our projects. Join our Discord, follow our Instagram, or subscribe to our mailing list. 
-                        </p>
+                <div class="profile-card-center" aria-hidden="true">
+                    <div class="profile-card">
+                        <div class="gradient-shapes"></div>
+                        <div class="profile-photo">
+                            <img src="assets/img/about/Board Photos/Maxime.jpg" alt="">
+                        </div>
+                        <div class="name h-label">Maxime</div>
+                        <div class="job h-label">Computer Science</div>
+                        <div class="country h-label">External Vice President</div>
+                        <div class="bio">
+                          Hey, I'm Maxime. I love open source 3D printer design.
+                        </div>
                     </div>
-                    <div class="profile-right">
-                        <svg class="printer-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-                            <style>
-                             .printerst0{fill:#0c71ea}
-                             .printerst1{fill:#ff165d}
-                             .printerst2{fill:#b83b5e}
-                             .printerst4{fill:#b83b5e}
-                             .printerst6{fill:#0a68ef}
-                             .printerst9{fill:#6b6b6b}
-                             .printerst10{fill:#a8a8a8}
-                             .printerst17{fill:#fff}
-                             .printerst18{fill:#3490de}
-                            </style>
-                            <g id="Body">
-                                <g id="Drone" class="print-item">
-                                    <path class="printerst0" d="M290 317c-1.7 6.1-3.2 13.5-4 22-.9 9.6-.7 18.1 0 25h4c-1.1-5.3-2.5-14.7 0-26 2.1-9.6 6.1-16.8 9-21h-9zM341.9 317c1.8 6.1 3.5 13.5 4.4 22 1 9.6.7 18.1 0 25h-4.4c1.3-5.3 2.7-14.7 0-26-2.3-9.6-6.8-16.8-9.9-21h9.9z"/>
-                                    <path class="printerst1" d="M253 304h124v13H253zM257 287h8v17h-8zM367 287h8v17h-8z"/>
-                                    <path class="printerst2" d="M258 290.8c-3-1.7-7.5-3.6-13-3.8-3.9-.2-6.7.6-9.7 1.3-4.7 1.1-11.5 2.3-20.3 2.7 8.4.4 15 1.8 19.6 3.1 4.4 1.2 7.8 2.6 12.4 1.9 4.8-.7 8.5-3.1 11-5.2zM368 289.8c-3-1.7-7.5-3.6-13-3.8-3.9-.2-6.7.6-9.7 1.3-4.7 1.1-11.5 2.3-20.3 2.7 8.4.4 15 1.8 19.6 3.1 4.4 1.2 7.8 2.6 12.4 1.9 4.8-.7 8.5-3.1 11-5.2zM265 290.8c3.1-1.7 7.6-3.6 13.3-3.8 4-.2 6.9.6 10 1.3 4.8 1.1 11.8 2.3 20.7 2.7-8.6.4-15.4 1.8-20 3.1-4.6 1.2-8 2.6-12.7 1.9-5-.7-8.8-3.1-11.3-5.2zM374 289.8c2.9-1.7 7.1-3.6 12.4-3.8 3.7-.2 6.4.6 9.3 1.3 4.5 1.1 11 2.3 19.3 2.7-8 .4-14.3 1.8-18.7 3.1-4.2 1.2-7.4 2.6-11.8 1.9-4.6-.7-8.2-3.1-10.5-5.2z"/>
-                                </g>
-                                <g id="Arm" class="print-item">
-                                    <path d="M297.8 364c.4-14.6 1.4-26.2 2.2-34.3.8-7.7 1.9-17.3 2.2-31 .1-4.7 0-8.5 0-11.1h34.3c-.1 2.9-.1 5.8 0 8.8.3 13.1 2.1 24.9 4.4 35.4 1 5.5 1.9 11.8 2.2 18.8.2 4.7.2 9.2 0 13.3h-45.3z" fill="#1245c6"/><path class="printerst4" d="M297.8 247.9l-11-7.8-8.9-8.8-5.5 3.3 7.7 13.3 12.2 9.9zM312.4 239v-22.3l2.1-19.7h6.3l2.1 21v21zM303.7 239.5l-6-17.8-3.7-16.3 5.1-1.7 7.3 16.2 5.7 16.8zM325.1 238.2l2.8-18.6 4.2-16.2 5.3.8-.9 17.8-2.7 17.5zM335.3 245.5l4.1-15.9 4.8-13.8 3.7 1-2.6 15.3-3.8 15z"/>
-                                    <path d="M303.3 236.8l-11.1 21 10 29.9h34.3l5.5-39.8c0-1.1-.3-3.9-2.2-6.6-2-2.8-4.5-4-5.5-4.4l-13.3-4.4h-8.8l-8.9 4.3z" fill="#6639a6"/>
-                                </g>
-                                <g id="Ukulele" class="print-item">
-                                    <path class="printerst6" d="M307 204l10-2 9 2-1 25-3 9h-11l-3-9z"/>
-                                    <path fill="#7c2935" d="M309 317h15l-2-79h-11z"/>
-                                    <path class="printerst6" d="M299 317c-.3 4.4-3.1 5.6-6 12-.8 1.8-3 6.7-3 13 0 3 0 8.4 3 13 5.5 8.4 17.3 8.8 22.7 9 5.5.2 14.7.6 21.3-8 3.7-4.9 4-10.5 4-12 .1-5.7-2.5-10.4-5-15-3.3-6.1-4.7-6.7-5-11-.2-3.3 4-8.1 5-10 .5-1.4.7-4.3-1-8-1.9-4.3-6.2-5.7-10-7-8.3-2.8-15.4-.8-18 0-4.5 1.3-9.2 2.7-11 7-1.4 3.2-.6 6.4 0 8 1.5 2.1 3.3 5.3 3 9z"/>
-                                    <circle cx="316" cy="314" r="8"/>
-                                </g>
-                                <path id="PrinterBG" fill="var(--pewter)" d="M200 99h240v265H200z"/>
-                                <g id="Bed">
-                                    <path class="printerst9" d="M266 371h107v15H266zM215 364h209v7H215z"/>
-                                </g>
-                                <g id="Pipe">
-                                    <path class="printerst10" d="M200 131h240v45H200z"/>
-                                    <path fill="#8e8e8e" d="M200 146h240v16H200z"/>
-                                    <g id="Extruder"><path fill="#2d2d2d" d="M206 166h47v24h-47z"/>
-                                        <path d="M252.1 182h-46.3c-3.2 0-5.9-2.6-5.9-5.9v-46.3c0-3.2 2.6-5.9 5.9-5.9h46.3c3.2 0 5.9 2.6 5.9 5.9v46.3c0 3.3-2.6 5.9-5.9 5.9z" fill="#494949"/>
-                                        <path fill="#a7a9aa" d="M225.9 190h8.9l-4.7 9z"/>
-                                        <circle class="printerst10" cx="229" cy="153" r="21"/><circle cx="229" cy="153" r="18" fill="#444"/>
-                                    </g>
-                                </g>
-                                <g id="Main">
-                                    <path d="M476 36H117c-6.6 0-12 5.4-12 12v342c0 6.6 5.4 12 12 12h359c6.6 0 12-5.4 12-12V48c0-6.6-5.4-12-12-12zm-36 350H200V121h240v265z" fill="#ff6d00"/>
-                                    <path d="M105 386h383v114H105z"/>
-                                    <path class="printerst17" d="M330.2 94.1c0 1.7-.8 2.5-2.5 2.5h-8.3c-1.6 0-2.4-.8-2.4-2.5v-6.3h4v5.3h5.2v-6.8l-5-3.4V82l5-3.4v-5.7H321v5h-4V72c0-1.7.8-2.5 2.5-2.5h8.3c1.6 0 2.5.8 2.5 2.5v6.4c0 1.1-.5 1.9-1.4 2.5l-2.5 1.6 2.6 1.6c.9.5 1.3 1.4 1.3 2.5v7.5zM346.9 91.5c0 1.6-.5 2.9-1.4 3.8-1 .9-2.2 1.4-3.8 1.4h-8.3V69.4h8.3c1.6 0 2.9.5 3.8 1.4s1.4 2.2 1.4 3.8v16.9zm-4.1-.7V75.1c0-1.5-.8-2.3-2.4-2.3h-3V93h2.9c1.7.1 2.5-.7 2.5-2.2zM361.4 83.8c0 .6-.2 1-.5 1.4-.4.4-.8.5-1.4.5H353v10.8h-2.4V69.4h8.8c.6 0 1 .2 1.4.5.4.4.5.8.5 1.4v12.5zm-2.4-.2V71.5h-6v12.1h6zM376.8 96.6h-2.5L369.2 82l.3-.5h4.3v-10h-6.2v25.1h-2.4V69.4h9.1c.6 0 1 .2 1.4.5.4.4.5.8.5 1.4v10.3c0 1.3-.9 2-2.6 2h-1.5c1.6 4.3 3.1 8.6 4.7 13zM383 96.6h-2.4V69.4h2.4v27.2zM398.7 96.6H397l-7.3-20v20h-2.3V69.4h1.8l7.1 19.7V69.4h2.3v27.2zM412.4 71.5h-4.2v25.1h-2.4V71.5h-4.2v-2.1h10.9v2.1zM424.2 96.6h-8.9V69.4h8.8v2.1h-6.4v10.2h5.8v2.2h-5.8v10.6h6.5v2.1zM439.6 96.6H437L432 82l.3-.5h4.3v-10h-6.2v25.1H428V69.4h9.1c.6 0 1 .2 1.4.5.4.4.5.8.5 1.4v10.3c0 1.3-.9 2-2.6 2h-1.5c1.5 4.3 3.1 8.6 4.7 13z"/>
-                                </g>
-                            </g>
-                            <g id="Spool">
-                                <g id="SpoolBod">
-                                    <path d="M11 175h90v174H11zM101 153h4v211h-4zM7 153h4v211H7z"/>
-                                </g>
-                                <g id="Filament">
-                                    <path class="printerst18" d="M36 356c2.8 0 5-2.3 5-5V175c0-2.8-2.2-5-5-5s-5 2.3-5 5v176c0 2.8 2.2 5 5 5zM26 356c2.8 0 5-2.3 5-5V175c0-2.8-2.2-5-5-5-2.7 0-5 2.3-5 5v176c0 2.8 2.2 5 5 5zM16 356c2.8 0 5-2.3 5-5V175c0-2.8-2.2-5-5-5-2.7 0-5 2.3-5 5v176c0 2.8 2.2 5 5 5zM96 356c2.8 0 5-2.3 5-5V175c0-2.8-2.3-5-5-5s-5 2.3-5 5v176c0 2.8 2.3 5 5 5zM86 356c2.8 0 5-2.3 5-5V175c0-2.8-2.3-5-5-5s-5 2.3-5 5v176c0 2.8 2.3 5 5 5zM76 356c2.8 0 5-2.3 5-5V175c0-2.8-2.3-5-5-5s-5 2.3-5 5v176c0 2.8 2.3 5 5 5zM66 356c2.8 0 5-2.3 5-5V175c0-2.8-2.3-5-5-5s-5 2.3-5 5v176c0 2.8 2.2 5 5 5zM56 356c2.8 0 5-2.3 5-5V175c0-2.8-2.2-5-5-5s-5 2.3-5 5v176c0 2.8 2.2 5 5 5zM46 356c2.8 0 5-2.3 5-5V175c0-2.8-2.2-5-5-5s-5 2.3-5 5v176c0 2.8 2.2 5 5 5z"/>
-                                </g>
-                            </g>
+                    <div class="profile-card">
+                      <div class="gradient-shapes"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="#ffd700" style="position: absolute; top: 16px; right: 18px; transform: rotate(15deg); filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); z-index: 10;" aria-hidden="true">
+                          <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
                         </svg>
-                        <p id="project-hours">
-                            <b>Project Hours: 7PM - 8PM Thursdays; Branch Room in Olympic Hall Makerspace</b>
+                      <div class="profile-photo">
+                        <img src="assets/img/about/Board Photos/Yancy.jpg" alt="">
+                      </div>
+                      <div class="name h-label">Yancy</div>
+                      <div class="job h-label">Mathematics of Computation</div>
+                      <div class="country h-label">President</div>
+                      <div class="bio">
+                        I'm Yancy. I used to run the biomed project before.
+                      </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="gradient-shapes"></div>
+                        <div class="profile-photo">
+                            <img src="assets/img/about/Board Photos/Eric.jpg" alt="">
+                        </div>
+                        <div class="name h-label">Eric</div>
+                        <div class="job h-label">Electrical Engineering</div>
+                        <div class="country h-label">Internal Vice President</div>
+                        <div class="bio">
+                            I'm also doing premed while pursuing my EE degree. 
+                        </div>
+                    </div>
+                </div>
+
+
+                <h1>About Us</h1>
+                <section class="right">
+                    <div class="chalkboard">
+                      <p>
+                        3D4E is a multi-collegiate organization of students interested in 3D printing and its applications.
+                      </p>
+                        <p>
+                          We provide 3D printing expertise & engineering resources to all UCLA and her surrounding community.
+                          We also enable you to bring your transformative ideas to life, with a little elbow grease and a helping hand!
+                          We pride ourselves on our openness, our response times, our material selections,
+                          and our printer infrastructure to make sure the only question you have about your projects will be how soon can I get it. 
+                        </p>
+                        <!-- TODO: Add a popup thing when you click boelter 6514 which gives instructions on how to reach our lab. -->
+                        <p>
+                          We offer printing resources in our lab (Boelter 6514) and technical expertise with our board members! Come say hi, we always have someone between 12-5 PM. It's a space for any student to print, study or just hang out (˶ᵔヮᵔ˶) 
+                          <br>
+                          <br>
+                          Additionally, we:
+                          <ul>
+                            <!-- TODO: link project hours to our student Projects page -->
+                            <li>host weekly project hours to collaborate on multidisciplinary projects</li>
+                            <li>offer workshops on 3D modeling/printing software and skills</li>
+                            <li>host social events to encourage bonding and teamwork</li>
+                            <li>organize outreach events for local middle- and high-school students</li>
+                            <li>connect with companies and alumni to bring opportunities to students</li>
+                          </ul>
                         </p>
                     </div>
                 </section>
+
+                <div class="intro-grid">
+                  <div class="carousel-wrapper">
+                    <!-- Left Arrow -->
+                    <button class="carousel-btn prev" aria-label="Previous person">❮</button>
+                    <div class="carousel-container" id="board-carousel">
+                      <div class="profile-card">
+                        <div class="gradient-shapes"></div>
+                        <div class="profile-photo">
+                          <img src="assets/img/about/Board Photos/Maxime.jpg" alt="">
+                        </div>
+                        <div class="name h-label">Maxime</div>
+                        <div class="job h-label">Computer Science</div>
+                        <div class="country h-label">External Vice President</div>
+                        <div class="bio">
+                          Hey I'm Maxime. I love open source 3D printer design.
+                        </div>
+                      </div>
+
+                      <div class="profile-card">
+                        <div class="gradient-shapes"></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="#ffd700" style="position: absolute; top: 16px; right: 18px; transform: rotate(15deg); filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); z-index: 10;" aria-hidden="true">
+                          <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+                        </svg>
+                        <div class="profile-photo">
+                          <img src="assets/img/about/Board Photos/Yancy.jpg" alt="">
+                        </div>
+                        <div class="name h-label">Yancy</div>
+                        <div class="job h-label">Mathematics of Computation</div>
+                        <div class="country h-label">President</div>
+                        <div class="bio">
+                          I'm Yancy. I used to run the biomed project before.
+                        </div>
+                      </div>
+
+                      <div class="profile-card">
+                        <div class="gradient-shapes"></div>
+                        <div class="profile-photo">
+                          <img src="assets/img/about/Board Photos/Eric.jpg" alt="">
+                        </div>
+                        <div class="name h-label">Eric</div>
+                        <div class="job h-label">Electrical Engineering</div>
+                        <div class="country h-label">Internal Vice President</div>
+                        <div class="bio">
+                          I'm also doing premed while persuing my EE degree. 
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-btn next" aria-label="Next person">❯</button>
+                  </div>
+
+                    <div class="notebook-paper">
+                      <div class="notebook-content">
+                        <p>
+                          The real star of the show at 3D4E isn't the cool projects that we do or the machinery we own.
+                          The people who help run this deserve the real credit. 
+                        </p>
+                        <p>
+                          They help out in all different roles, from our lab managers who keep our printers running 14/6 (maintenance is important),
+                          our project leads who make sure students get the skills and experiences out of their projects,
+                          our tech instructors who teach CAD to every student no matter the background,
+                          our social and outreach team who make sure our impact is large and noticed,
+                          and executive board who lubricate the gears between every group. Every person here plays a crucial role.
+                        </p>
+                      </div>
+                    </div>
+                </div>
+
+                
             </section>
         </main>
     </div>
+    <script>
+        const car = document.getElementById('board-carousel');
+        let timer;
 
+        // Handles both forward (1) and backward (-1) movement with looping
+        const move = (dir = 1) => {
+            const w = car.offsetWidth, len = car.children.length;
+            const nextIdx = (Math.round(car.scrollLeft / w) + dir + len) % len;
+            car.scrollTo({ left: nextIdx * w, behavior: 'smooth' });
+        };
+
+        const play = () => timer = setInterval(move, 4000);
+        const reset = () => { clearInterval(timer); play(); };
+
+        // Button clicks
+        document.querySelector('.carousel-btn.prev').onclick = () => { move(-1); reset(); };
+        document.querySelector('.carousel-btn.next').onclick = () => { move(1); reset(); };
+
+        // Pause on hover/touch, resume on leave
+        ['mouseenter', 'touchstart'].forEach(e => car.addEventListener(e, () => clearInterval(timer), { passive: true }));
+        ['mouseleave', 'touchend'].forEach(e => car.addEventListener(e, play));
+
+        play(); // Start autoplay on load
+    </script>
     <script src="assets/js/allpages.js" defer></script>
-
 </body>
-
 </html>
