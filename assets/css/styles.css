@@ -128,6 +128,7 @@
   font-display: swap;
 }
 
+
 :where(html) {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -167,6 +168,10 @@
 
 :where(small) {
   font-size: 80%;
+}
+
+:where(smaller) {
+  font-size: 60%;
 }
 
 :where(table) {
