@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="3D4E at UCLA's website. We focus on collaboration and fabrication through 3D printers.">
-    <meta name="keywords" content="UCLA, 3D4E, 3D, Printing, Design, Fabrication, Modelling, Printers, Innovation, Creation, Engineer, Engineering">
-    <meta name="author" content="3D4E">
-    <meta name="theme-color" content="#fffaf3" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#2a273f" media="(prefers-color-scheme: dark)">
-    <meta property="og:site_name" content="3D4E at UCLA">
-    <meta property="og:title" content="3D4E at UCLA">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="3D4E's website">
-    <meta property="og:url" content="https://3d4eatucla.github.io">
-    <meta property="og:image" content="https://3d4eatucla.github.io/card.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="3D4E at UCLA">
-    <meta name="twitter:description" content="3D4E's website">
-    <meta name="twitter:image" content="https://3d4eatucla.github.io/card.jpg">
-    <title>Workshops - 3D4E at UCLA</title>
-    <link rel="canonical" href="workshops.html">
-    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" sizes="any">
-    <link rel="icon" href="assets/icons/favicon-32x32.png" type="image/png" sizes="32x32">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-    <script>(function () { const s = localStorage.getItem("theme"); const d = window.matchMedia("(prefers-color-scheme: dark)").matches; if (s === "dark" || (!s && d)) document.documentElement.classList.add("dark-mode"); })();</script>
-    <script>document.documentElement.classList.add('js')</script>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/transition.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="3D4E at UCLA's website. We focus on collaboration and fabrication through 3D printers.">
+        <meta name="keywords" content="UCLA, 3D4E, 3D, Printing, Design, Fabrication, Modelling, Printers, Innovation, Creation, Engineer, Engineering">
+        <meta name="author" content="3D4E">
+        <meta name="theme-color" content="#fffaf3" media="(prefers-color-scheme: light)">
+        <meta name="theme-color" content="#2a273f" media="(prefers-color-scheme: dark)">
+        <meta property="og:site_name" content="3D4E at UCLA">
+        <meta property="og:title" content="3D4E at UCLA">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="3D4E's website">
+        <meta property="og:url" content="https://3d4eatucla.github.io">
+        <meta property="og:image" content="https://3d4eatucla.github.io/card.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="3D4E at UCLA">
+        <meta name="twitter:description" content="3D4E's website">
+        <meta name="twitter:image" content="https://3d4eatucla.github.io/card.jpg">
+        <title>Workshops - 3D4E at UCLA</title>
+        <link rel="canonical" href="workshops.html">
+        <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" sizes="any">
+        <link rel="icon" href="assets/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+        <link rel="manifest" href="site.webmanifest">
+        <script>(function () { const s = localStorage.getItem("theme"); const d = window.matchMedia("(prefers-color-scheme: dark)").matches; if (s === "dark" || (!s && d)) document.documentElement.classList.add("dark-mode"); })();</script>
+        <script>document.documentElement.classList.add('js')</script>
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/transition.css">
 
-    <style>
+        <style>
         :root {
             --graphite-shadow: rgb(62 71 79 / 0.15);
             --graphite-shadow-strong: rgb(62 71 79 / 0.24);
@@ -922,12 +922,35 @@
                 max-width: 100%;
             }
         }
-    </style>
-    <script src="assets/js/transition.js" defer></script>
-</head>
 
-<body class="top-nav-layout">
-    <header class="top-header">
+         .workshop-image-container {
+             width: 100%;
+             max-width: 900px; /* Adjust this to fit your layout's needs */
+             margin: 0 auto; /* Centers the image container */
+             padding: 1rem; /* Optional: gives some breathing room on small screens */
+             flex: 2 1 50%;
+         }
+
+         /* Makes the image responsive and styles it */
+         .workshop-hero-image {
+             width: 100%; /* Forces image to fill the container */
+             height: auto; /* Maintains the original aspect ratio */
+             display: block; /* Removes tiny space below inline images */
+             
+             /* Styling to mimic a card component */
+             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+             border: 2px solid var(--wrought-iron);
+             border-radius: var(--radius-m);
+             
+             /* Optional: Ensures the image covers the area nicely if you force a specific height */
+             object-fit: cover; 
+         }
+        </style>
+        <script src="assets/js/transition.js" defer></script>
+    </head>
+
+    <body class="top-nav-layout">
+        <header class="top-header">
         <nav class="top-nav">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -997,117 +1020,53 @@
                 </button>
             </div>
         </div>
-    </header>
+        </header>
 
-    <div class="container">
-        <main id="main-content" class="content" tabindex="-1">
-            <section class="right-stack">
-                <h1>Workshops</h1>
-                <section class="right">
-                    <div class="chalkboard">
-                      <p>
-                          Regardless of your background, major, or design experience, we are committed to teaching all our general members how to 3D print from the ground up.
-                          During the Fall Quarter, after we recruit new members, we will host weekly workshops to train everyone how to use CAD tools like Fusion360, and translate your designs into manufacturable prints.
+        <div class="container">
+            <main id="main-content" class="content" tabindex="-1">
+                <section class="right-stack">
+                    <h1>Workshops</h1>
+                    <section class="right">
+                        <div class="chalkboard">
+                            <p>
+                                Regardless of your background, major, or design experience, we are committed to teaching all our general members how to 3D print from the ground up.
+                                During the Fall Quarter, after we recruit new members, we will host weekly workshops to train everyone how to use CAD tools like Fusion360, and translate your designs into manufacturable prints.
+                            </p>
+                        </div>
+                    </section>
 
-                        </p>
+                    <div class="intro-grid">
+                        
+                        <div class="workshop-image-container">
+                            <img 
+                                src="assets/img/workshops/workshop.jpg" 
+                                alt="Workshop Overview" 
+                                class="workshop-hero-image"
+                            >
+                        </div>
+
+                        <div class="notebook-paper">
+                            <div class="notebook-content">
+                                <p>
+                                    Our Tech Instructors work hard in creating the best free lessons for all the UCLA community, fit for every person to follow along to, regardless of prior CAD skill.
+                                </p>
+                                <p>
+                                    We primarily teach and use Fusion 360, which is free for all UCLA students.
+                                    The skills learnt transfer over to many other programs, like Sketchup, OnShape, and SolidWorks. 
+                                    We also give insights on the additive manufacturing process, and how to CAD in accordance to the object fabrication method, since prints with layer lines have different material properties to injection molded or CNC'd parts.
+                                    Finally, some of these workshops also go over the steps needed to build a strong profile so that the skills learnt can apply in industry.
+                                </p>
+                                <p>
+                                    Join us every TBD from TBD PM to TBD PM, learn a new skill, and make some friends along the way.
+                                </p>
+                            </div>
+                        </div>
                     </div>
+
+                    
                 </section>
-
-                <div class="intro-grid">
-                  <div class="carousel-wrapper">
-                    <!-- Left Arrow -->
-                    <button class="carousel-btn prev" aria-label="Previous person">❮</button>
-                    <div class="carousel-container" id="board-carousel">
-                      <div class="profile-card">
-                        <div class="gradient-shapes"></div>
-                        <div class="profile-photo">
-                          <img src="assets/img/about/Board Photos/Maxime.jpg" alt="">
-                        </div>
-                        <div class="name h-label">Maxime</div>
-                        <div class="job h-label">Computer Science</div>
-                        <div class="country h-label">External Vice President</div>
-                        <div class="bio">
-                          Hey I'm Maxime. I love open source 3D printer design.
-                        </div>
-                      </div>
-
-                      <div class="profile-card">
-                        <div class="gradient-shapes"></div>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="#ffd700" style="position: absolute; top: 16px; right: 18px; transform: rotate(15deg); filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3)); z-index: 10;" aria-hidden="true">
-                          <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
-                        </svg>
-                        <div class="profile-photo">
-                          <img src="assets/img/about/Board Photos/Yancy.jpg" alt="">
-                        </div>
-                        <div class="name h-label">Yancy</div>
-                        <div class="job h-label">Mathematics of Computation</div>
-                        <div class="country h-label">President</div>
-                        <div class="bio">
-                          I'm Yancy. I used to run the biomed project before.
-                        </div>
-                      </div>
-
-                      <div class="profile-card">
-                        <div class="gradient-shapes"></div>
-                        <div class="profile-photo">
-                          <img src="assets/img/about/Board Photos/Eric.jpg" alt="">
-                        </div>
-                        <div class="name h-label">Eric</div>
-                        <div class="job h-label">Electrical Engineering</div>
-                        <div class="country h-label">Internal Vice President</div>
-                        <div class="bio">
-                          I'm also doing premed while persuing my EE degree. 
-                        </div>
-                      </div>
-                    </div>
-                    <button class="carousel-btn next" aria-label="Next person">❯</button>
-                  </div>
-
-                    <div class="notebook-paper">
-                      <div class="notebook-content">
-                        <p>
-                          The real star of the show at 3D4E isn't the cool projects that we do or the machinery we own.
-                          The people who help run this deserve the real credit. 
-                        </p>
-                        <p>
-                          They help out in all different roles, from our lab managers who keep our printers running 14/6 (maintenance is important),
-                          our project leads who make sure students get the skills and experiences out of their projects,
-                          our tech instructors who teach CAD to every student no matter the background,
-                          our social and outreach team who make sure our impact is large and noticed,
-                          and executive board who lubricate the gears between every group. Every person here plays a crucial role.
-                        </p>
-                      </div>
-                    </div>
-                </div>
-
-                
-            </section>
-        </main>
-    </div>
-    <script>
-        const car = document.getElementById('board-carousel');
-        let timer;
-
-        // Handles both forward (1) and backward (-1) movement with looping
-        const move = (dir = 1) => {
-            const w = car.offsetWidth, len = car.children.length;
-            const nextIdx = (Math.round(car.scrollLeft / w) + dir + len) % len;
-            car.scrollTo({ left: nextIdx * w, behavior: 'smooth' });
-        };
-
-        const play = () => timer = setInterval(move, 4000);
-        const reset = () => { clearInterval(timer); play(); };
-
-        // Button clicks
-        document.querySelector('.carousel-btn.prev').onclick = () => { move(-1); reset(); };
-        document.querySelector('.carousel-btn.next').onclick = () => { move(1); reset(); };
-
-        // Pause on hover/touch, resume on leave
-        ['mouseenter', 'touchstart'].forEach(e => car.addEventListener(e, () => clearInterval(timer), { passive: true }));
-        ['mouseleave', 'touchend'].forEach(e => car.addEventListener(e, play));
-
-        play(); // Start autoplay on load
-    </script>
-    <script src="assets/js/allpages.js" defer></script>
-</body>
+            </main>
+        </div>
+        <script src="assets/js/allpages.js" defer></script>
+    </body>
 </html>
