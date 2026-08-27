@@ -22,7 +22,7 @@
     <meta name="twitter:description" content="3D4E's website">
     <meta name="twitter:image" content="https://3d4eatucla.github.io/card.jpg">
     <title>About Us - 3D4E at UCLA</title>
-    <link rel="canonical" href="about">
+    <link rel="canonical" href="about.html">
     <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" sizes="any">
     <link rel="icon" href="assets/icons/favicon-32x32.png" type="image/png" sizes="32x32">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
@@ -225,6 +225,14 @@
         background: var(--tempered-steel);
         box-shadow: 0 4px 12px rgb(0 0 0 / 0.3);
         font-family: var(--ff-technical);
+        overflow: hidden;
+      }
+
+      .lineup-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1.2) translateY(-12px);
       }
 
       .lineup-name {
@@ -1050,10 +1058,10 @@
       <nav class="top-nav">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="projects">Student Projects</a></li>
-          <li><a href="workshops">Workshops</a></li>
-          <li><a href="media">What We've Done</a></li>
-          <li><a href="about" class="active" aria-current="page">About Us</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="workshops.html">Workshops</a></li>
+          <li><a href="media.html">What We've Done</a></li>
+          <li><a href="about.html" class="active" aria-current="page">About Us</a></li>
           <li>
             <button class="theme-toggle-topnav" id="theme-toggle-top" type="button" title="Toggle theme"
                     aria-label="Toggle theme">
@@ -1088,7 +1096,7 @@
 
       <div class="topnav-dropdown">
         <a href="index.html">Home</a>
-        <a href="about" class="active" aria-current="page">About</a>
+        <a href="about.html" class="active" aria-current="page">About</a>
         <a href="sitemap">Site Map</a>
         <div class="topnav-dropdown-theme-row">
           <button class="theme-toggle-topnav" id="theme-toggle-mobile" type="button" title="Toggle theme"
@@ -1219,30 +1227,30 @@
             <div class="board-lineup" aria-label="Board member lineup">
               <div class="lineup-pitch">
                 <ol class="formation-row" data-position-group="0" aria-label="President row">
-                  <li class="lineup-member"><div class="lineup-photo">GK</div><span class="lineup-name">Open spot</span></li>
+                  <li class="lineup-member"><div class="lineup-photo"><img src="assets/img/about/Board Photos/Yancy.jpg"></div><span class="lineup-name">Yancy W.</span></li>
                 </ol>
                 <ol class="formation-row" data-position-group="1" start="2" aria-label="Vice Presidents row">
-                  <li class="lineup-member"><div class="lineup-photo">02</div><span class="lineup-name">Open spot</span></li>
-                  <li class="lineup-member"><div class="lineup-photo">03</div><span class="lineup-name">Open spot</span></li>
+                  <li class="lineup-member"><div class="lineup-photo"><img src="assets/img/about/Board Photos/Maxime.jpg"></div><span class="lineup-name">Maxime M.</span></li>
+                  <li class="lineup-member"><div class="lineup-photo"><img src="assets/img/about/Board Photos/Eric.jpg"></div><span class="lineup-name">Eric H.</span></li>
                 </ol>
                 <ol class="formation-row" data-position-group="2" start="4" aria-label="Project Leads row one">
-                  <li class="lineup-member"><div class="lineup-photo">04</div><span class="lineup-name">Open spot</span></li>
-                  <li class="lineup-member"><div class="lineup-photo">05</div><span class="lineup-name">Open spot</span></li>
-                  <li class="lineup-member"><div class="lineup-photo">06</div><span class="lineup-name">Open spot</span></li>
-                  <li class="lineup-member"><div class="lineup-photo">07</div><span class="lineup-name">Open spot</span></li>
+                  <li class="lineup-member"><div class="lineup-photo">04</div><span class="lineup-name">Chris L.</span></li>
+                  <li class="lineup-member"><div class="lineup-photo">05</div><span class="lineup-name">Nandita R.</span></li>
+                  <li class="lineup-member"><div class="lineup-photo">06</div><span class="lineup-name">Charlene H.</span></li>
+                  <li class="lineup-member"><div class="lineup-photo">07</div><span class="lineup-name">Jyothi R.</span></li>
                 </ol>
                 <ol class="formation-row" data-position-group="3" start="8" aria-label="Project Leads row two">
-                  <li class="lineup-member"><div class="lineup-photo">08</div><span class="lineup-name">Open spot</span></li>
-                  <li class="lineup-member"><div class="lineup-photo">09</div><span class="lineup-name">Open spot</span></li>
-                  <li class="lineup-member"><div class="lineup-photo">10</div><span class="lineup-name">Open spot</span></li>
+                  <li class="lineup-member"><div class="lineup-photo">08</div><span class="lineup-name">Timur S.</span></li>
+                  <li class="lineup-member"><div class="lineup-photo"><img src="assets/img/about/Board Photos/prab.jpg"></div><span class="lineup-name">Prabhvir B.</span></li>
+                  <li class="lineup-member"><div class="lineup-photo"><img src="assets/img/about/Board Photos/max.jpg"></div><span class="lineup-name">Max M.</span></li>
                 </ol>
                 <ol class="formation-row" data-position-group="4" start="11" aria-label="Outreach and Social row">
-                  <li class="lineup-member"><div class="lineup-photo">11</div><span class="lineup-name">Open spot</span></li>
-                  <li class="lineup-member"><div class="lineup-photo">12</div><span class="lineup-name">Open spot</span></li>
+                  <li class="lineup-member"><div class="lineup-photo">11</div><span class="lineup-name">Sahana C.</span></li>
+                  <li class="lineup-member"><div class="lineup-photo">12</div><span class="lineup-name">Irene L.</span></li>
                 </ol>
                 <ol class="formation-row" data-position-group="5" start="13" aria-label="Lab Managers row">
-                  <li class="lineup-member"><div class="lineup-photo">13</div><span class="lineup-name">Open spot</span></li>
-                  <li class="lineup-member"><div class="lineup-photo">14</div><span class="lineup-name">Open spot</span></li>
+                  <li class="lineup-member"><div class="lineup-photo">13</div><span class="lineup-name">Nathan L.</span></li>
+                  <li class="lineup-member"><div class="lineup-photo"><img src="assets/img/about/Board Photos/hannan.jpg"></div><span class="lineup-name">Hannan B.</span></li>
                 </ol>
               </div>
             </div>
@@ -1251,27 +1259,27 @@
               <div class="position-menu__viewport" data-lineup-menu>
                 <details class="position-group" data-menu-group="0" open>
                   <summary><span class="position-group__number">01</span><strong class="position-group__title">President</strong></summary>
-                  <p>One position at the base of the formation.</p>
+                  <p>Reponsible for overseeing all club operations. Contact for more club information, patnerships, or general inquiries.</p>
                 </details>
                 <details class="position-group" data-menu-group="1">
                   <summary><span class="position-group__number">02</span><strong class="position-group__title">Vice Presidents</strong></summary>
-                  <p>Two positions in the second row.</p>
+                  <p>External VP oversees collaborations and sponsorships. Internal VP assists the President with club level leadership.</p>
                 </details>
                 <details class="position-group" data-menu-group="2">
                   <summary><span class="position-group__number">03</span><strong class="position-group__title">Project Leads</strong></summary>
-                  <p>Four project-lead positions in the third row.</p>
+                  <p>Responsible for designing and leading year-long engineering projects designed to teach essential skills including CAD, programming, FEA etc.</p>
                 </details>
                 <details class="position-group" data-menu-group="3">
                   <summary><span class="position-group__number">04</span><strong class="position-group__title">Project Leads</strong></summary>
-                  <p>Three additional project-lead positions.</p>
+                  <p>Responsible for designing and leading year-long engineering projects designed to teach essential skills including CAD, programming, FEA etc.</p>
                 </details>
                 <details class="position-group" data-menu-group="4">
                   <summary><span class="position-group__number">05</span><strong class="position-group__title">Outreach and Social</strong></summary>
-                  <p>Two positions connecting the club and its community.</p>
+                  <p>Two positions focused on connecting the club to our local LA community and beyond. Contact them if you want to collaborate with us!</p>
                 </details>
                 <details class="position-group" data-menu-group="5">
                   <summary><span class="position-group__number">06</span><strong class="position-group__title">Lab Managers</strong></summary>
-                  <p>Two positions keeping the lab and printers running.</p>
+                  <p>Dedicated technicians keeping the lab and printers running. Seek them for general inquiries on 3D printing</p>
                 </details>
               </div>
             </aside>
