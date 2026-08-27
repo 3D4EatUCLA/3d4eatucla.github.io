@@ -1237,27 +1237,23 @@
                         <aside class="position-menu" aria-label="Board position groups">
                             <div class="position-menu__viewport" data-lineup-menu>
                                 <details class="position-group" data-menu-group="0" open>
-                                    <summary><span class="position-group__number">01</span><strong class="position-group__title">President</strong></summary>
+                                    <summary><strong class="position-group__title">President</strong></summary>
                                     <p>Reponsible for overseeing all club operations. Contact for more club information, patnerships, or general inquiries.</p>
                                 </details>
                                 <details class="position-group" data-menu-group="1">
-                                    <summary><span class="position-group__number">02</span><strong class="position-group__title">Vice Presidents</strong></summary>
+                                    <summary><strong class="position-group__title">Vice Presidents</strong></summary>
                                     <p>External VP oversees collaborations and sponsorships. Internal VP assists the President with club level leadership.</p>
                                 </details>
                                 <details class="position-group" data-menu-group="2">
-                                    <summary><span class="position-group__number">03</span><strong class="position-group__title">Project Leads</strong></summary>
+                                    <summary><strong class="position-group__title">Project Leads</strong></summary>
                                     <p>Responsible for designing and leading year-long engineering projects designed to teach essential skills including CAD, programming, FEA etc.</p>
                                 </details>
                                 <details class="position-group" data-menu-group="3">
-                                    <summary><span class="position-group__number">04</span><strong class="position-group__title">Project Leads</strong></summary>
-                                    <p>Responsible for designing and leading year-long engineering projects designed to teach essential skills including CAD, programming, FEA etc.</p>
-                                </details>
-                                <details class="position-group" data-menu-group="4">
-                                    <summary><span class="position-group__number">05</span><strong class="position-group__title">Outreach and Social</strong></summary>
+                                    <summary><strong class="position-group__title">Outreach and Social</strong></summary>
                                     <p>Two positions focused on connecting the club to our local LA community and beyond. Contact them if you want to collaborate with us!</p>
                                 </details>
-                                <details class="position-group" data-menu-group="5">
-                                    <summary><span class="position-group__number">06</span><strong class="position-group__title">Lab Managers</strong></summary>
+                                <details class="position-group" data-menu-group="4">
+                                    <summary><strong class="position-group__title">Lab Managers</strong></summary>
                                     <p>Dedicated technicians keeping the lab and printers running. Seek them for general inquiries on 3D printing</p>
                                 </details>
                             </div>
@@ -1392,13 +1388,22 @@
              const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
              let activeIndex = 0;
              let timer;
+
+             const menuToRowsMap = {
+                 0: [0],    
+                 1: [1],    
+                 2: [2, 3], 
+                 3: [4],    
+                 4: [5]     
+             };
              
              const showGroup = (index) => {
                  activeIndex = (index + groups.length) % groups.length;
                  groups.forEach((group, i) => {
                      group.open = i === activeIndex;
                  });
-                 rows.forEach((row, i) => row.classList.toggle('is-active', i === activeIndex));
+                 const targetRows = menuToRowsMap[activeIndex] || [];
+                 rows.forEach((row, i) => row.classList.toggle('is-active', targetRows.includes(i)));
              };
              
              const stop = () => window.clearInterval(timer);
