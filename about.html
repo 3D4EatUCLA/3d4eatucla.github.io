@@ -159,10 +159,12 @@
          }
 
          .board-lineup {
-             flex: 0 1 700px;
+             flex: 1 1 480px;
              display: flex;
              align-items: center;
-             height: 100%;
+             justify-content: center;
+             min-width: 0;
+             /* height: 100%; */
              /* overflow-x: auto; */
          }
 
@@ -172,8 +174,8 @@
              flex-direction: column-reverse;
              justify-content: space-around;
              gap: var(--sp-4);
-             width: 100%
-             max-width: 480px;
+             width: 100%;
+             /* max-width: 480px; */
              min-height: 600px;
              padding: var(--sp-6);
              overflow: hidden;
@@ -202,7 +204,7 @@
              z-index: 1;
              display: grid;
              grid-auto-flow: column;
-             grid-auto-columns: 200px;
+             grid-auto-columns: minmax(110px, 200px);
              justify-content: center;
              gap: var(--sp-2);
              margin: 0;
@@ -254,21 +256,29 @@
          }
 
          .position-menu {
+             display: flex;
+             flex-direction: column;
              flex: 0 1 320px;
-             min-width: 260px;
+             min-width: 200px;
              padding: var(--sp-4);
              border: 1px solid var(--aluminum);
              border-radius: var(--radius-lg);
              background: var(--platinum);
+             /* height: 100%; */
          }
 
          .position-menu__viewport {
+             flex: 1;
              display: flex;
              flex-direction: column-reverse;
              gap: var(--sp-2);
          }
 
          .position-group {
+             flex: 1;
+             display: flex;
+             flex-direction: column;
+             justify-content: center; /* Vertically centers the summary text */
              border: 1px solid var(--aluminum);
              border-radius: var(--radius-m);
              color: var(--wrought-iron);
@@ -279,6 +289,8 @@
          }
 
          .position-group[open] {
+             flex: 1.7;
+             justify-content: flex-start;
              opacity: 1;
              background: var(--pale-steel);
              border-color: var(--tempered-steel);
@@ -332,7 +344,8 @@
          }
 
          .lineup-intro {
-             flex: 0 1 300px; /* Maintains the fixed width in the flex layout */
+             flex: 1 1; /* Maintains the fixed width in the flex layout */
+             min-width: 250px; /* Prevents text from becoming a narrow column */
              background-color: transparent; 
              border: none; /* Removes the solid border so the paper edge looks natural */
              padding: 0;
@@ -458,11 +471,12 @@
 
          .intro-grid {
              display: flex;
+             flex-wrap: nowrap;
              gap: 2rem;
-             align-items: center;
+             align-items: stretch;
              width: 100%;
-             min-height: 80vh;
-             height: auto
+             /* min-height: 80vh;
+                height: auto */
          }
 
          .art-showcase {
@@ -1206,16 +1220,16 @@
                     </div>
                     
                     <h1 class="h-label--lined">Our Lineup</h1>
-                    <div class="intro-grid">
-                        <section style="flex: 0 1 300px">
-                            <div class="notebook-paper">
-                                <div class="notebook-content">
-                                    <p>The real star of the show at 3D4E isn't the cool projects that we do or the machinery we own. The people who help run this deserve the real credit.</p>
-                                    <p>They help out in all different roles. Every person here plays a crucial role.</p>
-                                    <p>If you get the chance, say hi to us when you meet us! We love to chat with people.</p>
-                                </div>
+                    <section class="lineup-intro">
+                        <div class="notebook-paper">
+                            <div class="notebook-content">
+                                <p>The real star of the show at 3D4E isn't the cool projects that we do or the machinery we own. The people who help run this deserve the real credit.</p>
+                                <p>They help out in all different roles. Every person here plays a crucial role.</p>
+                                <p>If you get the chance, say hi to us when you meet us! We love to chat with people.</p>
                             </div>
-                        </section>
+                        </div>
+                    </section>
+                    <div class="intro-grid">
                 
                         <div class="board-lineup" aria-label="Board member lineup">
                             <div class="lineup-pitch">
