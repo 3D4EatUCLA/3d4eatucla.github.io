@@ -51,6 +51,9 @@
             --graphite-overlay: rgb(62 71 79 / 0.36);
         }
 
+         *, *::before, *::after {
+             box-sizing: border-box;
+         }
         html.dark-mode {
             --graphite-shadow: rgb(0 0 0 / 0.28);
             --graphite-shadow-strong: rgb(0 0 0 / 0.38);
@@ -294,12 +297,15 @@
             z-index: 1;
         }
 
-        .intro-grid {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            width: 100%;
-        }
+         .intro-grid {
+             display: flex;
+             flex-wrap: nowrap;
+             gap: 2rem;
+             align-items: stretch;
+             width: 100%;
+             /* min-height: 80vh;
+                height: auto */
+         }
 
         .art-showcase {
             flex: 0 0 30%;
@@ -332,7 +338,7 @@
         }
 
         .notebook-paper {
-            flex: 1;
+            flex: 1 1 0%;
             padding: 0;
             padding-top: calc(20px / 2);
             background: radial-gradient(calc(20px / 2) at top,
@@ -342,6 +348,7 @@
             background-repeat: repeat-x;
             background-size: calc(20px * 1.5) calc(20px / 2);
             overflow: hidden;
+
             min-width: 0;
         }
 
@@ -793,7 +800,7 @@
             background-color: var(--platinum);
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1284px) {
 
             .intro-grid {
                 flex-direction: column;
@@ -924,11 +931,12 @@
         }
 
          .workshop-image-container {
-             width: 100%;
+             /* width: 100%; */
              max-width: 900px; /* Adjust this to fit your layout's needs */
              margin: 0 auto; /* Centers the image container */
              padding: 1rem; /* Optional: gives some breathing room on small screens */
-             flex: 2 1 50%;
+             flex: 2 1 0%;
+             min-width: 0; /* Add this line */
          }
 
          /* Makes the image responsive and styles it */
