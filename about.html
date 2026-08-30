@@ -172,7 +172,8 @@
              flex-direction: column-reverse;
              justify-content: space-around;
              gap: var(--sp-4);
-             min-width: 480px;
+             width: 100%
+             max-width: 480px;
              min-height: 600px;
              padding: var(--sp-6);
              overflow: hidden;
@@ -338,6 +339,18 @@
          }
 
          @media (max-width: 768px) {
+             .board-lineup {
+                 flex: 1 1 100%;
+                 width: 100%;
+             }
+             .lineup-pitch {
+                 min-width: 0;
+                 min-height: 450px; /* Scale down the height for mobile */
+                 padding: var(--sp-3);
+             }
+             .formation-row {
+                 grid-auto-columns: 140px; /* Prevent portraits from overflowing horizontally */
+             }
              .position-menu {
                  flex-basis: auto;
                  width: 100%;
@@ -448,7 +461,8 @@
              gap: 2rem;
              align-items: center;
              width: 100%;
-             height: 80vh;
+             min-height: 80vh;
+             height: auto
          }
 
          .art-showcase {
