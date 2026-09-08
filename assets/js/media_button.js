@@ -5,6 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const portfolioContainer = document.getElementById('portfolio');
 
   // Album embeds lookup dictionary
+    // TODO: This is a terrible hacky solution that only works because it piggy backs off the work done by generations prior.
+    // To make this work much better both in terms of code terseness, media longevity, and webmaster ease of work
+    // would be to create a list of google drive photo galleries that lives in this repo
+    // have a git hook that runs through the list downloading any new thing
+    // and creating these widgets and adding the images to our media folder.
+    //
+    // write links to media-links -> commit hook runs -> pulls images to media/img -> generate query entry with title based off gdrive folder name
+    // 
   const albumData = {
       socialoutreach2023: `
             <div class="pa-gallery-player-widget" style="width:100%; height:480px; display:none;"
