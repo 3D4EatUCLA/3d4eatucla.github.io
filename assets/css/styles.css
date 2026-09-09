@@ -2130,6 +2130,40 @@ html.dark-mode .profile-card::after {
     background: var(--zinc);
 }
 
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--sp-4);
+    width: 100%;
+    flex: 1; /* Allows it to size cleanly next to the notebook-paper div */
+    min-width: 0;
+}
+
+.project-card {
+    position: relative;
+    border-radius: var(--radius-m);
+    overflow: hidden;
+    background: var(--platinum);
+    border: 1px solid var(--aluminum);
+    box-shadow: 0 4px 12px var(--graphite-shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px var(--graphite-shadow-strong);
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4/3;
+    display: block;
+}
+
 /* --- Consolidated Media Queries --- */
 
 @media (prefers-reduced-motion: reduce) {
@@ -2223,37 +2257,4 @@ html.dark-mode .profile-card::after {
         width: 95%;
         max-width: 325px;
     }
-}
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--sp-4);
-    width: 100%;
-    flex: 1; /* Allows it to size cleanly next to the notebook-paper div */
-    min-width: 0;
-}
-
-.project-card {
-    position: relative;
-    border-radius: var(--radius-m);
-    overflow: hidden;
-    background: var(--platinum);
-    border: 1px solid var(--aluminum);
-    box-shadow: 0 4px 12px var(--graphite-shadow);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px var(--graphite-shadow-strong);
-}
-
-.project-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    aspect-ratio: 4/3;
-    display: block;
 }
