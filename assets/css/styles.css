@@ -2236,7 +2236,7 @@ html.dark-mode .profile-card::after {
         padding: var(--sp-3);
     }
     .formation-row {
-        grid-auto-columns: 140px; 
+        grid-auto-columns: minmax(0, 1fr); 
     }
     .position-menu {
         flex-basis: auto;
