@@ -84,7 +84,7 @@
                 if (btn) btn.setAttribute('aria-pressed', nowDark);
             });
             localStorage.setItem('theme', nowDark ? 'dark' : 'light');
-            document.cookie = `theme=${nowDark ? 'dark' : 'light'}; domain=.pearlitegates.com; path=/; max-age=31536000`;
+            document.cookie = `theme=${nowDark ? 'dark' : 'light'}; path=/; max-age=31536000`;
         });
     }
 })();
