@@ -1555,6 +1555,7 @@ html.dark-mode {
 
 .profile-card-center {
     display: flex;
+    /* flex-wrap: wrap; */
     justify-content: center;
     position: relative;
 }
@@ -2241,6 +2242,28 @@ html.dark-mode .profile-card::after {
         flex-basis: auto;
         width: 100%;
         min-width: 0;
+    }
+
+    .profile-card-center {
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        padding-bottom: var(--sp-3);
+        
+        /* Hide scrollbars for a clean carousel look */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .profile-card-center::-webkit-scrollbar {
+        display: none;
+    }
+
+    .profile-card {
+        flex: 0 0 85%;
+        scroll-snap-align: center;
+        margin: 10px 15px;
     }
 }
 
