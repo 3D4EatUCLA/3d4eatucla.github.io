@@ -152,17 +152,21 @@
         nozzle.classList.add('active');
         document.documentElement.classList.add('painting');
 
-    try {
-        // Concurrently run the animation timer AND fetch the new HTML
-        await Promise.all([
-            fetch(link.href),
-            new Promise(resolve => setTimeout(resolve, duration))
-        ]);
-    } catch (err) {
-        console.warn("Background fetch failed, proceeding to standard load:", err);
-    }
+        try {
+            // Concurrently run the animation timer AND fetch the new HTML
+            await Promise.all([
+                fetch(link.href),
+                new Promise(resolve => setTimeout(resolve, duration))
+            ]);
+        } catch (err) {
+            console.warn("Background fetch failed, proceeding to standard load:", err);
+        }
 
-    // The browser has now cached the new page, making this navigation instant
-    window.location.href = link.href;
+        // The browser has now cached the new page, making this navigation instant
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                window.location.href = link.href;
+            });
+        });
     })
 })();
