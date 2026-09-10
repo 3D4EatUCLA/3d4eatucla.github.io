@@ -991,14 +991,6 @@ html.dark-mode .theme-toggle-topnav:hover {
     transform-origin: 50% 200%;
 }
 
-.theme-toggle-topnav .theme-toggle__sun {
-    display: block;
-}
-
-.theme-toggle-topnav .theme-toggle__moon {
-    display: none;
-}
-
 html:not(.dark-mode) .theme-toggle__moon {
     transform: rotate(60deg);
     opacity: 0;
