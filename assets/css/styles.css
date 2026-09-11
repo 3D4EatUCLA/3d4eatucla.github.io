@@ -840,11 +840,11 @@ body.top-nav-layout html {
     display: none;
     flex-direction: column;
     justify-content: center;
+    margin-left: auto;
     gap: 5px;
     width: var(--sp-6);
     height: var(--sp-8);
     padding: 0;
-    margin: 0;
     background: 0 0;
     border: none;
     cursor: pointer;
