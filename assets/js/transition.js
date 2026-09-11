@@ -44,9 +44,9 @@
 
 
             // Generates nozzle keyframes
-            if (i === 0) kfNozzle += ` ${t_start}% {transform: translate(${x1}, -${bot_current}svh);}\n`;
-            kfNozzle += ` ${t_sweep_end}% {transform: translate(${x2}, -${bot_current}svh);}\n`;
-            kfNozzle += ` ${t_end}% {transform: translate(${x2}, -${bot_next}svh);}\n`;
+            if (i === 0) kfNozzle += ` ${t_start}% {transform: translate(${x1}, -${bot_current}lvh);}\n`;
+            kfNozzle += ` ${t_sweep_end}% {transform: translate(${x2}, -${bot_current}lvh);}\n`;
+            kfNozzle += ` ${t_end}% {transform: translate(${x2}, -${bot_next}lvh);}\n`;
 
             let clipStart, clipSweep;
             if (goRight) {
