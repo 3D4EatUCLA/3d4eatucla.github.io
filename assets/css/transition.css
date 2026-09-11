@@ -2,7 +2,7 @@
     --layer-count:          14;
     --filament:             #FF6B00;
     --filament-line:        #7a2f06;
-    --layer-height:         calc(100vh / var(--layer-count));
+    --layer-height:         calc(100svh / var(--layer-count));
     --transition-duration:  0.6s;
 }
 
