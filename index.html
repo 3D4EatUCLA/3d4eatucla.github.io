@@ -35,72 +35,6 @@
     <link rel="preload" href="assets/fonts/ApfelGrotezk-Fett.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/transition.css">
-    <!-- <style type="text/css" media="screen">
-         
-         :root {
-       --layer-count:          14;
-       --filament:             #FF6B00;
-       --filament-line:        #7a2f06;
-       --layer-height:         calc(100vh / var(--layer-count));
-       --transition-duration:  0.8s;
-         }
-
-         html.js body::before {
-         content: '';
-         position: fixed;
-         inset: 0;
-         z-index: 9999;
-         pointer-events: none;
-         background: repeating-linear-gradient(
-         to top,
-         var(--filament) 0,
-         var(--filament) calc(var(--layer-height) - 2px),
-         var(--filament-line) calc(var(--layer-height) - 2px),
-         var(--filament-line) var(--layer-height)
-         );
-         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-         opacity: 1;
-         will-change: clip-path;
-         }
-
-         html.revealing body::before {
-         animation: wipeDown var(--transition-duration) ease-out forwards;
-         }
-
-         html.revealed body::before {
-         clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-         }
-
-         html.painting body::before {
-         animation: paintUp var(--transition-duration) ease-out forwards;
-         }
-
-         @keyframes paintUp {
-         0%  { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); }
-         100%  { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-         }
-
-         @keyframes wipeDown {
-         0%  { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
-         100%  { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%); }
-         }
-
-
-         #filament-nozzle {
-         position: fixed;
-         z-index: 10000;
-         pointer-events: none;
-         width: 44px;
-         height: 54px;
-         left: -60px;
-         bottom: 0;
-         opacity: 0;
-         filter: drop-shadow(0 2px 4px rgba(0,0,0,.5));
-         will-change: left bottom opacity;
-         }
-
-         #filament-nozzle.active { opacity: 1; }
-         </style> -->
 
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <script>document.documentElement.classList.add('js')</script>
@@ -145,6 +79,7 @@
             <a href="projects.html">Student Projects</a>
             <a href="workshops.html">Workshops</a>
             <a href="media.html">What We've Done</a>
+            <a href="lab.html">Our Lab</a>
             <a href="about.html">About Us</a>
             <div class="topnav-dropdown-theme-row">
                 <button class="theme-toggle-topnav" id="theme-toggle-mobile" type="button" title="Toggle theme"
@@ -195,6 +130,9 @@
                         </li>
                         <li class="nav-item">
                             <a href="media.html"><span class="nav-label">What We've Done</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="lab.html"><span class="nav-label">Our Lab</span></a>
                         </li>
                         <li class="nav-item">
                             <a href="about.html"><span class="nav-label">About Us</span></a>
@@ -333,6 +271,19 @@
                 </section>
             </section>
         </main>
+      <section class="lab-info">
+
+        <div id="about-printout">
+          <div class="about-printout-inner">
+            <div class="bold-text">
+              <p>Find us at Boelter 6514.</p>
+              <p>No Dues Ever. Free Printing. Expert Help.</p>
+              <p>Come learn. Come design, tinker, and print to your hearts content. </p>
+              <p>Makers and creatives welcome and encouraged.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
     <script src="assets/js/allpages.js" defer></script>

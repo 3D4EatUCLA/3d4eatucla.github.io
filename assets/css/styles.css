@@ -2158,6 +2158,72 @@ html.dark-mode .profile-card::after {
     display: block;
 }
 
+.lab-info {
+    display: flex;
+    justify-content: center;
+}
+
+#about-printout::before, #about-printout::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 44px;
+	background-image: radial-gradient(circle, var(--wrought-iron) 11px, transparent 11.5px);
+	background-repeat: repeat-y;
+	background-size: 100% 66px;
+	background-position: center 55px;
+}
+#about-printout::before {
+	left: 0;
+}
+#about-printout::after {
+	right: 0;
+}
+#about-printout {
+	position: relative;
+	width: 100%;
+	max-width: 1010px;
+	background: var(--platinum);
+	box-sizing: border-box;
+	padding: 56px 66px;
+    justify-content:center;
+}
+.about-printout-inner {
+    display: contents; /* Allows it to rely on #about-printout's relative positioning */
+}
+
+/* Shared properties for both top and bottom flourishes */
+.about-printout-inner::before,
+.about-printout-inner::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: calc(20px / 2);
+    pointer-events: none;
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    background-size: calc(20px * 1.5) calc(20px / 2);
+}
+
+.about-printout-inner::before {
+    top: 0;
+    transform: translateY(-100%);
+    background-image: radial-gradient(calc(20px / 2) at top, transparent 90%, var(--platinum) 100%);
+}
+
+.about-printout-inner::after {
+    bottom: 0;
+    transform: translateY(100%);
+    background-image: radial-gradient(calc(20px / 2) at bottom, transparent 90%, var(--platinum) 100%);
+}
+.bold-text {
+    text-align: center;
+    font-family: var(--ff-drawing);
+    font-size: var(--fs-h2);
+}
+
 /* --- Consolidated Media Queries --- */
 
 @media (prefers-reduced-motion: reduce) {
@@ -2272,5 +2338,12 @@ html.dark-mode .profile-card::after {
     .profile-card {
         width: 95%;
         max-width: 325px;
+    }
+}
+
+@media (min-width: 701px) {
+    #about-printout {
+        transform: rotate(-1.1deg);
+        margin-right: var(--sp-4);
     }
 }
