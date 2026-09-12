@@ -2262,7 +2262,8 @@ html.dark-mode .profile-card::after {
 }
 
 .spec-table-container {
-    flex: 1;
+    flex: 1 1 auto;
+    min-height: 0;
     overflow-y: auto;
     overflow-x: auto; /* Changed from hidden to allow horizontal scrolling on mobile */
 }
