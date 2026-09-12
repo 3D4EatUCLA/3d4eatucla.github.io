@@ -2224,32 +2224,47 @@ html.dark-mode .profile-card::after {
     font-size: var(--fs-h2);
 }
 
-.spec-popup .spec-sheet {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	max-height: 85vh;
-}
-
+/* Remove the obsolete .spec-popup wrapper rules and combine them here */
 .spec-sheet {
-	background: var(--platinum);
-	font-family: var(--ff-mono);
-	font-weight: var(--font-weight-regular);
-	color: var(--wrought-iron);
-	border: 1px solid var(--aluminum);
+    /* Layout & Responsiveness */
+    display: flex;
+    flex-direction: column;
+    width: 90vw;            /* Responsive width */
+    max-width: 800px;       /* Cap width on desktop */
+    max-height: 85vh;       /* Cap height so it doesn't bleed off screen */
+    margin: auto;           /* Centers the popover */
+    
+    /* Existing Styles */
+    background: var(--platinum);
+    font-family: var(--ff-mono);
+    font-weight: var(--font-weight-regular);
+    color: var(--wrought-iron);
+    border: 1px solid var(--aluminum);
     padding: 0;
-    transition: opacity 0.25s, scale 0.25s, overlay 0.25s allow-discrete,
-                display 0.25s allow-discrete;
+    
+    /* Animations */
+    transition: opacity 0.25s, scale 0.25s, overlay 0.25s allow-discrete, display 0.25s allow-discrete;
     opacity: 0;
     scale: 0;
     transform-origin: 50% 50%;
-    &:popover-open {
-        opacity: 1;
-        scale: 1;
-    }
 }
 
+.spec-sheet:popover-open {
+    opacity: 1;
+    scale: 1;
+}
+
+/* Optional: Add a backdrop to focus the user's attention on the popover */
+.spec-sheet::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+}
+
+.spec-table-container {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: auto; /* Changed from hidden to allow horizontal scrolling on mobile */
+}
 .spec-sheet-titleblock {
 	padding: 1.25rem 1.5rem;
 	background: var(--zinc);
@@ -2290,12 +2305,6 @@ html.dark-mode .profile-card::after {
 
 .info-value {
 	color: var(--graphite);
-}
-
-.spec-table-container {
-	flex: 1;
-	overflow-y: auto;
-	overflow-x: hidden;
 }
 
 .spec-table-desktop {
@@ -2368,6 +2377,61 @@ html.dark-mode .col-item {
 html.dark-mode .footer-notes strong {
 	color: var(--blue-steel);
 }
+/* Image Button & Container */
+.entrance-btn {
+    flex: 1; 
+    width: 100%; 
+    aspect-ratio: 1 / 1; 
+    position: relative; 
+    padding: 0;
+    border: 2px solid var(--wrought-iron);
+    border-radius: var(--radius-m);
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: block; 
+}
+
+.entrance-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px var(--graphite-shadow-strong);
+}
+
+/* Image Styling */
+.entrance-btn img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Forces the image to fill the entire square */
+    object-fit: cover; /* Prevents the image from squishing or distorting */
+    display: block;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.entrance-btn:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay Text Styling */
+.entrance-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem;
+    background: var(--graphite-overlay);
+    color: #fff;
+    font-family: var(--ff-mono);
+    font-weight: 600;
+    font-size: var(--fs-body);
+    text-align: center;
+    backdrop-filter: blur(4px);
+    z-index: 2; /* Ensures the text stays above the image */
+}
+
 /* --- Consolidated Media Queries --- */
 
 @media (prefers-reduced-motion: reduce) {
@@ -2475,6 +2539,18 @@ html.dark-mode .footer-notes strong {
         flex: 0 0 85%;
         scroll-snap-align: center;
         margin: 10px 15px;
+    }
+    .spec-sheet-titleblock {
+        padding: 1rem;
+    }
+    
+    .spec-table th, 
+    .spec-table td {
+        padding: 0.5rem; /* Reduce padding to fit more content */
+    }
+    
+    .col-item {
+        width: 50px; /* Slim down the step number column */
     }
 }
 

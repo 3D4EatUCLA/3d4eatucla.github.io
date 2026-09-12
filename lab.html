@@ -36,20 +36,59 @@
 
     <body class="top-nav-layout">
         <header class="top-header">
-        <nav class="top-nav">
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="projects.html">Student Projects</a></li>
-                <li><a href="workshops.html">Workshops</a></li>
-                <li><a href="media.html">What We've Done</a></li>
-                <li><a href="lab.html" class="active" aria-current="page">Lab</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li>
-                    <button class="theme-toggle-topnav" id="theme-toggle-top" type="button" title="Toggle theme"
-                        aria-label="Toggle theme">
+            <nav class="top-nav">
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="projects.html">Student Projects</a></li>
+                    <li><a href="workshops.html">Workshops</a></li>
+                    <li><a href="media.html">What We've Done</a></li>
+                    <li><a href="lab.html" class="active" aria-current="page">Lab</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li>
+                        <button class="theme-toggle-topnav" id="theme-toggle-top" type="button" title="Toggle theme"
+                                aria-label="Toggle theme">
+                            <svg class="theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5" />
+                                <line x1="12" y1="1" x2="12" y2="3" />
+                                <line x1="12" y1="21" x2="12" y2="23" />
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                                <line x1="1" y1="12" x2="3" y2="12" />
+                                <line x1="21" y1="12" x2="23" y2="12" />
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                            </svg>
+                            <svg class="theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+
+                <button class="topnav-hamburger" aria-label="Menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+
+            <div class="topnav-dropdown">
+                <a href="/">Home</a>
+                <a href="projects.html">Student Projects</a>
+                <a href="workshops.html">Workshops</a>
+                <a href="media.html">What We've Done</a>
+                <a href="lab.html" class="active" aria-current="page">Our Lab</a>
+                <a href="about.html">About Us</a>
+                <div class="topnav-dropdown-theme-row">
+                    <button class="theme-toggle-topnav" id="theme-toggle-mobile" type="button" title="Toggle theme"
+                            aria-label="Toggle theme">
                         <svg class="theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
+                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                             stroke-linejoin="round">
                             <circle cx="12" cy="12" r="5" />
                             <line x1="12" y1="1" x2="12" y2="3" />
                             <line x1="12" y1="21" x2="12" y2="23" />
@@ -61,52 +100,13 @@
                             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
                         </svg>
                         <svg class="theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
+                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                             stroke-linejoin="round">
                             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
                         </svg>
                     </button>
-                </li>
-            </ul>
-
-            <button class="topnav-hamburger" aria-label="Menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-
-        <div class="topnav-dropdown">
-            <a href="/">Home</a>
-            <a href="projects.html">Student Projects</a>
-            <a href="workshops.html">Workshops</a>
-            <a href="media.html">What We've Done</a>
-            <a href="lab.html" class="active" aria-current="page">Our Lab</a>
-            <a href="about.html">About Us</a>
-            <div class="topnav-dropdown-theme-row">
-                <button class="theme-toggle-topnav" id="theme-toggle-mobile" type="button" title="Toggle theme"
-                    aria-label="Toggle theme">
-                    <svg class="theme-toggle__sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5" />
-                        <line x1="12" y1="1" x2="12" y2="3" />
-                        <line x1="12" y1="21" x2="12" y2="23" />
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-                        <line x1="1" y1="12" x2="3" y2="12" />
-                        <line x1="21" y1="12" x2="23" y2="12" />
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-                    </svg>
-                    <svg class="theme-toggle__moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-                    </svg>
-                </button>
+                </div>
             </div>
-        </div>
         </header>
 
         <div class="container">
@@ -123,7 +123,10 @@
                     <h1 class="h-label--lined">How to get there</h1>
 
                     <div class="intro-grid">
-                        <button popovertarget="boelter-5th-floor-entrance">Boelter 5th Floor Entrance</button>
+                        <button class="entrance-btn" popovertarget="boelter-5th-floor-entrance">
+                            <img src="assets/img/lab/fifth_floor.jpg" alt="Boelter 5th Floor Entrance">
+                            <span class="entrance-label">Boelter 5th Floor Guide</span>
+                        </button>
                         <div class="spec-sheet" id="boelter-5th-floor-entrance" popover>
                                 <div class="spec-sheet-titleblock">
                                     <div class="titleblock-main">
@@ -172,27 +175,69 @@
                                 <div class="spec-sheet-footer">
                                     <div class="footer-notes"><strong>CAUTION:</strong> These hallways are a maze linked together with portals and posters. Discretion is advised.</div>
                                 </div>
+                        </div>
+                        <button class="entrance-btn" popovertarget="boelter-3rd-floor-entrance">
+                            <img src="assets/img/lab/third_floor.jpg" alt="Boelter 3rd Floor Entrance">
+                            <span class="entrance-label">Boelter 3rd Floor Guide</span>
+                        </button>
+                        <div class="spec-sheet" id="boelter-3rd-floor-entrance" popover>
+                            <div class="spec-sheet-titleblock">
+                                <div class="titleblock-main">
+                                    <div class="titleblock-title" id="boelter-3rd-spec">Boelter 3rd Floor Directions</div>
+                                    <div class="titleblock-subtitle">Cartographer's guide to Boelter Hall</div>
+                                </div>
+                                <div class="titleblock-info">
+                                    <div class="info-row"><span class="info-label">CAT:</span> <span class="info-value">LOST-2026</span>
+                                    </div>
+                                    <div class="info-row"><span class="info-label">DATE:</span> <span class="info-value">SEP '26</span>
+                                    </div>
+                                    <div class="info-row"><span class="info-label">BY:</span> <span class="info-value">Maxime M.</span></div>
+                                    <div class="info-row"><span class="info-label">REV:</span> <span class="info-value">A</span></div>
+                                </div>
                             </div>
-                        <button popovertarget="boelter-3rd-floor-entrance">Toggle popover</button>
-                        <div id="boelter-3rd-floor-entrance" popover>
-                            <p>3rd floor entrance</p>
-                            <button popovertarget="boelter-3rd-floor-entrance" popovertargetaction="hide">Close</button>
+
+                            <div class="spec-table-container">
+                                <table class="spec-table spec-table-desktop">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-item">STEP</th>
+                                            <th class="col-designation">DIRECTIONS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr data-cover="assets/img/about/compressed_f_dt.jpg">
+                                            <td class="col-item">001</td>
+                                            <td class="col-designation">Descend the stairs near math and science and walk down the pathway, taking the first door to your left.</td>
+                                        </tr>
+                                        <tr data-cover="assets/img/about/compressed_f_hdwr.jpg">
+                                            <td class="col-item">002</td>
+                                            <td class="col-designation">Take the elevator to the 6th floor.</td>
+                                        </tr>
+                                        <tr data-cover="assets/img/about/compressed_f_dunmeshi.jpg">
+                                            <td class="col-item">003</td>
+                                            <td class="col-designation">Turn right and go down the hallway.</td>
+                                        </tr>
+                                        <tr data-cover="assets/img/about/compressed_f_cook.jpg">
+                                            <td class="col-item">004</td>
+                                            <td class="col-designation">Enter the room with our logo and say hi!</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="spec-sheet-footer">
+                                <div class="footer-notes"><strong>CAUTION:</strong> These hallways are a maze linked together with portals and posters. Discretion is advised.</div>
+                            </div>
                         </div>
 
                         <div class="notebook-paper">
                             <div class="notebook-content">
-                                <p>We currently offer 4 guided projects throughout the school year:</p>
-                                <ul>
-                                    <li>Keyboards (Keebs)</li>
-                                    <li>Biomed</li>
-                                    <li>Gears</li>
-                                    <li>Robotics</li>
-                                </ul>
                                 <p>
-                                    We primarily teach and use Fusion 360, which is free for all UCLA students.
-                                    We have a strong focus on collaboration and year long planning, which leaves each student with the skills necessary to make for themselves.
+                                    Our lab space is free to access, free to use, and has ample space for anyone to work in.
                                 </p>
-                                <p>You'll leave the year able to design, build, post process, and even show off projects you'd never thought possible. And you might make a few friends at the same time as well.</p>
+                                <p>We have access to paints, sandpaper, printers, and other tools for all your project needs. And we also have a lounge next to our workshop, where we hang out, host events, and chill after a long day's work. </p>
+                                <p>For safety purposes, do not bring items from one room to another.</p>
+                                <p>Click one of the guides either above or to the left to find out how to get here</p>
                             </div>
                         </div>
                     </div>
@@ -206,7 +251,7 @@
                                 <div class="printer-type">Voron 2.4</div>
                                 <div class="printer-stats">Type: FDM | Vol: 350x350x330mm</div>
                                 <div class="printer-desc">
-                                    Yveltal is one of the largest 3D printers at UCLA accessible to students, built by hand from prior members. 
+                                    Yveltal is one of the largest 3D printers at UCLA accessible to students, built by hand from prior members.
                                 </div>
                                 <div class="printer-filaments">
                                     <div class="filament-label">Supported Materials:</div>
@@ -224,7 +269,7 @@
                                 <div class="printer-type">Sovol SV08</div>
                                 <div class="printer-stats">Type: FDM | Vol: 350x350x345mm</div>
                                 <div class="printer-desc">
-                                    Xerneas' design is heavily inspired by the Voron 2.4. Our model is enclosed, and has better part cooling than default. 
+                                    Xerneas' design is heavily inspired by the Voron 2.4. Our model is enclosed, and has better part cooling than default.
                                 </div>
                                 <div class="printer-filaments">
                                     <div class="filament-label">Supported Materials:</div>
@@ -311,7 +356,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </section>
             </main>
         </div>
