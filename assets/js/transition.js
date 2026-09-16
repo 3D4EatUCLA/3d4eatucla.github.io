@@ -19,7 +19,7 @@
         // the zig zag animation a printer will do. We could do
         // left -> right -> up -> right -> left, but i'm lazy
         const STEP = 100 / LAYERS;
-        const DROP_FRAC = 0.1;
+        const DROP_FRAC = 0.01;
         let kfNozzle = '@keyframes ' + nozzleName + ' {\n';
         let kfClip = '@keyframes ' + clipName + ' {\n';
 
@@ -91,7 +91,7 @@
     function revealPage() {
         nozzle.style.animation = 'none';
         void nozzle.offsetWidth;
-        nozzle.style.animation = `nozzleWipeDown ${duration}ms linear forwards`;
+        nozzle.style.animation = `nozzleWipeDown ${duration}ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards`;
         nozzle.classList.add('active');
         document.documentElement.classList.add('revealing');
 
@@ -148,7 +148,7 @@
 
         nozzle.style.animation = 'none';
         void nozzle.offsetWidth;
-        nozzle.style.animation = 'nozzlePaintUp ' + duration + 'ms linear forwards';
+        nozzle.style.animation = 'nozzlePaintUp ' + duration + 'ms cubic-bezier(0.05, 0.7, 0.1, 1) forwards';
         nozzle.classList.add('active');
         document.documentElement.classList.add('painting');
 
