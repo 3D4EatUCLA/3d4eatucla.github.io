@@ -7,9 +7,6 @@ User-agent: Applebot
 User-agent: Applebot-Extended
 User-agent: Brightbot 1.0
 User-agent: CCBot
-User-agent: ChatGPT-User
-User-agent: Claude-Web
-User-agent: ClaudeBot
 User-agent: cohere-ai
 User-agent: cohere-training-data-crawler
 User-agent: Cotoyogi
@@ -37,7 +34,6 @@ User-agent: Meta-ExternalAgent
 User-agent: meta-externalfetcher
 User-agent: Meta-ExternalFetcher
 User-agent: NovaAct
-User-agent: OAI-SearchBot
 User-agent: omgili
 User-agent: omgilibot
 User-agent: Operator
